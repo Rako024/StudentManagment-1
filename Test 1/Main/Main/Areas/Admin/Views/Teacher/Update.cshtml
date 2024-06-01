@@ -1,0 +1,45 @@
+﻿@using Business.DTOs.Admin
+@model TeacherUpdateDto
+
+<div class="container justify-content-center">
+    <form method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label">Name</label>
+            <input asp-for="Name" class="form-control">
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Surname" class="form-label">Surname</label>
+            <input asp-for="Surname" class="form-control">
+            <span asp-validation-for="Surname" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Email" class="form-label">Email</label>
+            <input asp-for="Email" class="form-control">
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="UserName" class="form-label">UserName</label>
+            <input asp-for="UserName" class="form-control">
+            <span asp-validation-for="UserName" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Kafedra" class="form-label">Kafedra</label>
+            <input asp-for="Kafedra" class="form-control">
+            <span asp-validation-for="Kafedra" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Born" class="form-label">Born</label>
+            <input asp-for="Born" class="form-control">
+            <span asp-validation-for="Born" class="text-danger"></span>
+        </div>
+
+        <div asp-validation-summary=All>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

@@ -1,0 +1,83 @@
+﻿@using Core.CoreEnums
+@using Core.Models
+
+@model Lesson
+<div class="container justify-content-center">
+    <form method="post" enctype="multipart/form-data">
+        <div class="row justify-content-center">
+            <div class="col-md-6 mb-3">
+                <label asp-for="Name" class="form-label">Name</label>
+                <input asp-for="Name" class="form-control">
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label asp-for="LessonCount" class="form-label">LessonCount</label>
+                <input asp-for="LessonCount" class="form-control">
+                <span asp-validation-for="LessonCount" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+
+
+
+            <div class="col-md-3 mb-3">
+                <label asp-for="GroupId" class="form-label">Group</label>
+                <select class="form-select" asp-for="GroupId" aria-label="Default select example">
+                    <option selected>Select</option>
+                    @foreach (var item in ViewBag.Groups)
+                    {
+                        <option value="@item.Id">@item.Name</option>
+                    }
+                </select>
+                <span asp-validation-for="GroupId" class="text-danger"></span>
+
+            </div>
+
+            <div class="col-md-3 mb-3">
+
+                <label asp-for="TeacherUserId" class="form-label">Teacher</label>
+                <select class="form-select" asp-for="TeacherUserId" aria-label="Default select example">
+                    <option selected>Select</option>
+                    @foreach (var item in ViewBag.Teachers)
+                    {
+                        <option value="@item.Id">@(item.Name + " " + item.Surname)</option>
+                    }
+                </select>
+                <span asp-validation-for="TeacherUserId" class="text-danger"></span>
+
+            </div>
+            <div class="col-md-3 mb-3">
+                <label asp-for="Semester" class="form-label">Semester</label>
+                <select class="form-select" asp-for="Semester" aria-label="Default select example">
+                    <option selected>Select</option>
+                    
+                    <option value="@((int)Semesters.Autumn)">Autumn</option>
+                    <option value="@((int)Semesters.Spring)">Spring</option>
+                    <option value="@((int)Semesters.Summer)">Summer</option>
+
+                </select>
+                <span asp-validation-for="Semester" class="text-danger"></span>
+
+            </div>
+            <div class="col-md-3 mb-3">
+                <label asp-for="Year" class="form-label">Year</label>
+                <select class="form-select" asp-for="Year" aria-label="Default select example">
+                    <option selected>Select</option>
+
+                    <option value="@((int)Years.First)">First - 1</option>
+                    <option value="@((int)Years.Second)">Second - 2</option>
+                    <option value="@((int)Years.Third)">Third - 3</option>
+                    <option value="@((int)Years.Fourth)">Fourth - 4</option>
+
+                </select>
+                <span asp-validation-for="Semester" class="text-danger"></span>
+
+            </div>
+        </div>
+        <div asp-validation-summary=All>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

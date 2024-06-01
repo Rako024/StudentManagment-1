@@ -1,0 +1,50 @@
+﻿@using Core.Models
+
+@{
+    int count = 1;
+}
+@model List<Group>
+
+<div class="container">
+
+    <h1>Groups</h1>
+    <a class="btn btn-primary" asp-action="Create">Create</a>
+</div>
+<div class="container justify-content-center">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Facuty Name</th>
+                <th scope="col">Specialty</th>
+                <th scope="col">Actions</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th scope="row">@count</th>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.FacultyName</td>
+                    <td>@item.Specialty</td>
+                    
+                    <td>
+                        <a class="btn btn-warning" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                        <a class="btn btn-info" asp-action="Update" asp-route-id="@item.Id">Update</a>
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+
+                count++;
+            }
+
+        </tbody>
+    </table>
+
+    <div asp-validation-summary=All class="text-danger"></div>
+</div>

@@ -1,0 +1,59 @@
+﻿@using Main.DTOs.Admin
+@model StudentCreateDto
+<div class="container justify-content-center">
+    <form method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label">Name</label>
+            <input asp-for="Name" class="form-control">
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Surname" class="form-label">Surname</label>
+            <input asp-for="Surname" class="form-control">
+            <span asp-validation-for="Surname" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Email" class="form-label">Email</label>
+            <input asp-for="Email" class="form-control">
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="UserName" class="form-label">UserName</label>
+            <input asp-for="UserName" class="form-control">
+            <span asp-validation-for="UserName" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <select class="form-select" asp-for="GroupId" aria-label="Default select example">
+                <option selected>Select</option>
+                @foreach(var item in ViewBag.Groups)
+                {
+                    <option value="@item.Id">@item.Name</option>
+                }
+            </select>
+            <span asp-validation-for="GroupId" class="text-danger"></span>
+
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Password" class="form-label">Password</label>
+            <input asp-for="Password" class="form-control">
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="ConPassword" class="form-label">ConPassword</label>
+            <input asp-for="ConPassword" class="form-control">
+            <span asp-validation-for="ConPassword" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Born" class="form-label">Born</label>
+            <input asp-for="Born" class="form-control">
+            <span asp-validation-for="Born" class="text-danger"></span>
+        </div>
+        <div asp-validation-summary=All>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

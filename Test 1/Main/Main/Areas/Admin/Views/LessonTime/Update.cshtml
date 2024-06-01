@@ -1,0 +1,39 @@
+﻿@using Core.Models
+@model LessonTime
+<div class="container justify-content-center">
+    <form method="post" enctype="multipart/form-data">
+        <div class="row justify-content-center">
+            <div class="col-md-6 mb-3">
+                <label asp-for="Date" class="form-label">Date</label>
+                <input asp-for="Date" class="form-control">
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+
+        </div>
+
+        <div class="row justify-content-center">
+
+
+
+            <div class="col-md-3 mb-3">
+                <label asp-for="LessonId" class="form-label">Group</label>
+                <select class="form-select" asp-for="LessonId" aria-label="Default select example">
+                    <option selected>Select</option>
+                    @foreach (var item in ViewBag.Lessons)
+                    {
+                        <option value="@item.Id">@item.Name</option>
+                    }
+                </select>
+                <span asp-validation-for="LessonId" class="text-danger"></span>
+
+            </div>
+
+
+
+
+        </div>
+        <div asp-validation-summary=All>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

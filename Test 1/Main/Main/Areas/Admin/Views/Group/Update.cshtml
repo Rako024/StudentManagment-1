@@ -1,0 +1,26 @@
+﻿@using Core.Models
+@model Group
+<div class="container justify-content-center">
+    <form method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label">Name</label>
+            <input asp-for="Name" class="form-control">
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="FacultyName" class="form-label">FacultyName</label>
+            <input asp-for="FacultyName" class="form-control">
+            <span asp-validation-for="FacultyName" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Specialty" class="form-label">Specialty</label>
+            <input asp-for="Specialty" class="form-control">
+            <span asp-validation-for="Specialty" class="text-danger"></span>
+        </div>
+        <div asp-validation-summary=All>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
