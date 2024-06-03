@@ -24,9 +24,22 @@ namespace Main.Areas.Admin.Controllers
             return View(lessonTimes);
         }
 
-        public IActionResult Create()
+        public IActionResult Create(int? lessonId)
         {
-            ViewBag.Lessons = _lessonService.GetAllLessons();
+            if (lessonId == null)
+            {
+                ViewBag.Lessons = _lessonService.GetAllLessinsWithGroupAndTeacherUser();
+                
+            }
+            else
+            {
+                Lesson lesson = _lessonService.GetLessonsWithGroupAndTeacherUser(x=>x.Id == lessonId);
+                if(lesson == null)
+                {
+                    return View("Error");
+                }
+                ViewBag.Lesson = lesson;
+            }
             return View();
         }
 
@@ -35,7 +48,7 @@ namespace Main.Areas.Admin.Controllers
         {
             if(!ModelState.IsValid)
             {
-                ViewBag.Lessons = _lessonService.GetAllLessons();
+                ViewBag.Lessons = _lessonService.GetAllLessinsWithGroupAndTeacherUser();
                 return View();
             }
             try
@@ -44,7 +57,7 @@ namespace Main.Areas.Admin.Controllers
             }
             catch (LessonNotFoundException ex)
             {
-                ViewBag.Lessons = _lessonService.GetAllLessons();
+                ViewBag.Lessons = _lessonService.GetAllLessinsWithGroupAndTeacherUser();
                 ModelState.AddModelError("LessonId", ex.Message);
                 return View();
             }
@@ -52,7 +65,7 @@ namespace Main.Areas.Admin.Controllers
             {
                 return View("Error");
             }
-            return RedirectToAction(nameof(Index)); 
+            return RedirectToAction("Details", "Lesson", new { id = lessonTime.LessonId });
         }
 
 
@@ -77,7 +90,7 @@ namespace Main.Areas.Admin.Controllers
 
         public IActionResult Update(int id) 
         {
-            ViewBag.Lessons = _lessonService.GetAllLessons();
+            ViewBag.Lessons = _lessonService.GetAllLessinsWithGroupAndTeacherUser();
             LessonTime lessonTime = _lessonTimeService.GetLessonTime(x => x.Id == id);
             if (lessonTime == null)
             {
@@ -91,7 +104,7 @@ namespace Main.Areas.Admin.Controllers
         {
             if (!ModelState.IsValid)
             {
-                ViewBag.Lessons = _lessonService.GetAllLessons();
+                ViewBag.Lessons = _lessonService.GetAllLessinsWithGroupAndTeacherUser();
                 return View();
             }
 
@@ -103,11 +116,11 @@ namespace Main.Areas.Admin.Controllers
                 return View("Error");
             }catch (LessonNotFoundException ex)
             {
-                ViewBag.Lessons = _lessonService.GetAllLessons();
+                ViewBag.Lessons = _lessonService.GetAllLessinsWithGroupAndTeacherUser();
                 ModelState.AddModelError("LessonId", ex.Message);
                 return View();
             }
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Details", "Lesson", new { id = lessonTime.LessonId });
         }
     }
 }

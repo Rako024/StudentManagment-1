@@ -16,12 +16,19 @@
 
 
             <div class="col-md-3 mb-3">
-                <label asp-for="LessonId" class="form-label">Group</label>
+                <label asp-for="LessonId" class="form-label">Lesson - Group - Teacher</label>
                 <select class="form-select" asp-for="LessonId" aria-label="Default select example">
-                    <option selected>Select</option>
-                    @foreach (var item in ViewBag.Lessons)
+                    @if (ViewBag.Lesson == null)
                     {
-                        <option value="@item.Id">@item.Name</option>
+                        <option selected>Select</option>
+                        @foreach (var item in ViewBag.Lessons)
+                        {
+                            <option value="@item.Id">@(item.Name + " - " + item.Group.Name + " - " + item.TeacherUser.Name)</option>
+                        }
+                    }
+                    else
+                    {
+                        <option value="@ViewBag.Lesson.Id" selected>@(ViewBag.Lesson.Name + " - " + ViewBag.Lesson.Group.Name + " - " + ViewBag.Lesson.TeacherUser.Name)</option>
                     }
                 </select>
                 <span asp-validation-for="LessonId" class="text-danger"></span>

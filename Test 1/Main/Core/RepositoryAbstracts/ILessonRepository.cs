@@ -10,5 +10,6 @@ namespace Core.RepositoryAbstracts
     public interface ILessonRepository:IGenericRepositroy<Lesson>
     {
         List<Lesson> GetAllLessonsWithGroupAndTeacherUser(Func<Lesson,bool>? func = null);
+        Lesson GetLessonsWithGroupAndTeacherUser(Func<Lesson, bool>? func = null);
     }
 }

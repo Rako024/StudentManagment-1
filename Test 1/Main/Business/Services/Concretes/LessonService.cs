@@ -66,6 +66,11 @@ namespace Business.Services.Concretes
             return _lessonRepository.Get(func);
         }
 
+        public Lesson GetLessonsWithGroupAndTeacherUser(Func<Lesson, bool>? func = null)
+        {
+            return _lessonRepository.GetLessonsWithGroupAndTeacherUser(func);
+        }
+
         public void UpdateLesson(int id, Lesson lesson)
         {
             var oldLesson = _lessonRepository.Get(x => x.Id == id);
@@ -79,6 +84,7 @@ namespace Business.Services.Concretes
             oldLesson.LessonCount = lesson.LessonCount;
             oldLesson.Semester = lesson.Semester;
             oldLesson.Year = lesson.Year;
+            oldLesson.Credit = lesson.Credit;
             _lessonRepository.Commit();
         }
     }

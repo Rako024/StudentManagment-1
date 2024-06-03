@@ -15,5 +15,6 @@ namespace Business.Services.Abstracts
         Lesson GetLesson(Func<Lesson,bool>? func = null);
         List<Lesson> GetAllLessons(Func<Lesson, bool>? func = null);
         List<Lesson> GetAllLessinsWithGroupAndTeacherUser(Func<Lesson, bool>? func = null);
+        Lesson GetLessonsWithGroupAndTeacherUser(Func<Lesson, bool>? func = null);
     }
 }

@@ -85,6 +85,7 @@ namespace Business.Services.Concretes
             }
 
             user.Name = student.Name;
+            user.Surname = student.Surname;
             user.Email = student.Email;
             user.UserName = student.UserName;
             user.GroupId = student.GroupId;

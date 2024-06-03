@@ -13,6 +13,9 @@ namespace Core.Models
         [Required]
         [MaxLength(50)]
         public string Name { get; set; }
+        [Required]
+        [Range(1, 30)]
+        public int Credit { get; set; } 
         public int? GroupId { get; set; }
         public Group? Group { get; set; }
 

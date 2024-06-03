@@ -5,16 +5,22 @@
 <div class="container justify-content-center">
     <form method="post" enctype="multipart/form-data">
         <div class="row justify-content-center">
-            <div class="col-md-6 mb-3">
+            <div class="col-md-4 mb-3">
                 <label asp-for="Name" class="form-label">Name</label>
                 <input asp-for="Name" class="form-control">
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
 
-            <div class="col-md-6 mb-3">
+            <div class="col-md-4 mb-3">
                 <label asp-for="LessonCount" class="form-label">LessonCount</label>
                 <input asp-for="LessonCount" class="form-control">
                 <span asp-validation-for="LessonCount" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <label asp-for="Credit" class="form-label">Credit</label>
+                <input asp-for="Credit" class="form-control">
+                <span asp-validation-for="Credit" class="text-danger"></span>
             </div>
         </div>
 

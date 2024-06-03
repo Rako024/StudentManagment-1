@@ -23,5 +23,11 @@ namespace Data.RepositoryConcretes
             return func == null ? _dbContext.Lessons.Include(x => x.Group).Include(x => x.TeacherUser).ToList() :
                 _dbContext.Lessons.Include(x=>x.Group).Include(x=>x.TeacherUser).Where(func).ToList();
         }
+
+        public Lesson GetLessonsWithGroupAndTeacherUser(Func<Lesson, bool>? func = null)
+        {
+            return func == null ? _dbContext.Lessons.Include(x => x.Group).Include(x => x.TeacherUser).FirstOrDefault() :
+                _dbContext.Lessons.Include(x => x.Group).Include(x => x.TeacherUser).Where(func).FirstOrDefault();
+        }
     }
 }

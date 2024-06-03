@@ -7,10 +7,14 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <a class="btn btn-primary m-1 col-md-2 mb-3" asp-action="Create">Students</a>
-        <a class="btn btn-primary m-1 col-md-2 mb-3" asp-action="Create">Lessons</a>
-        <a class="btn btn-primary m-1 col-md-2 mb-3" asp-action="Create">Teachers</a>
-        <a class="btn btn-primary m-1 col-md-2 mb-3" asp-action="Create">LessonTime</a>
+        <h2>@ViewBag.Group.Name</h2>
+    </div>
+    <div class="row justify-content-center">
+        <a class="btn btn-primary m-1 col-md-2 mb-3 text-warning" asp-action="Details" asp-route-id="@ViewBag.Group.Id">Students</a>
+        <a class="btn btn-primary m-1 col-md-2 mb-3" asp-action="DetailsLessons" asp-route-id="@ViewBag.Group.Id">Lessons</a>
+        <a class="btn btn-primary m-1 col-md-2 mb-3" asp-action="DetailsTeachers" asp-route-id="@ViewBag.Group.Id">Teachers</a>
+        <a class="btn btn-primary m-1 col-md-2 mb-3" asp-action="DetailsLessonTimes" asp-route-id="@ViewBag.Group.Id">LessonTime</a>
+        <a class="btn btn-secondary m-1 col-md-2 mb-3" asp-action="Index" asp-controller="Group">Back to page</a>
     </div>
 </div>
 
@@ -19,7 +23,7 @@
 <div class="container">
 
     <h1>Students</h1>
-    <a class="btn btn-primary" asp-action="Create">Create</a>
+    <a class="btn btn-primary" asp-action="Create" asp-controller="Student">Create</a>
 </div>
 <div class="container justify-content-center">
     <table class="table">

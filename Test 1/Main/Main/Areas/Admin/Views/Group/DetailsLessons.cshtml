@@ -1,0 +1,65 @@
+﻿@using Core.Models
+@model List<Lesson>
+@{
+    int count = 1;
+}
+
+
+<div class="container">
+    <div class="row justify-content-center">
+        <h2>@ViewBag.Group.Name</h2>
+    </div>
+    <div class="row justify-content-center">
+        <a class="btn btn-primary m-1 col-md-2 mb-3" asp-action="Details" asp-route-id="@ViewBag.Group.Id">Students</a>
+        <a class="btn btn-primary m-1 col-md-2 mb-3 text-warning" asp-action="DetailsLessons" asp-route-id="@ViewBag.Group.Id">Lessons</a>
+        <a class="btn btn-primary m-1 col-md-2 mb-3" asp-action="DetailsTeachers" asp-route-id="@ViewBag.Group.Id">Teachers</a>
+        <a class="btn btn-primary m-1 col-md-2 mb-3" asp-action="DetailsLessonTimes" asp-route-id="@ViewBag.Group.Id">LessonTime</a>
+        <a class="btn btn-secondary m-1 col-md-2 mb-3" asp-action="Index" asp-controller="Group">Back to page</a>
+    </div>
+</div>
+<div class="container">
+
+    <h1>Lessons</h1>
+    <a class="btn btn-primary" asp-action="Create" asp-controller="Lesson" asp-route-groupId="@ViewBag.Group.Id">Create</a>
+</div>
+<div class="container justify-content-center">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Group Name</th>
+                <th scope="col">Teacher Name</th>
+                <th scope="col">Lesson Count</th>
+                <th scope="col">Actions</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th scope="row">@count</th>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Group.Name</td>
+                    <td>@item.TeacherUser.Name</td>
+                    <td>@item.LessonCount</td>
+
+                    <td>
+                        <a class="btn btn-warning" asp-action="Details" asp-controller="Lesson" asp-route-id="@item.Id">Details</a>
+                        <a class="btn btn-info" asp-action="Update" asp-controller="Lesson" asp-route-id="@item.Id">Update</a>
+                        <a class="btn btn-danger" asp-action="Delete" asp-controller="Lesson" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+
+                count++;
+            }
+
+        </tbody>
+    </table>
+
+    <div asp-validation-summary=All class="text-danger"></div>
+</div>

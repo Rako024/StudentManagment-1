@@ -1,10 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Rashid\\Desktop\\Student Managment\\Test 1\\Main\\",
+  "WorkspaceRootPath": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|c:\\users\\rashid\\desktop\\student managment\\test 1\\main\\main\\areas\\admin\\views\\group\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|solutionrelative:main\\areas\\admin\\views\\group\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{11F6EA27-9E49-4A61-9943-1D8A8C913DD8}|Core\\Core.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\core\\models\\adminuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11F6EA27-9E49-4A61-9943-1D8A8C913DD8}|Core\\Core.csproj|solutionrelative:core\\models\\adminuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\Test 1\\Main\\Main\\Areas\\Admin\\Views\\Group\\Details.cshtml",
-              "RelativeDocumentMoniker": "Main\\Areas\\Admin\\Views\\Group\\Details.cshtml",
-              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\Test 1\\Main\\Main\\Areas\\Admin\\Views\\Group\\Details.cshtml",
-              "RelativeToolTip": "Main\\Areas\\Admin\\Views\\Group\\Details.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-01T01:42:03.984Z",
+              "Title": "AdminUser.cs",
+              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Core\\Models\\AdminUser.cs",
+              "RelativeDocumentMoniker": "Core\\Models\\AdminUser.cs",
+              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Core\\Models\\AdminUser.cs",
+              "RelativeToolTip": "Core\\Models\\AdminUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-02T22:51:51.583Z",
               "EditorCaption": ""
             }
           ]

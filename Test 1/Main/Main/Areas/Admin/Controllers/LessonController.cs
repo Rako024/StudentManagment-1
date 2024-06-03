@@ -1,4 +1,5 @@
-﻿using Business.Exceptions;
+﻿using Business.DTOs.Admin.LessonDTOs;
+using Business.Exceptions;
 using Business.Exceptions.Lesson;
 using Business.Services.Abstracts;
 using Core.Models;
@@ -12,12 +13,14 @@ namespace Main.Areas.Admin.Controllers
         ILessonService _lessonService;
         IGroupService _groupService;
         ITeacherUserService _teacherUserService;
+        ILessonTimeService _lessonTimeService;
 
-        public LessonController(ILessonService lessonService, IGroupService groupService, ITeacherUserService teacherUserService)
+        public LessonController(ILessonService lessonService, IGroupService groupService, ITeacherUserService teacherUserService, ILessonTimeService lessonTimeService)
         {
             _lessonService = lessonService;
             _groupService = groupService;
             _teacherUserService = teacherUserService;
+            _lessonTimeService = lessonTimeService;
         }
 
         public IActionResult Index()
@@ -26,11 +29,24 @@ namespace Main.Areas.Admin.Controllers
             return View(lessons);
         }
 
-        public IActionResult Create()
+        public IActionResult Create(int? groupId)
         {
-            ViewBag.Groups = _groupService.GetAllGroup();
-            ViewBag.Teachers = _teacherUserService.GetAllTeachers();
-            return View();
+            if (groupId == null)
+            {
+                ViewBag.Groups = _groupService.GetAllGroup();
+                ViewBag.Teachers = _teacherUserService.GetAllTeachers();
+                return View();
+            }
+            else
+            {
+                ViewBag.Groups = _groupService.GetAllGroup();
+                ViewBag.Teachers = _teacherUserService.GetAllTeachers();
+                Lesson lesson = new Lesson()
+                {
+                    GroupId = groupId,
+                };
+                return View(lesson);
+            }
         }
 
         [HttpPost]
@@ -57,7 +73,7 @@ namespace Main.Areas.Admin.Controllers
             {
                 return View("Error");
             }
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("DetailsLessons", "Group", new { id = lesson.GroupId });
         }
 
         public IActionResult Delete(int id)
@@ -112,7 +128,26 @@ namespace Main.Areas.Admin.Controllers
             {
                 return View("Error");
             }
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("DetailsLessons", "Group", new { id = lesson.GroupId });
         }
+
+
+        public IActionResult Details(int id)
+        {
+            Lesson lesson = _lessonService.GetLessonsWithGroupAndTeacherUser(x=>x.Id == id);
+            if(lesson == null)
+            {
+                return View("Error");
+            }
+            List<LessonTime> lessonTimes = _lessonTimeService.GetLessonsWithLessonWithTeacherAndGroup(x=>x.LessonId == id)
+                .OrderBy(x=>x.Date).ToList();
+            LessonDetails lessonDetails = new LessonDetails()
+            {
+                LessonTimes = lessonTimes,
+                Lesson = lesson
+            };
+            return View(lessonDetails);
+        }
+        
     }
 }
