@@ -11,5 +11,7 @@ namespace Core.Models
         public int LessonId { get; set; }
         public Lesson? Lesson { get; set; }
         public DateTime Date { get; set; }
+        public DateTime EndDate { get; set; }
+        
     }
 }

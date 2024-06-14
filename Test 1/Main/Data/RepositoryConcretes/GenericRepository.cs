@@ -1,8 +1,10 @@
 ﻿using Core.RepositoryAbstracts;
 using Data.DAL;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,10 +13,12 @@ namespace Data.RepositoryConcretes
     public class GenericRepository<T> : IGenericRepositroy<T> where T : class, new()
     {
         AppDbContext _dbContext;
+        private DbSet<T> _table;
 
         public GenericRepository(AppDbContext dbContext)
         {
             _dbContext = dbContext;
+            _table = _dbContext.Set<T>();
         }
 
         public void Add(T item)
@@ -33,10 +37,31 @@ namespace Data.RepositoryConcretes
                                   _dbContext.Set<T>().Where(func).FirstOrDefault();
         }
 
-        public List<T> GetAll(Func<T, bool>? func = null)
+        public async Task<IQueryable<T>> GetAll
+            (Expression<Func<T, bool>>? func = null,
+             Expression<Func<T, object>>? orderBy = null,
+             bool isOrderByDesting = false,
+            params Expression<Func<T, object>>[] includes
+            )
         {
-            return func == null ? _dbContext.Set<T>().ToList() :
-                                  _dbContext.Set<T>().Where(func).ToList();
+            IQueryable<T> data = _table;
+
+            if(includes is not  null)
+            {
+                foreach(var item in includes) 
+                {
+                    data = data.Include(item);
+                }
+            }
+
+            if(orderBy is not null)
+            { 
+                data = isOrderByDesting
+                    ?data.OrderByDescending(orderBy)
+                    :data.OrderBy(orderBy);
+            }
+
+            return func == null ? data : data.Where(func);
         }
 
         public void Remove(T item)

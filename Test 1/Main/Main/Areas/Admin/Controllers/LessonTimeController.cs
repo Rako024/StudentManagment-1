@@ -18,17 +18,27 @@ namespace Main.Areas.Admin.Controllers
             _lessonService = lessonService;
         }
 
-        public IActionResult Index()
-        {
-            List<LessonTime> lessonTimes = _lessonTimeService.GetLessonsWithLessonWithTeacherAndGroup();
-            return View(lessonTimes);
-        }
+        public async Task<IActionResult> Index(int pageNumber = 1, int pageSize = 20)
+    {
+        var pagedResult = await _lessonTimeService.GetPagedLessonTimes(
+            pageNumber, 
+            pageSize, 
+            x => x.IsDeleted == false,
+            x => x.Date,
+            false,
+            x => x.Lesson,
+            x => x.Lesson.Group,
+            x => x.Lesson.TeacherUser
+        );
 
-        public IActionResult Create(int? lessonId)
+        return View(pagedResult);
+    }
+
+        public async Task<IActionResult> Create(int? lessonId)
         {
             if (lessonId == null)
             {
-                ViewBag.Lessons = _lessonService.GetAllLessinsWithGroupAndTeacherUser();
+                ViewBag.Lessons = await _lessonService.GetAllLessons(x => x.IsDeleted == false, x=>true,false,x => x.Group, x=>x.TeacherUser);
                 
             }
             else
@@ -48,7 +58,7 @@ namespace Main.Areas.Admin.Controllers
         {
             if(!ModelState.IsValid)
             {
-                ViewBag.Lessons = _lessonService.GetAllLessinsWithGroupAndTeacherUser();
+                ViewBag.Lessons = _lessonService.GetAllLessons(x => x.IsDeleted == false, x => true, false, x => x.Group, x => x.TeacherUser);
                 return View();
             }
             try
@@ -57,7 +67,7 @@ namespace Main.Areas.Admin.Controllers
             }
             catch (LessonNotFoundException ex)
             {
-                ViewBag.Lessons = _lessonService.GetAllLessinsWithGroupAndTeacherUser();
+                ViewBag.Lessons = _lessonService.GetAllLessons(x => x.IsDeleted == false, x => true, false, x => x.Group, x => x.TeacherUser);
                 ModelState.AddModelError("LessonId", ex.Message);
                 return View();
             }
@@ -90,7 +100,7 @@ namespace Main.Areas.Admin.Controllers
 
         public IActionResult Update(int id) 
         {
-            ViewBag.Lessons = _lessonService.GetAllLessinsWithGroupAndTeacherUser();
+            ViewBag.Lessons = _lessonService.GetAllLessons(x => x.IsDeleted == false, x => true, false, x => x.Group, x => x.TeacherUser);
             LessonTime lessonTime = _lessonTimeService.GetLessonTime(x => x.Id == id);
             if (lessonTime == null)
             {
@@ -104,7 +114,7 @@ namespace Main.Areas.Admin.Controllers
         {
             if (!ModelState.IsValid)
             {
-                ViewBag.Lessons = _lessonService.GetAllLessinsWithGroupAndTeacherUser();
+                ViewBag.Lessons = _lessonService.GetAllLessons(x => x.IsDeleted == false, x => true, false, x => x.Group, x => x.TeacherUser);
                 return View();
             }
 
@@ -116,7 +126,7 @@ namespace Main.Areas.Admin.Controllers
                 return View("Error");
             }catch (LessonNotFoundException ex)
             {
-                ViewBag.Lessons = _lessonService.GetAllLessinsWithGroupAndTeacherUser();
+                ViewBag.Lessons = _lessonService.GetAllLessons(x => x.IsDeleted == false, x => true, false, x => x.Group, x => x.TeacherUser);
                 ModelState.AddModelError("LessonId", ex.Message);
                 return View();
             }

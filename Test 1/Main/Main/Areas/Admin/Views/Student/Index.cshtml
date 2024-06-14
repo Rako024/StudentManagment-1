@@ -5,7 +5,6 @@
 @model List<StudentUser>
 
 <div class="container">
-
     <h1>Students</h1>
     <a class="btn btn-primary" asp-action="Create">Create</a>
 </div>
@@ -19,7 +18,6 @@
                 <th scope="col">UserName</th>
                 <th scope="col">Group Name</th>
                 <th scope="col">Actions</th>
-
             </tr>
         </thead>
         <tbody>
@@ -27,25 +25,28 @@
             {
                 <tr>
                     <th scope="row">@count</th>
-                    <td>@(item.Name +" "+ item.Surname ) </td>
+                    <td>@(item.Name + " " + item.Surname)</td>
                     <td>@item.Email</td>
                     <td>@item.UserName</td>
-                    <td>@item.Group.Name</td>
-
+                    <td>@item.Group?.Name</td>
                     <td>
                         <a class="btn btn-info" asp-action="Update" asp-route-id="@item.Id">Update</a>
                         <a class="btn btn-warning" asp-action="UpdatePassword" asp-route-id="@item.Id">Update Password</a>
-                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        <a class="btn btn-danger delete-button" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
                     </td>
                 </tr>
-
+               
                 count++;
             }
-
         </tbody>
     </table>
 
-    <div asp-validation-summary=All class="text-danger"></div>
+    <div asp-validation-summary="All" class="text-danger"></div>
 </div>
 
+
+
+
+<!-- jQuery ve Bootstrap Kütüphanelerini Ekleyin -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 

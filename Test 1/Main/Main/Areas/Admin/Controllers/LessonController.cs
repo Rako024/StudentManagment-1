@@ -23,24 +23,24 @@ namespace Main.Areas.Admin.Controllers
             _lessonTimeService = lessonTimeService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            List<Lesson> lessons = _lessonService.GetAllLessinsWithGroupAndTeacherUser();
+            List<Lesson> lessons = await _lessonService.GetAllLessons(x => x.IsDeleted == false, x => x.Name, false, x => x.Group, x => x.TeacherUser);
             return View(lessons);
         }
 
-        public IActionResult Create(int? groupId)
+        public async Task<IActionResult> Create(int? groupId)
         {
             if (groupId == null)
             {
-                ViewBag.Groups = _groupService.GetAllGroup();
-                ViewBag.Teachers = _teacherUserService.GetAllTeachers();
+                ViewBag.Groups = await _groupService.GetAllGroup(x=>x.IsDeleted == false);
+                ViewBag.Teachers = await _teacherUserService.GetAllTeachers(x => x.IsDeleted == false);
                 return View();
             }
             else
             {
-                ViewBag.Groups = _groupService.GetAllGroup();
-                ViewBag.Teachers = _teacherUserService.GetAllTeachers();
+                ViewBag.Groups = await _groupService.GetAllGroup(x => x.IsDeleted == false);
+                ViewBag.Teachers = await _teacherUserService.GetAllTeachers(x => x.IsDeleted == false);
                 Lesson lesson = new Lesson()
                 {
                     GroupId = groupId,
@@ -50,12 +50,12 @@ namespace Main.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(Lesson lesson)
+        public async Task<IActionResult> Create(Lesson lesson)
         {
             if (!ModelState.IsValid)
             {
-                ViewBag.Groups = _groupService.GetAllGroup();
-                ViewBag.Teachers = _teacherUserService.GetAllTeachers();
+                ViewBag.Groups = await _groupService.GetAllGroup(x => x.IsDeleted == false);
+                ViewBag.Teachers = await _teacherUserService.GetAllTeachers(x => x.IsDeleted == false);
                 return View();
             }
             try
@@ -85,7 +85,7 @@ namespace Main.Areas.Admin.Controllers
             }
             try
             {
-                _lessonService.DeleteLesson(id);
+                _lessonService.SoftDeleteLesson(id);
             }
             catch (Exception)
             {
@@ -95,10 +95,10 @@ namespace Main.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        public IActionResult Update(int id)
+        public async Task<IActionResult> Update(int id)
         {
-            ViewBag.Groups = _groupService.GetAllGroup();
-            ViewBag.Teachers = _teacherUserService.GetAllTeachers();
+            ViewBag.Groups = await _groupService.GetAllGroup(x => x.IsDeleted == false);
+            ViewBag.Teachers = await _teacherUserService.GetAllTeachers(x => x.IsDeleted == false);
             var lesson = _lessonService.GetLesson(x => x.Id == id);
             if (lesson == null)
             {
@@ -108,12 +108,12 @@ namespace Main.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult Update(Lesson lesson)
+        public async Task<IActionResult> Update(Lesson lesson)
         {
             if (!ModelState.IsValid)
             {
-                ViewBag.Groups = _groupService.GetAllGroup();
-                ViewBag.Teachers = _teacherUserService.GetAllTeachers();
+                ViewBag.Groups = await _groupService.GetAllGroup(x => x.IsDeleted == false);
+                ViewBag.Teachers = await _teacherUserService.GetAllTeachers(x => x.IsDeleted == false);
                 return View();
             }
             try
@@ -132,15 +132,23 @@ namespace Main.Areas.Admin.Controllers
         }
 
 
-        public IActionResult Details(int id)
+        public async Task<IActionResult> Details(int id)
         {
-            Lesson lesson = _lessonService.GetLessonsWithGroupAndTeacherUser(x=>x.Id == id);
+            Lesson lesson =  _lessonService.GetLessonsWithGroupAndTeacherUser(x=>x.Id == id);
             if(lesson == null)
             {
                 return View("Error");
             }
-            List<LessonTime> lessonTimes = _lessonTimeService.GetLessonsWithLessonWithTeacherAndGroup(x=>x.LessonId == id)
-                .OrderBy(x=>x.Date).ToList();
+            List<LessonTime> lessonTimes = await _lessonTimeService.GetAllLessonTimes
+                (
+                x => x.LessonId == id && x.IsDeleted == false,
+                x => x.Date,
+                false,
+                x => x.Lesson,
+                x => x.Lesson.Group,
+                x => x.Lesson.TeacherUser
+            );
+                
             LessonDetails lessonDetails = new LessonDetails()
             {
                 LessonTimes = lessonTimes,

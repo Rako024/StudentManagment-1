@@ -2,9 +2,11 @@
 using Business.Services.Abstracts;
 using Core.Models;
 using Core.RepositoryAbstracts;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -35,10 +37,27 @@ namespace Business.Services.Concretes
             _groupRepository.Remove(group);
             _groupRepository.Commit();
         }
-
-        public List<Group> GetAllGroup(Func<Group, bool>? func = null)
+        public void SoftDeleteGroup(int id)
         {
-            return _groupRepository.GetAll();
+            Group group = _groupRepository.Get(x => x.Id == id);
+            if (group == null)
+            {
+                throw new GroupNotFoundException("", "Group Not Found!");
+            }
+            group.IsDeleted = true;
+            _groupRepository.Commit();
+        }
+
+        public async Task<List<Group>> GetAllGroup
+            (
+            Expression<Func<Group, bool>>? func = null,
+            Expression<Func<Group, object>>? orderBy = null,
+            bool isOrderByDesting = false,
+            params Expression<Func<Group, object>>[] includes
+            )
+        {
+            var queryable = await _groupRepository.GetAll(func, orderBy, isOrderByDesting, includes);
+            return await queryable.ToListAsync();
         }
 
         public Group GetGroup(Func<Group, bool>? func = null)

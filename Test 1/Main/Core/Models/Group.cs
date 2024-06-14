@@ -12,5 +12,6 @@ namespace Core.Models
         public string FacultyName { get; set; }
         public string Specialty { get; set; }
         public List<StudentUser>? Students { get; set; }
+        
     }
 }

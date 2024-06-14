@@ -27,5 +27,7 @@ namespace Core.Models
         public Years Year { get; set; }
         public List<LessonTime>? LessonTimes { get; set; }
 
+        
+
     }
 }

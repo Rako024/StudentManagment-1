@@ -7,9 +7,11 @@ using Data.RepositoryConcretes;
 using Main.DTOs.Admin;
 using Main.Enums;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -66,9 +68,13 @@ namespace Business.Services.Concretes
             return _studentUserRepositroy.Get(func);
         }
 
-        public List<StudentUser> GetAll(Func<StudentUser, bool>? func = null)
+        public async Task<List<StudentUser>> GetAll(Expression<Func<StudentUser, bool>>? func = null,
+             Expression<Func<StudentUser, object>>? orderBy = null,
+             bool isOrderByDesting = false,
+            params Expression<Func<StudentUser, object>>[] includes)
         {
-            return _studentUserRepositroy.GetAll(func);
+            var queryable = await _studentUserRepositroy.GetAll(func,orderBy,isOrderByDesting,includes);
+            return await queryable.ToListAsync();
         }
 
         public List<StudentUser> GetAllStudentWithGroup(Func<StudentUser,bool>? func = null)

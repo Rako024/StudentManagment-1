@@ -3,9 +3,11 @@ using Business.Exceptions.Lesson;
 using Business.Services.Abstracts;
 using Core.Models;
 using Core.RepositoryAbstracts;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -56,9 +58,16 @@ namespace Business.Services.Concretes
             return _lessonRepository.GetAllLessonsWithGroupAndTeacherUser(func);
         }
 
-        public List<Lesson> GetAllLessons(Func<Lesson, bool>? func = null)
+        public async Task<List<Lesson>> GetAllLessons
+            (
+            Expression<Func<Lesson, bool>>? func = null,
+            Expression<Func<Lesson, object>>? orderBy = null,
+            bool isOrderByDesting = false,
+            params Expression<Func<Lesson, object>>[] includes
+            )
         {
-            return _lessonRepository.GetAll();
+            var queryable = await _lessonRepository.GetAll(func, orderBy, isOrderByDesting, includes);
+            return await queryable.ToListAsync();
         }
 
         public Lesson GetLesson(Func<Lesson, bool>? func = null)
@@ -69,6 +78,17 @@ namespace Business.Services.Concretes
         public Lesson GetLessonsWithGroupAndTeacherUser(Func<Lesson, bool>? func = null)
         {
             return _lessonRepository.GetLessonsWithGroupAndTeacherUser(func);
+        }
+
+        public void SoftDeleteLesson(int id)
+        {
+            var lesson = _lessonRepository.Get(x => x.Id == id);
+            if (lesson == null)
+            {
+                throw new LessonNotFoundException();
+            }
+            lesson.IsDeleted = true;
+            _lessonRepository.Commit();
         }
 
         public void UpdateLesson(int id, Lesson lesson)

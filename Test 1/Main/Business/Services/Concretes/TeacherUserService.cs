@@ -5,9 +5,11 @@ using Core.Models;
 using Core.RepositoryAbstracts;
 using Main.Enums;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -55,9 +57,16 @@ namespace Business.Services.Concretes
             await _userManager.DeleteAsync(user);
         }
 
-        public List<TeacherUser> GetAllTeachers(Func<TeacherUser, bool>? func = null)
+        public async Task<List<TeacherUser>> GetAllTeachers
+            (
+            Expression<Func<TeacherUser, bool>>? func = null,
+            Expression<Func<TeacherUser, object>>? orderBy = null,
+            bool isOrderByDesting = false,
+            params Expression<Func<TeacherUser, object>>[] includes
+            )
         {
-            return _userRepository.GetAll(func);
+            var queryable = await _userRepository.GetAll(func, orderBy, isOrderByDesting, includes);
+            return await queryable.ToListAsync();
         }
 
         public TeacherUser GetTeacher(Func<TeacherUser, bool>? func = null)

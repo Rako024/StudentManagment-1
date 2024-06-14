@@ -22,15 +22,15 @@ public class StudentController : Controller
         _groupService = groupService;
     }
 
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
-        List<StudentUser> students = _studentUserService.GetAllStudentWithGroup();
+        List<StudentUser> students = await _studentUserService.GetAll(x=> x.IsDeleted == false,x=>x.Surname,false,x=>x.Group);
         return View(students);
     }
 
-    public IActionResult Create()
+    public async Task<IActionResult> Create()
     {
-        ViewBag.Groups = _groupService.GetAllGroup();
+        ViewBag.Groups = await _groupService.GetAllGroup(x => x.IsDeleted == false);
         return View();
     }
 
@@ -40,7 +40,7 @@ public class StudentController : Controller
         
         if(!ModelState.IsValid)
         {
-            ViewBag.Groups = _groupService.GetAllGroup();
+            ViewBag.Groups = await _groupService.GetAllGroup(x => x.IsDeleted == false);
             return View();
         }
         try
@@ -78,9 +78,9 @@ public class StudentController : Controller
     }
 
 
-    public IActionResult Update(string id)
+    public async Task<IActionResult> Update(string id)
     {
-        ViewBag.Groups = _groupService.GetAllGroup();
+        ViewBag.Groups = await _groupService.GetAllGroup(x => x.IsDeleted == false);
         var result =  _studentUserService.Get(x=>x.Id == id);
         if(result == null)
         {
@@ -94,7 +94,7 @@ public class StudentController : Controller
     {
         if (!ModelState.IsValid)
         {
-            ViewBag.Groups = _groupService.GetAllGroup();
+            ViewBag.Groups = await _groupService.GetAllGroup(x => x.IsDeleted == false);
             return View();
         }
 

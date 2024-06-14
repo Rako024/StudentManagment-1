@@ -18,9 +18,9 @@ public class TeacherController : Controller
         _userService = userService;
     }
 
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
-        List<TeacherUser> users = _userService.GetAllTeachers();
+        List<TeacherUser> users = await _userService.GetAllTeachers();
         return View(users);
     }
 

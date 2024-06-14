@@ -1,7 +1,8 @@
-﻿@using Core.Models
-@model List<LessonTime>
+﻿@using Core.Helper
+@using Core.Models
+@model PageResult<LessonTime>
 @{
-    int count = 1;
+    int count = 1+((Model.PageNumber-1)*20);
 }
 <div class="container">
 
@@ -22,7 +23,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var item in Model)
+            @foreach (var item in Model.Items)
             {
                 <tr>
                     <th scope="row">@count</th>
@@ -43,6 +44,21 @@
 
         </tbody>
     </table>
-
+    <nav>
+        <ul class="pagination">
+            <li class="page-item @(Model.PageNumber == 1 ? "disabled" : "")">
+                <a class="page-link" asp-action="Index" asp-route-pageNumber="@(Model.PageNumber - 1)" asp-route-pageSize="@Model.PageSize">Previous</a>
+            </li>
+            @for (int i = 1; i <= Model.TotalPages; i++)
+            {
+                <li class="page-item @(Model.PageNumber == i ? "active" : "")">
+                    <a class="page-link" asp-action="Index" asp-route-pageNumber="@i" asp-route-pageSize="@Model.PageSize">@i</a>
+                </li>
+            }
+            <li class="page-item @(Model.PageNumber == Model.TotalPages ? "disabled" : "")">
+                <a class="page-link" asp-action="Index" asp-route-pageNumber="@(Model.PageNumber + 1)" asp-route-pageSize="@Model.PageSize">Next</a>
+            </li>
+        </ul>
+    </nav>
     <div asp-validation-summary=All class="text-danger"></div>
 </div>
