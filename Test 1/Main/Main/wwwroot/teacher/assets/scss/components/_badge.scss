@@ -1,0 +1,62 @@
+.badge-outline-primary {
+    border-color: $primary;
+    color: $primary;
+}
+.badge-outline-secondary {
+    border-color: $secondary;
+    color: $secondary;
+}
+.badge-soft-primary {
+    background: rgba($primary,0.5);
+    color: $primary;
+}
+.badge-soft-secondary {
+    background: rgba($secondary,0.3);
+    color: $secondary;
+}
+.badge.badge-xs {
+    font-size: 10px;
+    padding: 0px 5px;
+    line-height: 18px;
+}
+.badge.badge-sm {
+    font-size: 11px;
+    padding: 5px 8px;
+    line-height: 11px;
+}
+.badge.badge-md {
+    font-size: 12px;
+    padding: 5px 12px;
+    line-height: 1.5;
+}
+.badge.badge-lg {
+    font-size: 14px;
+    padding: 0px 10px;
+    line-height: 30px;
+}
+.badge.badge-xl {
+    font-size: 16px;
+    padding: 0px 15px;
+    line-height: 35px;
+}
+.bg-outline-secondary {
+    background-color: #ffffff;
+    border: 1px solid $secondary;
+    color:  $secondary;
+}
+.bg-outline-success {
+    border: 1px solid $success;
+    color: $success;
+}
+.bg-outline-info {
+    border: 1px solid $info;
+    color: $info;
+}
+.bg-outline-warning {
+    border: 1px solid $warning;
+    color: $warning;
+}
+.bg-outline-danger {
+    border: 1px solid $danger;
+    color: $danger;
+}

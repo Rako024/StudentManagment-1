@@ -1,4 +1,5 @@
-﻿using Core.Models;
+﻿using Business.DTOs.Account;
+using Core.Models;
 using Main.Enums;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -17,9 +18,64 @@ public class AccountController : Controller
         _signInManager = signInManager;
     }
 
-    public IActionResult Register()
+   public IActionResult Login()
     {
         return View();
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Login(LoginDto loginDto)
+    {
+        if (!ModelState.IsValid)
+        {
+            return View(loginDto);
+        }
+        AppUser user = await _userManager.FindByEmailAsync(loginDto.UserNameOrEmail);
+        if (user == null)
+        {
+            user = await _userManager.FindByNameAsync(loginDto.UserNameOrEmail);
+        }
+
+        if(user == null)
+        {
+            ModelState.AddModelError("", "Username or Password is not valid");
+            return View();
+        }
+        if(!user.LockoutEnabled)
+        {
+            ModelState.AddModelError("", "You Are Blocked!");
+            return View();
+        }
+        var result = await _signInManager.CheckPasswordSignInAsync(user, loginDto.Password,false);
+        if (!result.Succeeded)
+        {
+            ModelState.AddModelError("", "Username or Password is not valid");
+            return View();
+        }
+        var signInResult = await _signInManager.PasswordSignInAsync(user,loginDto.Password,loginDto.RememberMe,false);
+        if (!signInResult.Succeeded)
+        {
+            ModelState.AddModelError("", "Username or Password is not valid");
+            return View();
+        }
+        IList<string> roleList = await _userManager.GetRolesAsync(user);
+        string role = roleList.FirstOrDefault()?.ToString();
+        if (role == RolesEnum.Teacher.ToString())
+        {
+            return RedirectToAction("Index", "Dashboard", new { area = "Teacher", id = user.Id });
+        }else if (role == RolesEnum.Student.ToString()) 
+        {
+            return RedirectToAction("Index", "Dashboard", new { area = "Student", id = user.Id });
+        }
+        else if (role == RolesEnum.Cordinator.ToString() || role == RolesEnum.SuperAdmin.ToString())
+        {
+            return RedirectToAction("Index", "Dashboard", new { area = "Admin", id = user.Id });
+        }
+        else
+        {
+            return View();
+        }
+        
     }
 
     public async Task<IActionResult> CreateRoles()

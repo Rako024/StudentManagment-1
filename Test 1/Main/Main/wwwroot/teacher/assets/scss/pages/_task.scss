@@ -1,0 +1,909 @@
+.board-view-header {
+    @include margin-padding( 0 0 30px, null);
+    .pro-teams {
+        text-align: center;
+        @include margin-padding( 0 20px 15px 0, null);
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        @include respond-below(custom991) {
+            display: none;
+        }
+        .avatar-title{
+            background-color: $primary-800;
+        }
+        .pro-team-lead {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            h4 {
+                font-size: $font-size-16;
+                @include margin-padding(0 0 0 6px, null);
+                .avatar-group {
+                    display: -webkit-inline-box;
+                    display: -ms-inline-flexbox;
+                    display: inline-flex;
+                    .avatar {
+                        margin-right: 0;
+                        position: relative;
+                        display: inline-block;
+                        width: 34px;
+                        height: 34px;
+                        background-color: transparent;
+                        .border {
+                            border: 3px solid $white !important;
+                        }
+                    }
+                }
+            }
+        }
+        .pro-team-members {
+            margin-left: 15px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+        }
+        .avatar-group {
+            .avatar {
+                @include margin-padding(0 -0.75rem 0 0, null);
+            }
+        }
+    }
+    .pro-progress-bar {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        .progress {
+            width: 100%;
+            height: 15px;
+            background-color: $light-900;
+            box-shadow: unset;
+            @include margin-padding(0 10px 0 0, null);
+        }
+        h4 {
+            margin-bottom: 0;
+            margin-right: 10px;
+            font-size: $font-size-13;
+            text-transform: uppercase;
+        }
+    }
+}
+.kanban-cont {
+    overflow: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    @include margin-padding(null, 0 0 20px);
+    .kanban-list{
+        align-self: flex-start;
+        min-width: 300px;
+        width: 300px;
+        @include margin-padding(0 30px 0 0, null);
+        &.kanban-danger {
+            background-color: $danger-100;
+            .kanban-header {
+                background-color: $danger;
+            }
+            .progress-bar {
+                background-color: $danger;
+            }
+        }
+        .kanban-wrap {
+            @include margin-padding(null, 20px);
+            .task-board-header {
+                font-size: $font-size-14;
+                font-weight: $font-weight-medium;
+                @include margin-padding(null, 15px 15px 5px);
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                justify-content: space-between;
+                -webkit-justify-content: space-between;
+                -ms-flex-pack: space-between;
+                a {
+                    color: $secondary;
+                }
+            }
+            .task-board-body {
+                font-size: $font-size-13;
+                @include margin-padding(null, 0 15px 15px);
+                .kanban-info {
+                    font-size: $font-size-12;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    align-items: center;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    .progress {
+                        width: 100%;
+                        @include margin-padding(0 10px 0 0, null);
+                    }
+                }
+                .kanban-footer {
+                    font-size: $font-size-12;
+                    margin-top: 10px;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    align-items: end;
+                    -webkit-box-align: end;
+                    -ms-flex-align: end;
+                    justify-content: space-between;
+                    -webkit-justify-content: space-between;
+                    -ms-flex-pack: space-between;
+                    .task-date {
+                        display: block;
+                    }
+                    .task-avatar {
+                        @include rounded(50%);
+                        position: relative;
+                    }
+                    .task-user-count {
+                        font-size: $font-size-10;
+                        font-weight: $font-weight-medium;
+                        display: inline-block;
+                        margin-left: 3px;
+                        position: relative;
+                        top: 1px;
+                    }
+                }
+            }
+            .card{
+                background-color: $white;
+                border: 1px solid $light-900;
+                @include rounded(2px);
+                box-shadow: unset;
+                margin: 0 0 12px;
+            }
+        }
+        .add-new-task {
+            text-align: center;
+            @include margin-padding(null, 0 20px 20px);
+            a{
+                color:$secondary-900;
+                
+            }
+        }
+        .kanban-header {
+            @include margin-padding(null, 10px 20px);
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            justify-content: space-between;
+            -webkit-justify-content: space-between;
+            -ms-flex-pack: space-between;
+            .status-title {
+                color: $white;
+                font-size: $font-size-16;
+                font-weight: $font-weight-medium;
+            }
+            .kanban-action{
+               > a{
+                    color: $white;
+                    background-color: rgba(0, 0, 0, 0.3);
+                    width: 22px;
+                    height: 22px;
+                    @include rounded(50%);
+                    display: -webkit-inline-box;
+                    display: -ms-inline-flexbox;
+                    display: inline-flex;
+                    align-items: center;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    justify-content: center;
+                    -webkit-justify-content: center;
+                    -ms-flex-pack: center;
+                }
+            }
+        }
+        &.kanban-info{
+            background-color: #e7f3fe;
+            .kanban-header {
+                background-color: #42a5f5;
+            }
+            .progress-bar {
+                background-color: #42a5f5;
+            }
+        }
+        &.kanban-success {
+            background-color: $success-100;
+            .kanban-header {
+                background-color: $success;
+            }
+            .progress-bar {
+                background-color: $success;
+            }
+        }
+        &.kanban-warning {
+            background-color: $light-100;
+            .kanban-header {
+                background-color: $warning;
+            }
+            .progress-bar {
+                background-color: $warning;
+            }
+        }
+        &.kanban-purple  {
+            background-color: $purple-100;
+            .kanban-header {
+                background-color: $purple;
+            }
+            .progress-bar {
+                background-color: $purple;
+            }
+        }
+        &.kanban-primary  {
+            background-color: $primary-100;
+            .kanban-header {
+                background-color: $primary-800;
+            }
+            .progress-bar {
+                background-color: $primary-800;
+            }
+        }
+
+    }
+}
+.chat-main-row {
+    overflow: auto;
+    padding-bottom: inherit;
+    padding-top: inherit;
+    @include position(absolute,0,0,0,0);
+    .chat-main-wrapper {
+        display: table;
+        height: 100%;
+        table-layout: fixed;
+         width: 100%;
+        .message-view {
+            display: table-cell;
+            height: 100%;
+            float: none;
+            padding: 0;
+            position: static;
+            vertical-align: top;
+            width: 75%;
+            @include respond-below(custom991) {
+                &.task-view{
+                    width: 100%;
+                }
+            }
+            @include respond-below(custom991) {
+                &.chat-profile-view {
+                    @include transition(all 0.4s ease);
+                    z-index: 1041;
+                    width: 300px;
+                    display: table-cell;
+                    @include margin-padding(60px -300px 0 0, 0 0 60px);
+                    @include position(fixed,0,0,null,null);
+                    @include transform(translateX(0px));
+                    &.opened {
+                        margin-right: 0 ; 
+                    }
+                }
+            }
+        }
+        .task-left-sidebar {
+            width: 58.3333%;
+            @include respond-below(custom991) {
+                width: 100%;
+               &.chat-sidebar{
+                   display: none;
+                  
+               }
+           }
+        }
+        .task-right-sidebar {
+            width: 41.6667%;
+            @include respond-below(custom991) {
+                z-index: 1041;
+                width: 300px;
+                display: table-cell;
+                @include transform(translateX(0px));
+                @include margin-padding(60px -300px 0, 0 0  60px);
+                @include position(fixed,0,0,null,null);
+                @include transition(all 0.4s ease);
+                &.opened {
+                    margin-right: 0;
+                }
+            }
+        }
+        .chat-window {
+            display: table;
+            height: 100%;
+            table-layout: fixed;
+             width: 100%;
+            background-color: $body-bg;
+            .fixed-header {
+                background-color: $white;
+                border-bottom: 1px solid $secondary-100;
+                padding: 10px 15px;
+                .user-details{
+                    a {
+                        color: $secondary-800;
+                        text-transform: uppercase;
+                    }
+                    .typing-text {
+                        color: $primary;
+                        font-size: $font-size-12;
+                        text-transform: lowercase;
+                    }
+                    .last-seen {
+                        color: $secondary-600;
+                        display: block;
+                        font-size: $font-size-12;
+                    }
+                }
+                .navbar {
+                    border: 0 none;
+                    margin: 0;
+                    min-height: auto;
+                    padding: 0;
+                    .profile-rightbar{
+                        display: none;
+                        color: $secondary-300;
+                        font-size: $font-size-26;
+                        margin-left: 15px;
+                        @include respond-below(custom991) {
+                            display: block;
+                        }
+                    }
+                }
+                .custom-menu {
+                    margin: 1px 0 0;
+                    li{
+                        a {
+                            color: $secondary-300;
+                            font-size: $font-size-22;
+                            line-height: 32px;
+                            @include margin-padding(0 0 0 15px, 0);
+                            
+                        }
+                        .dropdown-menu{
+                            left:auto;
+                            right:0;
+                            @include margin-padding(15px 0 0, 0);
+                            .dropdown-item{
+                                font-size: $font-size-14;
+                                color: $secondary-900;
+                                @include margin-padding(0, 0 10px);
+                            }
+                        }
+                        .custom-dropdown-menu {
+                            @include margin-padding(0, 0 0 0 0);
+                            .dropdown-item {
+                                margin: 0;
+                                @include margin-padding(0, 0 10px 0 10px);
+                            }
+                        }
+                        .dropdown-menu-right{
+                            a{
+                                font-size: $font-size-14;
+                            }
+                        }
+                    }
+                    .profile-rightbar {
+                        display: none;
+                        @include respond-below(custom991) {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.task-wrapper {
+    padding: 20px;
+     width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    .task-list-body {
+        max-height: 500px;
+        overflow: auto;
+        #task-list {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            border-bottom: 1px solid $secondary-100;
+            li {
+                @include margin-padding(0, 0);
+                &.completed {
+                    .task-container {
+                        background: $light-200;
+                        .complete-btn {
+                            background: $green !important;
+                            border: 1px solid $green !important;
+                            color: $white;
+                        }
+                    }
+                }
+                .task-container {
+                    display: table;
+                    background: $white;
+                    width: 100%;
+                    border: 1px solid $secondary-100;
+                    border-bottom: none;
+                    box-sizing: border-box;
+                    position: relative;
+                    @include margin-padding(null, 8px 15px);
+                    @include transition(all 0.2s ease);
+                    .task-action-btn {
+                        display: table-cell;
+                        vertical-align: middle;
+                        text-align: right;
+                        &.task-check {
+                            text-align: left !important;
+                            width: 40px;
+                        }
+                        .action-circle {
+                            background-color: $white;
+                            border: 1px solid $secondary-200;
+                            height: 20px;
+                            width: 20px;
+                            display: inline-block;
+                            text-align: center;
+                            cursor: pointer;
+                            @include rounded(100%);
+                            @include transition(all 0.2s ease);
+                        }
+                        .action-circle.large {
+                            height: 24px;
+                            width: 24px;
+                            .material-icons {
+                                font-size: $font-size-16;
+                                vertical-align: -4px;
+                            }
+                        }
+                    }
+                    .task-label {
+                        display: table-cell;
+                        font-weight: $font-weight-normal;
+                        vertical-align: middle;
+                        color: $secondary-900;
+                        word-break: break-all;
+                    }
+                    .task-btn-right{
+                        display: none;
+                        .action-circle.large {
+                            height: 24px;
+                            width: 24px;
+                            .material-icons {
+                                font-size: $font-size-16;
+                                vertical-align: -4px;
+                                color: $secondary-200;
+                            }
+                        }
+                    }
+                   &:hover{
+                        .task-btn-right{
+                            display: block;
+                        }
+                   }
+                }
+                &.completed{
+                    .task-container {
+                        .task-label{
+                                color: #ccc;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .task-list-footer {
+        position: relative;
+        .new-task-wrapper{
+            @include transition(all 0.2s ease);
+            overflow: hidden;
+            visibility: hidden;
+            .visible {
+                max-height: 300px;
+                overflow: auto;
+            }
+            textarea {
+                box-sizing: border-box;
+                width: 100%;
+                border: 1px solid $secondary-100;
+                border-top: 0;
+                height: 45px;
+                resize: none;
+                @include margin-padding(0 0 20px, 10px 45px);
+                @include transition(all 0.2s ease);
+            }
+            .error-message {
+                color: $danger;
+                font-style: italic;
+            }
+            .add-new-task-btn {
+                background: $white;
+                border: 1px solid $secondary-200;
+            }
+            .btn {
+                float: right;
+                cursor: pointer;
+                @include margin-padding(null, 6px 12px);
+            }
+        }
+    }
+}
+.chat-content-wrap {
+    height: 100%;
+    position: relative;
+     width: 100%;
+    .chat-wrap-inner {
+        overflow: auto;
+        @include position(absolute,0,0,0,0);
+        .chats {
+            @include margin-padding(null, 15px 15px 30px);
+        }
+        .task-header {
+            font-size: $font-size-14;
+            font-weight: $font-weight-medium;
+            @include margin-padding(null, 15px 15px 5px);
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            .assignee-info {
+                border: 1px solid transparent;
+                flex: 0 1 180px;
+                position: relative;
+                @include rounded(10px);
+                @include margin-padding(null, 5px 10px 5px 5px);
+                display: -webkit-inline-box;
+                display: -ms-inline-flexbox;
+                display: inline-flex;
+                align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                &:hover {
+                    border-color: $light-900;
+                    .remove-icon {
+                        visibility: visible;
+                    }
+                }
+                a {
+                    color: $secondary-900;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    align-items: center;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                }
+                .remove-icon {
+                    background-color: $light-900;
+                    @include rounded(50%);
+                    color: $secondary-900;
+                    cursor: pointer;
+                    height: 20px;
+                    margin-right: 10px;
+                    transform: translateY(-50%);
+                    visibility: hidden;
+                    width: 20px;
+                    @include position(absolute,50%,0,null,null);
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    align-items: center;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    justify-content: center;
+                    -webkit-justify-content: center;
+                    -ms-flex-pack: center;
+                }
+                .task-head-title {
+                    color: $secondary-400;
+                    font-size: $font-size-12;
+                }
+                .task-assignee {
+                    font-size: $font-size-13;
+                    max-width: 120px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+            .task-due-date {
+                border: 1px solid transparent;
+                flex: 0 0 160px;
+                position: relative;
+                @include margin-padding(0 0 0 10px, 5px 10px 5px 5px);
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                @include rounded(10px);
+                &:hover {
+                    border-color: $light-900;
+                    .remove-icon {
+                        visibility: visible;
+                    }
+                }
+                .due-icon{
+                    background-color: $white;
+                    border: 1px solid $secondary-200;
+                    @include rounded(50%);
+                    color: $secondary-200;
+                    height: 30px;
+                    line-height: 30px;
+                    margin-right: 10px;
+                    width: 30px;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    align-items: center;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    justify-content: center;
+                    -webkit-justify-content: center;
+                    -ms-flex-pack: center;
+                    span{
+                        i{
+                            font-size: $font-size-18;
+                            @include position(relative,4px,null,null,null);
+                        }
+                    }
+                }
+                a {
+                    color: $secondary-900;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    align-items: center;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                }
+                .remove-icon {
+                    background-color: $light-900;
+                    @include rounded(50%);
+                    color: $secondary-900;
+                    cursor: pointer;
+                    height: 20px;
+                    visibility: hidden;
+                    width: 20px;
+                    @include transform(translateY(-50%));
+                    @include position(absolute,50%,0,null,null);
+                    @include margin-padding(0 10px 0 0, null);
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    align-items: center;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    justify-content: center;
+                    -webkit-justify-content: center;
+                    -ms-flex-pack: center;
+                }
+            }
+        }
+        .task-desc {
+            @include margin-padding(5px 0 15px, null);
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: flex-start;
+            -webkit-box-align: flex-start;
+            -ms-flex-align: flex-start;
+            .task-desc-icon {
+                color: $secondary-200;
+                @include margin-padding(5px 0 15px, null);
+            }
+            .task-textarea {
+                width: 100%;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+            }
+        }
+        .task-information {
+            color: $secondary-400;
+            font-size: $font-size-11;
+            line-height: 17px;
+            min-width: 1px;
+            margin-left: 50px;
+            .task-info-line {
+                overflow-wrap: normal;
+                .task-user {
+                    color: $secondary-600;
+                    font-weight: $font-weight-medium;
+                }
+            }   
+            .task-time {
+                display: inline-block;
+                padding-left: 10px;
+            }
+        }
+    }
+}
+.task-chat-contents {
+    background-color: $white;
+    .chat.chat-left {
+        @include margin-padding(0 0 20px, null);
+    }
+    .completed-task-msg {
+        @include margin-padding(0 0 30px 50px, null);
+        .task-success {
+            color: $success;
+            font-size: $font-size-13;
+        }
+        .task-time {
+            color: $secondary-400;
+            display: inline-block;
+            font-size: $font-size-11;
+        }
+    }
+}
+.chat-footer {
+    background-color: $white;
+    border-top: 1px solid $secondary-100;
+    @include margin-padding(null, 15px);
+    .call-duration {
+        display: inline-block;
+        font-size:$font-size-30;
+        margin-top: 4px;
+        @include position(absolute,null,null,null,0);
+        @include respond-below(custom575) {
+            display: block;
+            margin-top: 0;
+            margin-bottom: 10px;
+            position: inherit;
+        }
+    }
+    .task-followers {
+        margin-top: 15px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        .followers-title {
+            @include margin-padding(5px 10px 0 0, null);
+            .avatar {
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+            }
+        }
+        .followers-add {
+            background-color: $white;
+            border: 1px solid $secondary-200;
+            @include rounded(50%);
+            color: $secondary-200;
+            display: inline-block;
+            font-size: $font-size-20;
+            height: 34px;
+            line-height: 34px;
+            text-align: center;
+            width: 34px;
+            i {
+                line-height: 28px;
+            }
+        }
+    }
+    .message-bar {
+        display: table;
+        height: 44px;
+        position: relative;
+         width: 100%;
+        .message-inner {
+            display: table-row;
+            height: 100%;
+            width: 100%;
+            @include margin-padding(null, 0 8px);
+        }   
+        .link {
+            color: $secondary-600;
+            display: table-cell;
+            font-size: $font-size-20;
+            position: relative;
+            vertical-align: middle;
+            width: 30px;
+        }
+        .message-area {
+            display: table-cell;
+            .input-group {
+                position: relative;
+                flex-wrap: wrap;
+                width: 100%;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                align-items: stretch;
+                -webkit-box-align: stretch;
+                -ms-flex-align: stretch;
+                .form-control {
+                    background-color: $white;
+                    border: 1px solid $secondary-100;
+                    box-shadow: none;
+                    color: $secondary-800;
+                    display: block;
+                    font-size: $font-size-14;
+                    height: 44px;
+                    margin: 0;
+                    padding: 6px 12px;
+                    resize: none;
+                }
+            }
+            .btn {
+                height: 44px;
+                width: 50px;
+            }
+        }
+    }
+    .btn-custom{
+        background: $primary;
+        background: linear-gradient(to right, $primary 0%, $pink 100%);
+        color: $white;
+    }
+}
+@include respond-below(custom991) {
+    .leave-box {
+        .subtitle {
+            display: none;
+        }
+    }
+}
+.task-chat-view {
+    .chat-left {
+        .chat-content {
+            border: 0 !important;
+            padding: 0 !important;
+            p {
+                font-size: $font-size-13;
+                margin-bottom: 0;
+            }
+        }
+    }
+    
+}
+.notification-popup {
+    z-index: 1051;
+    width: 300px;
+    display: inline-block;
+    background: #1F8FEF;
+    border: 1px solid #1082e4;
+    color: $white;
+    opacity: .8;
+    @include position(fixed,20px,10px,null,null);
+    @include rounded(2px);
+    @include margin-padding(null, 20px);
+    box-sizing: border-box;
+    @include transition(all 0.2s ease);
+    &.hide {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+.task-assign {
+    float: left;
+    a {
+        float: left;
+    }
+    .task-complete-btn {
+        background-color: $white;
+        border: 1px solid $secondary-200;
+        color: $secondary-900;
+        font-size: $font-size-14;
+        @include margin-padding(null, 6px 10px);
+        @include rounded(5px);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+    }
+}

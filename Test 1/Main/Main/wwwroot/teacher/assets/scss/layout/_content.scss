@@ -1,0 +1,338 @@
+.page-wrapper {
+    left: 0;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    @include margin-padding(0 0 0 250px,60px 0 0);
+    @include respond-below(custom991) {
+        @include margin-padding(0,60px 0 0);
+    }
+    .content {
+        @include margin-padding(null, 24px);
+        @include respond-below(custom767) {
+            @include margin-padding(null, 15px);
+        }
+        .page-header {
+            margin-bottom: 1.875rem;
+            .page-title {
+                color: $secondary;
+                font-size: $font-size-26;
+                font-weight: $font-weight-medium;
+                margin-bottom: 5px;
+                @include respond-below(custom575) {
+                    font-size: $font-size-20;
+                }
+            }
+        }
+    }
+}
+.page-header {
+    .breadcrumb {
+        .breadcrumb-item {
+            &.active {
+                color: $sub-title;
+            }
+        }
+    }
+}
+.logo2{
+    display: none;
+}
+@include respond-below(custom991) {
+    .filter-row{
+        margin-bottom: 15px;
+    }
+}
+.form-check-inline {
+    .form-check-label {
+        line-height: 25px;
+    }
+}
+.bg-inverse-danger {
+    background-color: rgba(242, 17, 54,0.12) !important;
+    color: #e63c3c !important;
+}
+.bg-inverse-success {
+    background-color: rgba(15, 183, 107,0.12) !important;
+    color: #26af48 !important;
+}
+.bg-inverse-info {
+    background-color: rgba(2, 182, 179,0.12) !important;
+    color: #1db9aa !important;
+}
+.bg-inverse-warning {
+    background-color: rgba(255, 152, 0,0.12) !important;
+    color: #f39c12 !important;
+}
+.progress-xs {
+    height: 4px;
+}
+.progress {
+    .progress-bar {
+        background-color: #25628F;
+    }
+}
+.onoffswitch-inner {
+    display: block;
+    margin-left: -100%;
+    width: 200%;
+    @include transition(all 0.3s ease);
+}
+.onoffswitch-switch {
+    background: $white;
+    display: block;
+    height: 20px;
+    margin: 5px;
+    width: 20px;
+    @include position(absolute,0,43px,0,null);
+    @include transition(all 0.3s ease);
+    @include rounded(20px);
+} 
+.block {
+    display: block !important;
+}
+.text-muted {
+    color: $secondary-600 !important;
+}
+.input-block {
+    margin-bottom: 1rem;
+}
+input[type=file].form-control {
+    height: 44px;
+}
+.form-text {
+    color: $secondary-500;
+    font-size: $font-size-12;
+    @include margin-padding(7px 0, null);
+}
+.form-control {
+    border-color: $secondary-200;
+    border-radius: $border-radius-lg;
+    box-shadow: none;
+    font-size: $font-size-14;
+    color: $secondary-800;
+    height: 44px;
+    line-height: 2;
+    &.search-message {
+        height: 38px;
+        margin-left: 5px;
+        width: 180px;
+        @include rounded(4px);
+    }
+}
+.form-control:disabled, .form-control[readonly] {
+    background-color: $secondary-100;
+    opacity: 1;
+}
+.cal-icon{
+    position: relative;
+    width: 100%;    
+    &:after {
+        color: $secondary-500;
+        content: "\f073";
+        display: block;
+        font-family: "FontAwesome";
+        font-size: $font-size-15;
+        margin: auto;
+        @include position(absolute,10px,15px,null,null);
+    }
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: $font-size-24;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+}
+
+.form-focus {
+    height: 50px;
+    position: relative;
+    &.select-focus{
+        .focus-label {
+            opacity: 1;
+            font-weight: $font-weight-light;
+            top: -20px;
+            font-size: $font-size-12;
+            z-index: 1;
+        }
+    }
+    .cal-icon{
+        &:after {
+            top: 15px;
+        }
+    }
+    .focus-label {
+        font-size: $font-size-14;
+        font-weight: $font-weight-normal;
+        opacity: 0.4;
+        pointer-events: none;
+        z-index: 1;
+        color: $secondary-600;
+        margin-bottom: 0;
+        @include transition(all 0.2s ease);
+        @include position(absolute,-8px,null,null,12px);
+        @include transform-origin(left top);
+        @include transform(translate3d(0, 22px, 0) scale(1));
+    }
+    .form-control {
+        height: 50px;
+        @include margin-padding(null,  21px 12px 6px);
+        &:focus{
+            border-color: $primary;
+        }
+    }
+    &.focused{
+        .focus-label {
+            opacity: 1;
+            font-weight: $font-weight-light;
+            top: -20px;
+            font-size: $font-size-12;
+            z-index: 1;
+        }
+    }
+}
+.onoffswitch {
+    margin-left: auto;
+    position: relative;
+    width: 73px;
+    -webkit-user-select: none;
+    .onoffswitch-checkbox {
+        display: none;
+    }
+    .onoffswitch-inner{
+        &:after {
+            content: "OFF";
+            padding-right: 14px !important;
+            background-color: $secondary-200;
+            color: $white;
+            text-align: right;
+            display: block;
+            float: left;
+            font-size: $font-size-16;
+            height: 30px;
+            line-height: 32px;
+            padding: 0;
+            width: 50%;
+        }
+        &:before {
+            background-color: $success;
+            color: $white;
+            content: "ON";
+            padding-left: 14px;
+        }
+        &:after {
+            box-sizing: border-box;
+            color: $white;
+            display: block;
+            float: left;
+            font-size: $font-size-16;
+            height: 30px;
+            line-height: 32px;
+            padding: 0;
+            width: 50%;
+        }
+        &:before {
+            box-sizing: border-box;
+            color: $white;
+            display: block;
+            float: left;
+            font-size: $font-size-16;
+            height: 30px;
+            line-height: 32px;
+            padding: 0;
+            width: 50%;
+        }
+    }
+   
+    .onoffswitch-label {
+        display: block;
+        overflow: hidden;
+        cursor: pointer;
+        margin-bottom: 0;
+        @include rounded(20px);
+    }
+    .onoffswitch-checkbox{
+        .onoffswitch-inner {
+            display: block;
+            margin-left: -100%;
+            width: 200%;
+            @include transition(all 0.2s ease);
+        }
+        &:checked {
+            +  .onoffswitch-label {
+                display: block;
+                overflow: hidden;
+                cursor: pointer;
+                margin-bottom: 0;
+                @include rounded(20px);
+                .onoffswitch-inner {
+                    margin-left: 0;
+                    &:before {
+                        background-color: $success;
+                        color: $white;
+                        content: "ON";
+                        padding-left: 14px;
+                    }
+                }
+                .onoffswitch-switch {
+                    right: 0px;
+                }
+            }
+        }
+        
+    }
+}
+.status-toggle {
+    float: right;
+    .check {
+        display: block;
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        @include margin-padding(0, 0);
+        &:checked{
+            & + .checktoggle {
+                background-color: $success;
+                &:after {
+                    left: 100%;
+                    transform: translate(calc(-100% - 5px), -50%);
+                }
+            }
+        }
+       
+    }
+    .checktoggle {
+        background-color: $danger;
+        cursor: pointer;
+        display: block;
+        font-size: 0;
+        height: 24px;
+        margin-bottom: 0;
+        position: relative;
+        width: 48px;
+        @include rounded(12px);
+        &:after {
+            content: ' ';
+            display: block;
+            width: 16px;
+            height: 16px;
+            background-color: $white;
+            @include transition(all 0.2s ease);
+            @include transform(translate(5px, -50%));
+            @include position(absolute,50%,null,null,0);
+            @include rounded(50%);
+        }
+    }
+}

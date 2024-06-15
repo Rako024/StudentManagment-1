@@ -3,32 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\main\\areas\\admin\\views\\student\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|solutionrelative:main\\areas\\admin\\views\\student\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\main\\areas\\admin\\controllers\\lessontimecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|solutionrelative:main\\areas\\admin\\controllers\\lessontimecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47A14DE4-8F31-4BF5-9A13-1A201984553C}|Business\\Business.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\business\\services\\concretes\\lessontimeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47A14DE4-8F31-4BF5-9A13-1A201984553C}|Business\\Business.csproj|solutionrelative:business\\services\\concretes\\lessontimeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47A14DE4-8F31-4BF5-9A13-1A201984553C}|Business\\Business.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\business\\services\\abstracts\\ilessontimeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47A14DE4-8F31-4BF5-9A13-1A201984553C}|Business\\Business.csproj|solutionrelative:business\\services\\abstracts\\ilessontimeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11F6EA27-9E49-4A61-9943-1D8A8C913DD8}|Core\\Core.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\core\\helper\\pageresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11F6EA27-9E49-4A61-9943-1D8A8C913DD8}|Core\\Core.csproj|solutionrelative:core\\helper\\pageresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\main\\areas\\admin\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|solutionrelative:main\\areas\\admin\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\main\\areas\\teacher\\views\\teacherlesson\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|solutionrelative:main\\areas\\teacher\\views\\teacherlesson\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{11F6EA27-9E49-4A61-9943-1D8A8C913DD8}|Core\\Core.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\core\\models\\lessontime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11F6EA27-9E49-4A61-9943-1D8A8C913DD8}|Core\\Core.csproj|solutionrelative:core\\models\\lessontime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11F6EA27-9E49-4A61-9943-1D8A8C913DD8}|Core\\Core.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\core\\models\\lesson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11F6EA27-9E49-4A61-9943-1D8A8C913DD8}|Core\\Core.csproj|solutionrelative:core\\models\\lesson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47A14DE4-8F31-4BF5-9A13-1A201984553C}|Business\\Business.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\business\\dtos\\teacher\\teacherlessonsdto\\teacherlessondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47A14DE4-8F31-4BF5-9A13-1A201984553C}|Business\\Business.csproj|solutionrelative:business\\dtos\\teacher\\teacherlessonsdto\\teacherlessondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\main\\areas\\teacher\\controllers\\teacherlessoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|solutionrelative:main\\areas\\teacher\\controllers\\teacherlessoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,97 +30,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Admin\\Views\\Student\\Index.cshtml",
-              "RelativeDocumentMoniker": "Main\\Areas\\Admin\\Views\\Student\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Admin\\Views\\Student\\Index.cshtml",
-              "RelativeToolTip": "Main\\Areas\\Admin\\Views\\Student\\Index.cshtml",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAADQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-14T02:06:39.412Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ILessonTimeService.cs",
-              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Business\\Services\\Abstracts\\ILessonTimeService.cs",
-              "RelativeDocumentMoniker": "Business\\Services\\Abstracts\\ILessonTimeService.cs",
-              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Business\\Services\\Abstracts\\ILessonTimeService.cs",
-              "RelativeToolTip": "Business\\Services\\Abstracts\\ILessonTimeService.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAiwB0AAABAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T01:23:09.805Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PageResult.cs",
-              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Core\\Helper\\PageResult.cs",
-              "RelativeDocumentMoniker": "Core\\Helper\\PageResult.cs",
-              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Core\\Helper\\PageResult.cs",
-              "RelativeToolTip": "Core\\Helper\\PageResult.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABSAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T01:20:00.922Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "LessonTimeController.cs",
-              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Admin\\Controllers\\LessonTimeController.cs",
-              "RelativeDocumentMoniker": "Main\\Areas\\Admin\\Controllers\\LessonTimeController.cs",
-              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Admin\\Controllers\\LessonTimeController.cs",
-              "RelativeToolTip": "Main\\Areas\\Admin\\Controllers\\LessonTimeController.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAQwBYAAABGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T01:13:00.115Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "StudentController.cs",
-              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Admin\\Controllers\\StudentController.cs",
-              "RelativeDocumentMoniker": "Main\\Areas\\Admin\\Controllers\\StudentController.cs",
-              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Admin\\Controllers\\StudentController.cs",
-              "RelativeToolTip": "Main\\Areas\\Admin\\Controllers\\StudentController.cs",
-              "ViewState": "AQIAAIcAAAAAAAAAAAAIwGAAAABWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T01:06:55.977Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "LessonTime.cs",
               "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Core\\Models\\LessonTime.cs",
               "RelativeDocumentMoniker": "Core\\Models\\LessonTime.cs",
               "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Core\\Models\\LessonTime.cs",
               "RelativeToolTip": "Core\\Models\\LessonTime.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAArAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T00:59:30.684Z",
+              "WhenOpened": "2024-06-15T01:57:06.92Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "LessonTimeService.cs",
-              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Business\\Services\\Concretes\\LessonTimeService.cs",
-              "RelativeDocumentMoniker": "Business\\Services\\Concretes\\LessonTimeService.cs",
-              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Business\\Services\\Concretes\\LessonTimeService.cs",
-              "RelativeToolTip": "Business\\Services\\Concretes\\LessonTimeService.cs",
-              "ViewState": "AQIAAFAAAAAAAAAAAAAgwGIAAAAWAAAA",
+              "Title": "Lesson.cs",
+              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Core\\Models\\Lesson.cs",
+              "RelativeDocumentMoniker": "Core\\Models\\Lesson.cs",
+              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Core\\Models\\Lesson.cs",
+              "RelativeToolTip": "Core\\Models\\Lesson.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAswCEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T00:59:06.552Z",
+              "WhenOpened": "2024-06-15T01:57:01.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Teacher\\Views\\TeacherLesson\\Index.cshtml",
+              "RelativeDocumentMoniker": "Main\\Areas\\Teacher\\Views\\TeacherLesson\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Teacher\\Views\\TeacherLesson\\Index.cshtml",
+              "RelativeToolTip": "Main\\Areas\\Teacher\\Views\\TeacherLesson\\Index.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACEAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-15T01:46:07.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TeacherLessonDto.cs",
+              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Business\\DTOs\\Teacher\\TeacherLessonsDto\\TeacherLessonDto.cs",
+              "RelativeDocumentMoniker": "Business\\DTOs\\Teacher\\TeacherLessonsDto\\TeacherLessonDto.cs",
+              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Business\\DTOs\\Teacher\\TeacherLessonsDto\\TeacherLessonDto.cs",
+              "RelativeToolTip": "Business\\DTOs\\Teacher\\TeacherLessonsDto\\TeacherLessonDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T01:47:50.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TeacherLessonController.cs",
+              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Teacher\\Controllers\\TeacherLessonController.cs",
+              "RelativeDocumentMoniker": "Main\\Areas\\Teacher\\Controllers\\TeacherLessonController.cs",
+              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Teacher\\Controllers\\TeacherLessonController.cs",
+              "RelativeToolTip": "Main\\Areas\\Teacher\\Controllers\\TeacherLessonController.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAkwCAAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T01:46:09.892Z",
               "EditorCaption": ""
             }
           ]

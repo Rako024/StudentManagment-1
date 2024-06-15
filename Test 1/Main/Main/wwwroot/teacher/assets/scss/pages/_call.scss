@@ -1,0 +1,295 @@
+.voice-call-avatar {
+    flex: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    .call-avatar {
+        width: 150px;
+        height: 150px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background-color: $white;
+        @include margin-padding(3px,3px);
+        @include rounded(100%);
+        .username {
+            font-size: $font-size-18;
+            text-transform: uppercase;
+        }
+        .call-timing-count {
+            @include margin-padding(null, 5px);
+        }
+        @include respond-below(custom768) {
+            width: 120px;
+            height: 120px;
+        }
+    }
+}
+.call-users {
+    z-index: 99;
+    @include position(absolute,null,20px,20px,null);
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        li {
+            float: left;
+            width: 80px;
+            margin-left: 10px;
+            img {
+                background-color: $white;
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                @include rounded(6px);
+                @include margin-padding(null, 2px);
+            }
+            .call-mute {
+                width: 80px;
+                height: 80px;
+                background-color: rgba(0, 0, 0, 0.5);
+                text-align: center;
+                line-height: 80px;
+                font-size: $font-size-30;
+                color: $white;
+                display: none;
+                border: 3px solid transparent;
+                @include rounded(6px);
+                @include position(absolute,0,null,null,null);
+            }
+            a{
+                &:hover{
+                    .call-mute {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+.call-icons {
+    text-align: center;
+    position: relative;
+    .call-items {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        @include rounded(5px);
+        .call-item {
+            display: inline-block;
+            text-align: center;
+            margin-right: 5px;
+            a {
+                color: $secondary-600;
+                border: 1px solid $light;
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                display: inline-block;
+                font-size: $font-size-20;
+                @include rounded(50px);
+            }
+        }
+    }
+    .end-call {
+        @include position(absolute,7px,0,null,null);
+        @include respond-below(custom575) {
+            margin-top: 10px;
+            position: inherit;
+        }
+        a {
+            background-color: $danger-800;
+            color: $white;
+            display: inline-block;
+            line-height: 10px;
+            text-transform: uppercase;
+            @include margin-padding(null, 8px 25px);
+            @include rounded(50px);
+        }
+    }
+}
+.chat-sidebar {
+    .chats {
+        @include margin-padding(null,15px 15px 30px);
+    }
+    .chat-left {
+        .chat-avatar {
+            float: left;
+            .avatar {
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+            }
+        }
+        .chat-body {
+            @include margin-padding(0 0 0 50px, 0);
+        }
+    }
+}
+.user-video {
+    overflow: auto;
+    z-index: 10;
+    @include position(absolute,0,0,0,0);
+    img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        max-height: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+}
+.my-video {
+    z-index: 99;
+    @include position(absolute,null,20px,20px,null);
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        li {
+            float: left;
+            width: 120px;
+            margin-right: 10px;
+            @include respond-below(custom575) {
+                width: 80px;
+            }
+            img {
+                border: 3px solid $white;
+                @include rounded(6px);
+            }
+        }
+    }
+}
+.call-box {
+    display: block;
+    background: $primary;
+    background: linear-gradient(to right, $primary 0%, $pink 100%);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    overflow-y: auto;
+    overflow-x: hidden;
+    &.incoming-box{
+        .call-end,
+        .call-start{
+            margin: 0 10px !important;
+        }
+    }
+    .call-avatar{
+        height: 150px;
+        max-width: 150px;
+        min-width: 150px;
+        position: relative;
+        width: 100%;
+        @include rounded(100%);
+    }
+    .call-wrapper {
+        height: calc(100vh - 60px);
+        text-align: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        justify-content: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        .call-user {
+            margin-bottom: 50px;
+            h4 {
+                color: $white;
+            }
+            .call-box .call-wrapper .call-user span {
+                display: block;
+                color: $white;
+                font-weight: $font-weight-medium;
+                text-align: center;
+            }
+        }
+        .call-avatar {
+            cursor: pointer;
+            animation: ripple 2s infinite;
+            @include margin-padding(0 0 50px, null);
+            @include rounded(50%);
+        }
+        .call-items {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            justify-content: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            .call-item{
+                background-color: rgba(255, 255, 255, 0.2);
+                border: 1px solid transparent;
+                color: $white;
+                line-height: 0;
+                @include margin-padding(0 5px, 15px);
+                @include rounded(100%);
+                @include respond-below(custom575) {
+                    @include margin-padding(null, 10px);
+                }
+                &.call-start {
+                    background: $success;
+                    border: 1px solid $success;
+                    color: $white;
+                    line-height: 0;
+                    @include margin-padding(30px 20px 0, 20px);
+                    @include rounded(100%);
+                    @include respond-below(custom575) {
+                        @include margin-padding(null, 10px);
+                    }
+                }
+                &:first-child {
+                    margin-top: -30px;
+                }
+                &.call-end {
+                    background: $danger-800;
+                    border: 1px solid $danger-800;
+                    color: $white;
+                    line-height: 0;
+                    @include margin-padding(30px 20px 0, 20px);
+                    @include rounded(100%);
+                    @include respond-below(custom575) {
+                        @include margin-padding(0 10px, 10px);
+                    }
+                }
+                &:last-child {
+                    margin-top: -30px;
+                }
+            }
+        }
+    }
+}
+.leave-delete-btn {
+    font-weight: $font-weight-medium;
+    min-height: 30px;
+    @include margin-padding(0 0 0 10px, 2px 15px);
+}
+@-webkit-keyframes ripple {
+    0% {
+        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
+    }
+    100% {
+        -webkit-box-shadow: 0 0 0 50px rgba(0, 0, 0, 0);
+    }
+}
+@keyframes ripple {
+    0% {
+        -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
+    }
+100% {
+        -moz-box-shadow: 0 0 0 50px rgba(0, 0, 0, 0);
+        box-shadow: 0 0 0 50px rgba(0, 0, 0, 0);
+    }
+}

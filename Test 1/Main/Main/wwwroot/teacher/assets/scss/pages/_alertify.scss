@@ -1,0 +1,130 @@
+.alertify {
+	.ajs-footer {
+		border-top: 1px solid #eee;
+		.ajs-buttons {
+			.ajs-button {
+				font-weight: 500;
+				background-color: transparent;
+				color: #000;
+				border: 0;
+				font-size: 14px;
+				font-weight: 700;
+				text-transform: uppercase;
+				&.ajs-ok {
+					color: $primary;
+				}
+			}
+			&.ajs-primary {
+				text-align: right;
+			}
+		}
+	}
+	.ajs-body {
+		.ajs-content {
+			.ajs-input {
+				display: block;
+				width: 100%;
+				padding: 8px;
+				margin: 4px;
+				border-radius: 2px;
+				border: 1px solid #ccc;
+				&:focus-visible {
+					outline: 0;
+				}
+			}
+		}
+	}
+	.ajs-commands {
+		right: 4px;
+		left: auto;
+		margin: -14px 0 0 24px;
+	}
+	.ajs-header {
+		border-bottom: 1px solid #eee;
+	}
+}
+.alertify-notifier {
+	.ajs-message {
+		background-color: $primary;
+		border-color: $primary;
+		color: $white;
+		text-shadow: none!important;
+		&.ajs-success {
+			background-color: $success-900;
+			border-color: $success-900;
+		}
+		&.ajs-error {
+			background-color: $danger;
+			border-color: $danger;
+		}
+		&.ajs-warning {
+			background-color: #ffbf53;
+			border-color: #ffbf53;
+		}
+	}
+	&.ajs-right {
+		right: 10px;
+		left: auto;
+		.ajs-message {
+			right: -320px;
+			left: auto;
+			&.ajs-visible {
+				right: 290px;
+				left: auto;
+			}
+		}
+	}
+	&.ajs-left {
+		left: 10px;
+		right: auto;
+		.ajs-message {
+			left: -300px;
+			right: auto;
+			&.ajs-visible {
+				left: 0;
+				right: auto;
+			}
+		}
+	}
+}
+body[data-layout-mode=dark] {
+	.alertify {
+		.ajs-dialog {
+			background-color: #313533;
+		}
+		.ajs-body {
+			color: #adb5bd;
+			.ajs-content {
+				.ajs-input {
+					color: #adb5bd;
+					background-color: #363a38;
+					border: 1px solid #3b403d;
+				}
+			}
+		}
+		.ajs-footer {
+			.ajs-buttons {
+				.ajs-button {
+					color: #adb5bd;
+					&.ajs-ok {
+						color: $primary;
+					}
+				}
+			}
+		}
+	}
+}
+body[data-layout-mode=dark] .alertify .ajs-footer,
+body[data-layout-mode=dark] .alertify .ajs-header {
+	color: #ced4da;
+	background-color: #313533;
+	border-color: #3b403d;
+}
+.swal2-actions {
+	button {
+		margin-right: 10px;
+	}
+}
+.swal2-title {
+	font-size: 22px  !important;
+}

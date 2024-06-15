@@ -5,6 +5,7 @@
         Admin,
         Cordinator,
         Teacher,
-        Student
+        Student,
+        SuperAdmin
     }
 }

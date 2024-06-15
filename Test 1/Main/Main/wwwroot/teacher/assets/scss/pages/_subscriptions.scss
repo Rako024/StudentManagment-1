@@ -1,0 +1,21 @@
+.equal-height-cards{
+    .card {
+        height: 100%;
+    }
+    .pricing-box {
+        text-align: center;
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-align: left;
+            li {
+                line-height: 35px;
+                i {
+                    color: $success-900;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}

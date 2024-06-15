@@ -1,0 +1,55 @@
+.activity-box {
+    position: relative;
+    .activity-list {
+        list-style: none;
+        position: relative;
+        @include margin-padding(null, null);
+        &::before {
+            content: "";
+            width: 2px;
+            background: $light;
+            @include position(absolute,8px,null,0,23px);
+        }
+        li {
+            background-color: $white;
+            position: relative;
+            border: 1px solid $secondary-100;
+            @include box-shadow(null, 0, 1px, 1px, 0, rgba(0, 0, 0, .20));
+            @include margin-padding(0 0 10px,10px);
+            &::before {
+                background: $light;
+                bottom: 0;
+                content: "";
+                width: 2px;
+                @include position(absolute,12px,null,null,22px);
+            }
+            .activity-user {
+                height: 32px;
+                width: 32px;
+                @include margin-padding(0, 0);
+                @include position(absolute,12px, null,null,8px);
+                .avatar {
+                    height: 32px;
+                    line-height: 32px;
+                    width: 32px;
+                    @include margin-padding(0,null);
+                }
+            }
+            .activity-content {
+                position: relative;
+                @include margin-padding(0 0 0 40px, 0);
+                .timeline-content {
+                    color: $secondary-500;
+                    a {
+                        color: $secondary-700;
+                    }
+                }
+            }
+            .time {
+                color: $secondary-300;
+                display: block;
+                font-size: $font-size-13;
+            }
+        }
+    }
+}

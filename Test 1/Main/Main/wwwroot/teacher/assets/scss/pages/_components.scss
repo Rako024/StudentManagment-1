@@ -1,0 +1,114 @@
+.comp-section {
+    @include margin-padding(0 0 30px, 30px 0);
+    .section-title {
+        font-size:$font-size-18;
+        text-decoration: underline;
+        text-transform: uppercase;
+        @include margin-padding(0 0 20px, null);
+    }
+}
+.progress-example{
+    .progress {
+        margin-bottom: 1.5rem;
+        .progress-lg {
+            height: 18px;
+        }
+    }
+}
+.tab-content {
+    padding-top: 20px;
+}
+.page-title {
+    color: $secondary;
+    font-size: $font-size-26;
+    font-weight: $font-weight-medium;
+    margin-bottom: 5px;
+}
+.notification-list {
+    .status-toggle {
+        float: right;
+        .check {
+            display: block;
+            width: 0;
+            height: 0;
+            visibility: hidden;
+            opacity: 0;
+            pointer-events: none;
+            position: absolute;
+            @include margin-padding(0, 0);
+            &:checked{
+                & + .checktoggle {
+                    background-color: $success;
+                    &:after {
+                        left: 100%;
+                        @include transform(translate(calc(-100% - 5px), -50%));
+                    }
+                }
+            }
+           
+        }
+        .checktoggle {
+            background-color: $danger;
+            cursor: pointer;
+            display: block;
+            font-size: 0;
+            height: 24px;
+            margin-bottom: 0;
+            position: relative;
+            width: 48px;
+            @include rounded(12px);
+            &:after {
+                content: ' ';
+                display: block;
+                width: 16px;
+                height: 16px;
+                background-color: $white;
+                @include position(absolute,50%,null,null,0);
+                @include rounded(50%);
+                @include transform(translate(5px, -50%));
+                @include transition(all 0.2s ease);
+            }
+        }
+    }
+}
+textarea.form-control {
+    resize: vertical;
+}
+.switch {
+    cursor: pointer;
+    position: relative;
+    input {
+        position: absolute;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        &:checked{
+            &+span {
+                background-color: $success;
+                &:after {
+                    left: 31px;
+                }
+            }
+        }
+    }
+    span{
+        position: relative;
+        width: 60px;
+        height: 30px;
+        background-color: $white;
+        border: 1px solid $light-600;
+        border-color: rgba(0, 0, 0, 0.1);
+        display: inline-block;
+        @include transition(all 0.2s ease);
+        @include rounded(30px);
+        &:after {
+            content: "";
+            background-color: $white;
+            width: 20px;
+            height: 20px;
+            @include box-shadow(null, 1px, 1px, 3px, null, rgba(0, 0, 0, .25));
+            @include position(absolute,4px,null,1px,6px);
+            @include rounded(30px);
+            @include transition(all 0.2s ease);
+        }
+    }
+}

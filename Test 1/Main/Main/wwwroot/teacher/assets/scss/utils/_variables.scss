@@ -1,0 +1,289 @@
+// Base Font
+$font-size-base: 15px;
+$font-size-sm: $font-size-base * .875;
+$font-size-lg: $font-size-base * 1.25;
+$font-weight-lighter: lighter;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-bolder: bolder;
+
+// Font Family
+$font-family-primary:'CircularStd', sans-serif;
+$font-family-secondary: "Poppins", sans-serif;
+$font-awesome: "Fontawesome";
+	
+// Theme Colors Variables
+$primary: #FF902F;
+$primary-hover: darken($primary, 10%);
+$secondary: #212529;
+$secondary-hover: darken($secondary, 10%);
+$success: #55CE63;
+$success-hover: darken($success, 10%);
+$info: #009EFB;
+$info-hover: darken($info, 10%);
+$warning: #FFBC34;
+$warning-hover: darken($warning, 10%);
+$danger: #FC133D;
+$danger-hover: darken($danger, 10%);
+$blue: #00c5fb;
+$blue-hover: darken($blue, 10%);
+$maroon: #f43b48;
+$maroon-hover: darken($maroon, 10%);
+$violet: #667eea;
+$violet-hover: darken($violet, 10%);
+$dark: #29344a;
+$light: #D5D8DA;
+$white: #FFF;
+$black: #000;
+$purple: #9368E9;
+$pink: #FC6075;
+$teal: #02a8b5;
+$cyan: #299cdb;
+$green: #35BA67;
+$orange: #fbc418;
+$indigo: #4d5ddb;
+$yellow: #ffd200;
+
+// Primary
+$primary-100: #FFF5EC;
+$primary-200: #FFEBDA;
+$primary-300: #FFE1C7;
+$primary-400: #FFD7B4;
+$primary-500: #FFCDA2;
+$primary-600: #FFC38F;
+$primary-700: #FFB97C;
+$primary-800: #FFAF69;
+$primary-900: #FF8012;
+
+// Secondary
+$secondary-100: #E9E9EA;
+$secondary-200: #D3D3D4;
+$secondary-300: #BCBEBF;
+$secondary-400: #A6A8A9;
+$secondary-500: #909294;
+$secondary-600: #7A7C7F;
+$secondary-700: #646669;
+$secondary-800: #4D5154;
+$secondary-900: #373B3E;
+
+// Light
+$light-100: #FCFCFC;
+$light-200: #F9F9F9;
+$light-300: #F5F6F7;
+$light-400: #F2F3F4;
+$light-500: #EFF0F1;
+$light-600: #ECEDEE;
+$light-700: #E9EAEB;
+$light-800: #E5E7E9;
+$light-900: #E2E4E6;
+
+// Success
+$success-100: #EEFAEF;
+$success-200: #DDF5E0;
+$success-300: #CCF0D0;
+$success-400: #BBEBC1;
+$success-500: #AAE7B1;
+$success-600: #99E2A1;
+$success-700: #88DD92;
+$success-800: #77D882;
+$success-900: #66D373;
+
+// Danger
+$danger-100: #FEEAEE;
+$danger-200: #FDD5DC;
+$danger-300: #FCC0CB;
+$danger-400: #FBABB9;
+$danger-500: #FB96A8;
+$danger-600: #FA8197;
+$danger-700: #F96C85;
+$danger-800: #F85774;
+$danger-900: #F74262;
+
+// Info
+$info-100: #E6F5FF;
+$info-200: #CCECFE;
+$info-300: #B3E2FE;
+$info-400: #99D8FD;
+$info-500: #80CFFD;
+$info-600: #66C5FD;
+$info-700: #4DBBFC;
+$info-800: #33B1FC;
+$info-900: #1AA8FB;
+
+// Warning
+$warning-100: #FFF8EB;
+$warning-200: #FFF2D6;
+$warning-300: #FFEBC2;
+$warning-400: #FFE4AE;
+$warning-500: #FFDE9A;
+$warning-600: #FFD785;
+$warning-700: #FFD071;
+$warning-800: #FFC95D;
+$warning-900: #FFC348;
+
+// Purple
+$purple-100: #F4F0FD;
+$purple-200: #E9E1FB;
+$purple-300: #DFD2F8;
+$purple-400: #D4C3F6;
+$purple-500: #C9B4F4;
+$purple-600: #BEA4F2;
+$purple-700: #B395F0;
+$purple-800: #A986ED;
+$purple-900: #9E77EB;
+
+// Pink
+$pink-100: #FFEFF1;
+$pink-200: #FEDFE3;
+$pink-300: #FECFD6;
+$pink-400: #FEBFC8;
+$pink-500: #FEB0BA;
+$pink-600: #FDA0AC;
+$pink-700: #FD909E;
+$pink-800: #FD8091;
+$pink-900: #FF445D;
+
+$colors: (
+  "blue":       $blue,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "pink":       $pink,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "white":      $white,
+  "gray":       $secondary-600,
+  "gray-dark":  $secondary-800
+);
+
+$theme-colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "dark": $dark,
+    "light": $light,
+    "black": $black,
+    "purple": $purple,
+    "yellow": $yellow,
+    "teal": $teal
+);
+
+$text-color: #5B6670;
+$title-color: #373B3E;
+$sub-title: #4D5154;
+$body-bg: #f7f7f7;
+$body-dark-bg: #263238;
+$wrapper-bg: #f1f5f6;
+$text-muted: #9595b5;
+$black-bg: #16191c;
+$theme-title: #97A2D2;
+$input-bg: #2c2c50;
+$form-control-bg: #FFF;
+$default-background: #f7f8f9;
+
+// Social Icons Colors
+$facebook: #3B5998;
+$twitter: #00ACEE;
+$google: #DD4B39;
+$telegram: #0088CC;
+$linkedin: #0E76A8;
+$youtube: #C4302B;
+$instagram: #3F729B;
+$reddit: #C6C6C6;
+$pinterest: #cc2127;
+$vk: #2B587A;
+$rss: #EE802F;
+$skype: #00AFF0;
+$xing: #126567;
+$tumblr: #34526F;
+$email: #6567A5;
+$delicious: #205CC0;
+$stumbleupon: #F74425;
+$digg: #191919;
+$blogger: #FC4F08;
+$flickr: #FF0084;
+$vimeo: #86C9EF;
+$yahoo: #720E9E;
+$gplus: #DD4B39;
+$appstore: #000;
+
+// Gradient Variables
+$primary-gradient: linear-gradient(90.31deg, $primary -1.02%, #FF2D3D 132.59%);
+$blue-gradient: linear-gradient(to right, $blue 0%, #0253cc 100%);
+$maroon-gradient: linear-gradient(to right, $maroon 0%, #453a94 100%);
+$violet-gradient: linear-gradient(to right, $violet 0%, #764ba2 100%);
+
+// Style Anchor Elements
+$link-color: $primary;
+$link-decoration: none;
+$link-shade-percentage: 20%;
+$link-hover-color: darken($link-color, 10%);
+$link-hover-decoration: null;
+$spacer: 1rem;
+
+// Border
+$border-width: 1px;
+$border-style: solid;
+$border-color: $secondary-200;
+$default-border: $secondary-400;
+$dark-border: #2e3840;
+$input-border: #e9edf6;
+
+// Border Radius
+$border-radius: 4px;
+$border-radius-sm: 3px;
+$border-radius-lg: 5px;
+$border-radius-xl: 8px;
+$border-radius-xxl: 12px;
+$rounded: 50%;
+$rounded-pill: 1.5rem;
+
+// Box Shadow
+$box-shadow: rgba(255, 255, 255, 0.15);
+$box-shadow-sm: rgba(255, 255, 255, 0.7);
+$box-shadow-lg: 0px 4px 24px 0px #BCBCBC40;
+
+// Font Size
+$font-size-8: 8px;
+$font-size-9: 9px;
+$font-size-10: 10px;
+$font-size-11: 11px;
+$font-size-12: 12px;
+$font-size-13: 13px;
+$font-size-14: 14px;
+$font-size-15: 15px;
+$font-size-16: 16px;
+$font-size-17: 17px;
+$font-size-18: 18px;
+$font-size-19: 19px;
+$font-size-20: 20px;
+$font-size-22: 22px;
+$font-size-23: 23px;
+$font-size-24: 24px;
+$font-size-26: 26px;
+$font-size-28: 28px;
+$font-size-30: 30px;
+$font-size-32: 32px;
+$font-size-34: 34px;
+$font-size-36: 36px;
+$font-size-40: 40px;
+$font-size-42: 42px;
+$font-size-48: 48px;
+$font-size-50: 50px;
+$font-size-54: 54px;
+$font-size-60: 60px;
+
+$h1-fs: 2rem;
+$h2-fs: 1.75rem;
+$h3-fs: 1.5rem;
+$h4-fs: 1.25rem;
+$h5-fs: 1.15rem;
+$h6-fs: 1rem;

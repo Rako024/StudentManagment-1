@@ -1,0 +1,326 @@
+.file-wrap {
+    border: 1px solid $secondary-100;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    position: relative;
+    &.file-sidebar-toggle{
+        .file-sidebar{
+            display: none;
+            @include respond-below(custom991) {
+                left: 0;
+                display: block;
+            }
+        }
+        .file-cont-wrap{
+            margin: 0;
+        }
+    }
+    .file-sidebar {
+        border-right: 1px solid $secondary-100;
+        z-index: 5;
+        width: 300px;
+        @include position(absolute,null,null,null,0);
+        @include transition(all 0.3s ease);
+        @include respond-below(custom991) {
+            @include position(absolute,null,null,null,-331px);
+        }
+        .file-header {
+            background-color: $white;
+            border-bottom: 1px solid $secondary-100;
+            color: $secondary-500;
+            height: 72px;
+            @include margin-padding(null, 0 15px);
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            justify-content: space-between;
+            -webkit-justify-content: space-between;
+            -ms-flex-pack: space-between;
+            span {
+                font-size: $font-size-20;
+                font-weight: $font-weight-semibold;
+                text-transform: capitalize;
+            }
+            .file-side-close {
+                display: none;
+                background-color: $light-600;
+                border: 1px solid $light-900;
+                border-radius: 24px;
+                color: $secondary-300;
+                font-size: $font-size-14;
+                line-height: 24px;
+                min-height: 26px;
+                text-align: center;
+                width: 26px;
+                @include position(absolute,null,15px,null,null);
+                @include respond-below(custom991) {
+                    display: block; 
+                }
+            }
+        }
+        .file-search {
+            background-color: $light-300;
+            border-bottom: 1px solid $secondary-100;
+            @include margin-padding(null, 10px 15px);
+            width:100%;
+            .input-group {
+                width:100%;
+                .form-control {
+                    background-color: $white;
+                    @include rounded(50px);
+                    padding-left: 36px;
+                }
+                .input-group-text {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    align-items: center;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    color: $secondary-700;
+                    pointer-events: none;
+                    z-index: 4;
+                    @include position(absolute,0,null,0,0);
+                    border: 0;
+                    background: transparent;
+                }
+            }
+        }
+        .file-pro-list {
+            background-color: $white;
+            @include margin-padding(null, 15px);
+            .file-scroll {
+                max-height: calc(100vh - 259px);
+                min-height: 497px;
+                overflow-y: auto;
+                .file-menu {
+                    display: inline-block;
+                    @include margin-padding(0 0 10px, 0);
+                    width:100%;
+                    li {
+                        display: inline-block;
+                        width:100%;
+                        &.active,&:hover{
+                            background: rgba(33, 33, 33, 0.05);
+                        }
+                        a {
+                            color: $secondary-900;
+                            display: inline-block;
+                            width:100%;
+                            text-transform: capitalize;
+                            @include margin-padding(null, 10px 15px);
+                            @include transition(all 0.2s ease);
+                        }
+                        + li {
+                            margin-top: 2px;
+                        }
+                    }
+                }
+                .show-more {
+                    text-align: center;
+                    a {
+                        position: relative;
+                        @include margin-padding(null, 0 20px 0 15px);
+                        &:before {
+                            content: '\f107';
+                            font-size: $font-size-18;
+                            line-height: inherit;
+                            font-family: 'FontAwesome';
+                            @include transform(translateY(-50%));
+                            @include position(absolute,50%,0,null,null);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.file-cont-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 300px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    @include transition(all 0.3s ease);
+    @include respond-below(custom991) {
+        margin:0;
+    }
+    .file-cont-inner {
+        flex: 0 0 100%;
+        max-width:100%;
+        .file-cont-header {
+            background: $white;
+            border-bottom: 1px solid $secondary-100;
+            height: 72px;
+            @include margin-padding(null, 0 15px);
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            justify-content: space-between;
+            -webkit-justify-content: space-between;
+            -ms-flex-pack: space-between;
+            .file-options {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                a{
+                    color: $secondary-900;
+                }
+            }
+            span {
+                color: $secondary-900;
+                font-size: $font-size-20;
+                font-weight: $font-weight-semibold;
+            }
+            .file-options {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+            }
+            .btn-file{
+                display: inline-block;
+                overflow: hidden;
+                position: relative;
+                vertical-align: middle;
+                input {
+                    cursor: pointer;
+                    direction: ltr;
+                    filter: alpha(opacity=0);
+                    font-size: $font-size-23;
+                    height: 100%;
+                    margin: 0;
+                    opacity: 0;
+                    @include position(absolute,0,0,null,null);
+                    width:100%;
+                }
+            }
+        }
+    }
+}
+.file-content {
+    flex: 0 0 100%;
+    max-width:100%;
+    .file-search {
+        background-color: $light-300;
+        border-bottom: 1px solid $secondary-100;
+        width:100%;
+        @include margin-padding(null, 10px 15px);
+        .input-group-text {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            bottom: 0;
+            color: $secondary-700;
+            pointer-events: none;
+            z-index: 4;
+            @include position(absolute,0,null,null,0px);
+            border: 0;
+            background: transparent;
+        }
+        .form-control {
+            background-color: $white;
+            padding-left: 36px;
+            @include rounded(50px);
+        }
+    }
+    .file-body {
+        background-color: $light-300;
+        .file-scroll {
+            max-height: calc(100vh - 259px);
+            min-height: 497px;
+            overflow-y: auto;
+            .file-content-inner {
+                @include margin-padding(null, 15px);
+                width:100%;
+                .card-file {
+                    @include margin-padding(null, 10px);
+                    position: relative;
+                    @include transition(all 0.2s ease);
+                    .card-body {
+                        @include margin-padding(null, 15px 0 0);
+                    }
+                    .dropdown-file {
+                        @include position(absolute,10px,10px,null,null);
+                        .dropdown-link {
+                            color: $secondary-600;
+                            width: 24px;
+                            height: 24px;
+                            display: -webkit-inline-box;
+                            display: -ms-inline-flexbox;
+                            display: inline-flex;
+                            align-items: center;
+                            -webkit-box-align: center;
+                            -ms-flex-align: center;
+                            justify-content: center;
+                            -webkit-justify-content: center;
+                            -ms-flex-pack: center;
+                        }
+                        .dropdown-menu {
+                            border: 1px solid rgba(0, 0, 0, 0.1);
+                            box-shadow: inherit;
+                            background-color: $white;
+                            font-size: $font-size-13;
+                            @include transform-origin(left top 0);
+                            @include rounded(3px);
+                        }
+                    }
+                    .card-file-thumb {
+                        background-color: $light-300;
+                        color: $secondary-600;
+                        font-size: $font-size-48;
+                        height: 120px;
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        align-items: center;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        justify-content: center;
+                        -webkit-justify-content: center;
+                        -ms-flex-pack: center;
+                    }
+                    h6 {
+                        margin-bottom: 0;
+                        font-size: $font-size-14;
+                        a {
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            display: block;
+                            width:100%;
+                            color: $secondary-900;
+                        }
+                    }
+                    span {
+                        font-size: $font-size-12;
+                        color: $secondary-600;
+                    }
+                }
+                .card-footer {
+                    font-size: $font-size-11;
+                    color: $secondary-400;
+                    border-top-width: 0;
+                    background-color: transparent;
+                    @include margin-padding(null, 10px 0 0);
+                    span {
+                        font-size: $font-size-12;
+                        color: $secondary-600;
+                    }
+                }
+            }
+        }
+    }
+}

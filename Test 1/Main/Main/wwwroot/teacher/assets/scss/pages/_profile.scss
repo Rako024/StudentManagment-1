@@ -1,0 +1,221 @@
+.profile-view {
+    position: relative;
+    .profile-img-wrap {
+        height: 120px;
+        width: 120px;
+        position: absolute;
+        @include respond-below(custom575) {
+            position: relative;
+            margin: 0 auto;
+        }
+        img {
+           @include rounded(50%);
+            height: 120px;
+            width: 120px;
+        }
+    }
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+    .profile-basic {
+        margin-left: 140px;
+        padding-right: 50px;
+        @include respond-below(custom575) {
+            margin-left: 0;
+            padding-right: 0;
+        }
+        .profile-info-left {
+            border-right: 2px dashed $secondary-200;
+            @include respond-below(custom575) {
+                text-align: center;
+                @include margin-padding(null,15px 0);
+            }
+            @include respond-below(custom768) {
+                border-right: none;
+                border-bottom: 2px dashed $secondary-200;
+                @include margin-padding(0 0 20px, 0 0 20px);
+            }
+            .user-name {
+                color: $secondary-900;
+            }
+            .staff-id {
+                font-size: $font-size-14;
+                font-weight: $font-weight-medium;
+                margin-top: 5px;
+            }
+            .staff-msg {
+                margin-top: 30px;
+                .btn-custom {
+                    background: $primary;
+                    background: linear-gradient(to right, $primary 0%, $pink 100%);
+                    color: $white;
+                    &:hover {
+                        border-color: $primary;
+                    }
+                }
+            }
+        }
+    }
+    .pro-edit {
+        @include position(absolute,0,0,null,null);
+    }
+}
+.profile-action{
+    .dropdown-toggle{
+        &:after{
+            display: none;
+        }
+    }
+}
+.edit-icon {
+    background-color: $light-600;
+    border: 1px solid $light-900;
+    color: $secondary-300;
+    float: right;
+    font-size: $font-size-12;
+    line-height: 24px;
+    min-height: 26px;
+    text-align: center;
+    width: 26px;
+    @include rounded(24px);
+}
+.personal-info {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        @include respond-below(custom991) {
+            width:100%;
+        }
+        margin-bottom: 10px;
+        .title {
+            color: $secondary-900;
+            float: left;
+            font-weight: $font-weight-medium;
+            width: 30%;
+            @include respond-below(custom575) {
+                width: 50%;
+                margin: 0;
+            }
+        }
+        .text {
+            color: $secondary-600;
+            display: block;
+            overflow: hidden;
+            width: 70%;
+            float:left;
+            .avatar-box {
+                float: left;
+                position: relative;
+                .avatar-xs {
+                    line-height: normal;
+                }
+            }
+        }
+    }
+}
+.delete-icon {
+    color: $danger;
+    float: right;
+    font-size: $font-size-18;
+}
+.experience-box {
+    position: relative;
+    .experience-list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        position: relative;
+        &::before {
+            background: $light;
+            bottom: 0;
+            content: "";
+            width: 2px;
+            @include position(absolute,8px,null,null,8px);
+        }
+        li {
+            position: relative;
+            .experience-user {
+                background: $white;
+                height: 10px;
+                width: 10px;
+                @include margin-padding(0, 0);
+                @include position(absolute,4px,null,null,4px);
+                .before-circle {
+                    background-color: $light;
+                   @include rounded(50%);
+                    height: 10px;
+                    width: 10px;
+                }
+            }
+            .experience-content {
+                background-color: $white;
+                @include margin-padding(0 0 20px 40px, 0);
+                position: relative;
+                .timeline-content {
+                    color: $secondary-500;
+                    a.name {
+                        color: $secondary-700;
+                        font-weight: $font-weight-bold;
+                    }
+                }
+                .time {
+                    color: $secondary-300;
+                    display: block;
+                    font-size: $font-size-12;
+                    line-height: 1.35;
+                }
+            }
+        }
+    }
+}
+.submit-btn {
+    font-size: $font-size-18;
+    font-weight: $font-weight-semibold;
+    min-width: 200px;
+    @include margin-padding(null, 10px 20px);
+    @include rounded(50px);
+}
+.profile-img-wrap {
+    height: 120px;
+    position: absolute;
+    width: 120px;
+    background: $white;
+    overflow: hidden;
+    @include respond-below(custom575) {
+        position: relative;
+        @include margin-padding(0 auto, null);
+    }
+    &.edit-img {
+       @include rounded(50%);
+        margin: 0 auto 30px;
+        position: relative;
+    }
+    img {
+       @include rounded(50%);
+        height: 120px;
+        width: 120px;
+    }
+    .fileupload {
+        background: rgba(33, 33, 33, 0.5);
+        border: none;
+        @include margin-padding(null, 3px 10px);
+        @include rounded(0);
+        @include position(absolute,null,0,0,0);
+        .btn-text {
+            color: $white;
+        }
+        .upload {
+            cursor: pointer;
+            filter: alpha(opacity=0);
+            font-size: $font-size-20;
+            opacity: 0;
+            @include margin-padding(0, 5px);
+            @include position(absolute,-3px,-3px,null,null);
+        }
+    }
+}

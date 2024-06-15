@@ -1,0 +1,16 @@
+.payslip-title {
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    @include margin-padding(0 0 20px, null);
+}
+.inv-logo {
+    height: auto;
+    max-height: 100px;
+    width: auto;
+    @include margin-padding(0 0 20px, null);
+}
+.invoice-details{
+    float: right;
+    text-align: right;
+}

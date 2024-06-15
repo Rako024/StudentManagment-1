@@ -1,0 +1,563 @@
+.tag-with-img {
+    .bootstrap-tagsinput {
+        .label-info {
+            border: 1px solid $secondary-200;
+            padding: 5px 10px 5px 30px;
+            position: relative;
+            &::before {
+                content: "";
+                background-image: url(../img/icons/tag-user-icon.svg);
+                background-repeat: no-repeat;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                position: absolute;
+                left: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}
+.header-collapse {
+    .header {
+        width: 250px;
+        z-index: 10;
+    }
+    .page-wrapper {
+        padding-top: 0;
+    }
+}
+[data-layout=horizontal] body {
+    &.header-collapse {
+        .header {
+            display: none;
+        }
+        .page-wrapper {
+            padding-top: 50px;
+        }
+        .sidebar, .two-col-bar {
+            top: 0;
+        }
+    }
+}
+@include respond-below(custom991) {
+    #collapse-header {
+        display: none;
+    }
+}
+.delete-modal-row {
+    display: block;
+    color: $danger;
+    font-size: $font-size-20;
+    margin-left: 24px;
+}
+.add-modal-row {
+    display: block;
+    color: $primary;
+    font-size: $font-size-20;
+    margin-left: 24px;
+}
+.custom-filter-row {
+    .custom-col {
+        width: 20%;
+        @include respond-below(custom1199) {
+            width: 100%;
+        }
+    }
+
+}
+.pipeline-progress {
+    .progress {
+        background: transparent;
+        width: 70px;
+        height: 5px;
+        .progress-bar {
+            width: 70px;
+            height: 5px;
+            border-radius: 5px;
+            &.progress-bar-success {
+                background: $success;
+            }
+            &.progress-bar-violet {
+                background: $purple;
+            }
+            &.progress-bar-info {
+                background: $info;
+            }
+            &.progress-bar-warning {
+                background: $warning;
+            }
+            &.progress-bar-pink {
+                background: $pink;
+            }
+            &.progress-bar-danger {
+                background: $danger;
+            }
+        }
+    }
+    span {
+        margin-left: 10px;
+    }
+}
+.pipeline-modal-head {
+    h4 {
+        font-size: $font-size-16;
+        color: $black;
+        margin-bottom: 0;
+    }
+}
+.pipeline-stages {
+    margin-bottom: 15px;
+    li {
+        border: 1px solid $secondary-200;
+        padding: 15px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        p {
+            margin-bottom: 0;
+            color: $secondary-900;
+            i {
+                color: $secondary-200;
+            }
+        }
+        .edit-delete-stage {
+            a {
+                color: $secondary-800;
+                position: relative;
+                &.edit-stage {
+                    margin-right: 5px;
+                    padding-right: 5px;
+                    &:after {
+                        content: "";
+                        height: 10px;
+                        width: 2px;
+                        background: $secondary-200;
+                        position: absolute;
+                        right: -4px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+            
+        }
+    }
+}
+.person-selected {
+    li {
+        border: 1px solid $secondary-200;
+        padding: 15px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        a {
+            display: block;
+        }
+        .profile-pic {
+            color: $secondary-900;
+            img {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                margin-right: 15px;
+               
+            }
+        }
+    }
+}
+.activity-badge {
+    padding: 5px 10px;
+    display: inline-flex;
+    align-items: center;
+    font-size: $font-size-14;
+    i {
+        margin-right: 5px;
+    }
+    &.badge-bg-violet {
+        background: $purple-100;
+        color: $purple;
+    }
+    &.badge-bg-success {
+        background: $success-100;
+        color: $success;
+    }
+    &.badge-bg-info {
+        background: $info-100;
+        color: $info;
+    }
+    &.badge-bg-warning {
+        background: $warning-100;
+        color: $warning;
+    }
+}
+.activity-filter-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    @include respond-below(custom767) {
+        flex-direction: column;
+        align-items: start;
+    }
+}
+.all-activity-head {
+    display: flex;
+    align-items: center;
+    @include respond-below(custom767) {
+        margin-bottom: 20px;
+    }
+    h5 {
+        font-size: $font-size-18;
+        margin-bottom: 0;
+        flex-shrink: 0;
+        margin-right: 15px;
+    }
+    .activity-list {
+        display: flex;
+        align-items: center;
+        li {
+            a {
+                width: 30px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid $light-900;
+                border-radius: 5px;
+                background: $white;
+                color: $secondary-800;
+            }
+            + li {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+.activity-date-picker {
+    .cal-icon {
+        &::after {
+            content: "\f274";
+            right: unset;
+            left: 10px;
+        }
+        input {
+            padding-left: 30px;
+        }
+        &.time-icon {
+            &::after {
+                content: "\f017";
+            }
+        }
+        &.reminder {
+            &::after {
+                content: "\f0f3";
+            }
+        }
+    }
+}
+.input-block {
+    .use-before {
+        flex-shrink: 0;
+        margin-left: 24px;
+    }
+}
+.new-delete-icon {
+    color: $danger;
+    margin-left: 24px;
+    font-size: $font-size-20;
+    &:hover {
+        color: $danger;
+    }
+}
+.table-responsive {
+    .pagination {
+        li {
+            margin-right: 0;
+            a {
+                color: $secondary-900;
+            }
+        }
+    }
+}
+.users-profile {
+    .company-icon {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $light-900;
+        border-radius: 50%;
+        margin-right: 8px;
+    }
+}
+.users-group {
+    ul {
+        display: flex;
+        align-items: center;
+        li {
+            a {
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                border: 1px solid $white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                line-height: normal;
+                margin-left: -11px;
+                img {
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                }
+                &.total-group-member {
+                    background: $primary;
+                    color: $white;
+                    font-size: $font-size-10;
+                }
+                &:hover {
+                    position: relative;
+                }
+            }
+            &:first-child {
+                a {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+.load-more-btn {
+    a {
+        display: inline-flex;
+        align-items: center;
+        i {
+            border-width: 2px;
+            color: $white;
+            width: 16px;
+            height: 16px;
+            margin-left: 5px;
+        }
+    }
+}
+.kanban-wrapper {
+    margin-top: 24px;
+    display: flex;
+    overflow-x: auto;
+    align-items: self-start;
+    .kanban-list-items {
+        border: 1px solid $secondary-200;
+        border-radius: 5px;
+        background: $light-300;
+        padding: 15px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        &:last-child {
+            margin-right: 0;
+        }
+        .kanban-list-head {
+            background: $white;
+            padding: 15px;
+            border-radius: 5px;
+            min-width: 285px;
+            .action-icon {
+                &::after {
+                    display: none;
+                }
+            }
+            .kanban-title-head {
+                h5 {
+                    color: $secondary-900;
+                    font-size: $font-size-18;
+                    margin-bottom: 5px;
+                    position: relative;
+                    padding-left: 15px;
+                    &:before {
+                        content: "";
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 10px;
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+                span {
+                    font-size: $font-size-14;
+                    color: $sub-title;
+                }
+                &.dot-success {
+                    h5 {
+                        &:before {
+                            background: $success;
+                        }
+                    }
+                }
+                &.dot-info {
+                    h5 {
+                        &:before {
+                            background: $info;
+                        }
+                    }
+                }
+                &.dot-warning {
+                    h5 {
+                        &:before {
+                            background: $warning;
+                        }
+                    }
+                }
+                &.dot-purple {
+                    h5 {
+                        &:before {
+                            background: $purple;
+                        }
+                    }
+                }
+                &.dot-danger {
+                    h5 {
+                        &:before {
+                            background: $danger;
+                        }
+                    }
+                }
+            }
+            
+            .kanban-action-btns {
+                .plus-btn {
+                    margin-right: 10px;
+                }
+            }
+        }
+        .kanban-drag-wrap {
+            padding-top: 24px;
+        }
+    }
+}
+.kanban-card {
+    background: $white;
+    box-shadow: 0px 4px 24px 0px #BCBCBC40;
+    border: 1px solid $secondary-200;
+    border-radius: 5px;
+    padding: 15px;
+    min-width: 285px;
+    margin-bottom: 15px;
+    .kanban-card-head {
+        .bar-design {
+            display: block;
+            width: 100%;
+            height: 4px;
+            &.bg-purple {
+                background: $purple;
+            }
+        }
+        .kanban-card-title {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            span {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                flex-shrink: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: $font-size-16;
+                color: $secondary-900;
+                margin-right: 8px;
+            }
+            h6 {
+                font-size: $font-size-14;
+                max-width: 143px;
+            }
+        }
+    }
+    .kanban-card-body {
+        ul {
+            margin-bottom: 15px;
+            li {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                color: $secondary-800;
+                i {
+                    margin-right: 5px;
+
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .card-user-info {
+            .user-name {
+                color: $secondary-800;
+            }
+        }
+    }
+    .kanban-card-footer {
+        border-top: 1px solid $secondary-200;
+        margin-top: 15px;
+        padding-top: 15px;
+        ul {
+            display: flex;
+            align-items: center;
+            li {
+                a {
+                    width: 24px;
+                    height: 24px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    color: $title-color;
+                    &:hover {
+                        background: $light-900;
+                    }
+                }
+            }
+        }
+    }
+}
+.kanban-drag-wrap {
+    > li {
+        &:last-child {
+            .kanban-card {
+                margin-bottom: 0;
+            }
+        }
+       
+    }
+}
+.leads-kanban-wrapper {
+    .kanban-card {
+        .kanban-card-head {
+            .kanban-card-title {
+                span {
+                    background: $secondary-100;
+                }
+            }
+        }
+        .kanban-card-footer {
+            span {
+                width: 32px;
+                height: 32px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid $light-900;
+                border-radius: 50%;
+            }
+        }
+    }
+}

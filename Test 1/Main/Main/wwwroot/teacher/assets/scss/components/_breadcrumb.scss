@@ -1,0 +1,253 @@
+.breadcrumb {
+    background-color: transparent;
+    color: $sub-title;
+    font-size: $font-size-16;
+    font-weight: $font-weight-medium;
+    @include margin-padding(0, 0);
+    @include respond-below(custom575) {
+        display: none;
+    }
+	.breadcrumb-item {
+		&.active {
+			color: $primary;
+		}
+	}
+
+    a{
+        color: $secondary-900;
+    }
+    .breadcrumb-item{
+        a {
+            color: $secondary-900;
+        }
+        +.breadcrumb-item{
+            &::before {
+                float: left;
+                padding-right: 0.5rem;
+                color: $sub-title;
+                content: "/"
+            }
+        }
+    }
+}
+.comp-section{
+    @include margin-padding(0, 10px 0);
+    .btn {
+        @include margin-padding(0 0 5px, null);
+    }
+    .breadcrumb {
+        @include respond-below(custom575) {
+            display: flex;
+        }
+    }
+}
+.breadcrumb-line {
+	.breadcrumb-item {
+		&:before {
+			content: "-";
+		}
+		&:first-child {
+			&:before {
+				content: "";
+			}
+		}
+	}
+}
+.breadcrumb-dot {
+	.breadcrumb-item {
+		&:before {
+			content: "•";
+		}
+		&:first-child {
+			&:before {
+				content: "";
+			}
+		}
+	}
+}
+.breadcrumb-separatorless {
+	.breadcrumb-item {
+		&:before {
+			content: "";
+		}
+	}
+}
+.breadcrumb{
+	margin: 0;
+}
+.breadcrumb-colored {
+	@include margin-padding(0 0 10px, 12px 16px);
+	@include rounded(4px);
+	li {
+		a {
+			color: $white;
+		}
+	}
+	.breadcrumb-item {
+		&.active {
+			color: $white;
+			opacity: 0.8;
+		}
+		& + .breadcrumb-item {
+			&::before {
+				color: $white;
+			}
+		}
+	}
+}
+.twitter-bs-wizard-pager-link {
+	display: inline-block;
+}
+.page-header {
+    h5 {
+        color: #1f1f1f;
+        font-size: 26px;
+        font-weight: 500;
+        margin-bottom: 0px;
+    }
+}
+.breadcrumb-arrow {
+	.breadcrumb-item+.breadcrumb-item::before {
+	  color: #9595b5;
+	  content: "\f101";
+	  font-family: "Fontawesome" !important;
+	}
+}
+.breadcrumb-pipe {
+	.breadcrumb-item+.breadcrumb-item::before {
+		color: #9595b5;
+	  content: "\f061";
+	  font-family: "Fontawesome" !important;
+	}
+}
+.breadcrumb-line {
+	.breadcrumb-item+.breadcrumb-item::before {
+		color: #9595b5;
+		content: "-";
+	}
+}
+.breadcrumb-dot {
+	.breadcrumb-item+.breadcrumb-item::before {
+		color: #9595b5;
+	  content: "•";
+	}
+  }
+.breadcrumb-divide {
+	.breadcrumb-item+.breadcrumb-item::before {
+		color: #9595b5;
+		content: "\f054";
+		font-family: "Fontawesome" !important;
+	}
+}
+.breadcrumb-separatorless {
+	.breadcrumb-item+.breadcrumb-item::before {
+	  content: "";
+	  display: none;
+	}
+}
+.bg-soft-primary {
+    background-color: rgba($primary,0.3);
+    color: $primary;
+	li {
+		i {
+			color: $white;
+		}
+		a {
+			color: $white !important; 
+		}
+	}
+}
+.bg-soft-primary {
+    background-color: rgba($primary,0.3);
+    color: $primary;
+	li {
+		i {
+			color: $white;
+		}
+		a {
+			color: $white !important; 
+		}
+	}
+}
+.bg-soft-secondary {
+    background-color: rgba($secondary,0.3);
+    color: $secondary;
+	li {
+		i {
+			color: $white;
+		}
+		a {
+			color: $white !important; 
+		}
+	}
+}
+.bg-soft-warning {
+    background-color: rgba($warning,0.3);
+    color: $warning;
+	li {
+		i {
+			color: $white;
+		}
+		a {
+			color: $white !important; 
+		}
+	}
+}
+.bg-soft-success {
+    background-color: rgba($success,0.3);
+    color: $success;
+	li {
+		i {
+			color: $white;
+		}
+		a {
+			color: $white !important; 
+		}
+	}
+}
+.bg-soft-danger {
+    background-color: rgba($danger,0.3);
+    color: $warning;
+	li {
+		i {
+			color: $white;
+		}
+		a {
+			color: $white !important; 
+		}
+	}
+}
+.bg-soft-info {
+    background-color: rgba($info,0.3);
+    color: $info;
+	li {
+		i {
+			color: $white;
+		}
+		a {
+			color: $white !important; 
+		}
+	}
+}
+.bg-soft-dark {
+    background-color: rgba($black,0.3);
+    color: $black;
+	li {
+		i {
+			color: $white;
+		}
+		a {
+			color: $white !important; 
+		}
+	}
+}
+.colored-breadcrumb {
+	.breadcrumb-item {
+		a {
+			color: $white;
+			i {
+				color: $white;
+			}
+		}
+	}
+}

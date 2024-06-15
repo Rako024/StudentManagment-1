@@ -1,0 +1,153 @@
+$breakpoints: (
+  xs: 320px,
+  sm: 568px,
+  md: 768px,
+  custom575: 575px,
+  custom767: 767px,
+  custom768: 768px,
+  custom991: 991px,
+  custom992: 992px,
+  custom1199: 1199px,
+  custom1399: 1399px,
+);
+
+// Respond above.
+@mixin respond-above($breakpoint) {
+
+  // If the breakpoint exists in the map.
+  @if map-has-key($breakpoints, $breakpoint) {
+
+    // Get the breakpoint value.
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    // Write the media query.
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+
+  // If the breakpoint doesn't exist in the map.
+  } @else {
+
+    // Log a warning.
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+// Respond above.
+@mixin respond-below($breakpoint) {
+
+  // If the breakpoint exists in the map.
+  @if map-has-key($breakpoints, $breakpoint) {
+
+    // Get the breakpoint value.
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    // Write the media query.
+    @media (max-width: $breakpoint-value) {
+      @content;
+    }
+
+  // If the breakpoint doesn't exist in the map.
+  } @else {
+
+    // Log a warning.
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+@mixin transform($property) {
+  transform: $property;
+  -webkit-transform: $property;
+  -ms-transform: $property;
+}
+
+// Define vertical, horizontal, or both position
+@mixin position-alignment($position) {
+  position: absolute;
+    @if $position == 'vertical' {
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+    @else if $position == 'horizontal' {
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translate(-50%);
+    }
+    @else if $position == 'both' {
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+}
+
+@mixin transition($property) {
+  -webkit-transition: $property;
+  -ms-transition: $property;
+  transition: $property;
+}
+
+@mixin background-properties($cover:cover,$no-repeat:no-repeat,$center:center){
+  background-size:$cover;
+  background-repeat:$no-repeat;
+  background-position:$center;
+}
+
+@mixin position($position-value,$top-value,$right-value,$bottom-value,$left-value){
+  position: $position-value;
+  top: $top-value;
+  right: $right-value;
+  bottom: $bottom-value;
+  left: $left-value;
+}
+
+@mixin margin-padding($margin, $padding) {
+   margin: $margin;
+   padding:$padding;
+}
+
+@mixin placeholder-color($color) {
+  &::-webkit-input-placeholder { /* WebKit browsers */
+      color: $color;
+      opacity: 1;
+  }
+  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: $color;
+      opacity: 1;
+  }
+  &::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: $color;
+      opacity: 1;
+  }
+  &:-ms-input-placeholder { /* Internet Explorer 10+ */
+      color: $color;
+      opacity: 1;
+  }
+}
+
+@mixin rounded($unit) {
+  border-radius: $unit;
+}
+
+@mixin transform-origin($property) {
+  transform-origin: $property;
+  -webkit-transform-origin: $property;
+  -ms-transform-origin: $property;
+}
+
+@mixin box-shadow($inset:inset,$horizontaloffset:10px,$verticaloffset:10px,$blur:10px,$spread:10px,$color: #000000) {
+  -webkit-box-shadow: $inset $horizontaloffset $verticaloffset $blur $spread $color;
+  -moz-box-shadow: $inset $horizontaloffset $verticaloffset $blur $spread $color;
+  box-shadow: $inset $horizontaloffset $verticaloffset $blur $spread $color;
+}
+
+%animation-effect {   
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}

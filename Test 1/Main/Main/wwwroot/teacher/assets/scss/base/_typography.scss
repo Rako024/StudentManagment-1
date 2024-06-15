@@ -1,0 +1,174 @@
+@font-face {
+	font-family: 'Material Icons';
+	font-style: normal;
+	font-weight: 400;
+	src: url(../fonts/MaterialIcons-Regular.eot);
+	src: local('Material Icons'),
+	local('MaterialIcons-Regular'),
+	url(../fonts/MaterialIcons-Regular.woff2) format('woff2'),
+	url(../fonts/MaterialIcons-Regular.woff) format('woff'),
+	url(../fonts/MaterialIcons-Regular.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'CircularStd';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Circular Std Book'), url('../fonts/CircularStd-Book.woff') format('woff');
+}
+@font-face {
+	font-family: 'CircularStd';
+	font-style: italic;
+	font-weight: 400;
+	src: local('Circular Std Book Italic'), url('../fonts/CircularStd-BookItalic.woff') format('woff');
+}
+@font-face {
+	font-family: 'CircularStd';
+	font-style: normal;
+	font-weight: 500;
+	src: local('Circular Std Medium'), url('../fonts/CircularStd-Medium.woff') format('woff');
+}
+@font-face {
+	font-family: 'CircularStd';
+	font-style: italic;
+	font-weight: 500;
+	src: local('Circular Std Medium Italic'), url('../fonts/CircularStd-MediumItalic.woff') format('woff');
+}
+@font-face {
+	font-family: 'CircularStd';
+	font-style: normal;
+	font-weight: 600;
+	src: local('Circular Std Bold'), url('../fonts/CircularStd-Bold.woff') format('woff');
+}
+@font-face {
+	font-family: 'CircularStd';
+	font-style: italic;
+	font-weight: 600;
+	src: local('Circular Std Bold Italic'), url('../fonts/CircularStd-BoldItalic.woff') format('woff');
+}
+@font-face {
+	font-family: 'CircularStd';
+	font-style: normal;
+	font-weight: 800;
+	src: local('Circular Std Black'), url('../fonts/CircularStd-Black.woff') format('woff');
+}
+@font-face {
+	font-family: 'CircularStd';
+	font-style: italic;
+	font-weight: 800;
+	src: local('Circular Std Black Italic'), url('../fonts/CircularStd-BlackItalic.woff') format('woff');
+}
+
+h1,
+.h1 {
+  font-size: 2rem;
+  font-weight: $font-weight-medium;
+  color: $secondary;
+  margin-bottom: 0;
+}
+h2,
+.h2 {
+  font-size: 1.75rem;
+  font-weight: $font-weight-medium;
+  color: $secondary;
+  margin-bottom: 0;
+}
+h3,
+.h3 {
+  font-size: 1.5rem;
+  font-weight: $font-weight-medium;
+  color: $secondary;
+  margin-bottom: 0;
+}
+h4,
+.h4 {
+  font-size: 1.125rem;
+  font-weight: $font-weight-medium;
+  color: $secondary;
+  margin-bottom: 0;
+}
+h5,
+.h5 {
+  font-size: 1rem;
+  font-weight: $font-weight-medium;
+  color: $secondary;
+  margin-bottom: 0;
+}
+h6,
+.h6 {
+  font-size: 0.875rem;
+  font-weight: $font-weight-medium;
+  color: $secondary;
+  margin-bottom: 0;
+}
+.text-fixed-white {
+    color: $white !important;
+}
+.blockquote-container {
+  padding: 1.25rem;
+  margin: 0;
+  border-left: 4px solid #ededed;
+  position: relative;
+  &.text-end {
+    border-right: 4px solid #ededed;
+    border-left: 0;
+  }
+}
+.blockquote.custom-blockquote {
+  font-size: 0.85rem;
+  font-weight: $font-weight-semibold;
+  padding: 1rem;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  position: relative;
+  &:before {
+    content: "\f10d";
+    font-family: Fontawesome;
+    z-index: 0;
+    font-size: 2rem;
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0.5rem;
+  }
+  &.primary {
+    background-color: rgba(255, 159, 67, 0.1);
+    border-inline-start: 2px solid #ff9b44;
+    &:before {
+      color: rgba(255, 159, 67, 0.1);
+    }
+  }
+  &.secondary {
+    background-color: rgba(9, 44, 76, 0.1);
+    border-inline-start: 2px solid #1f1f1f;
+    &:before {
+      color: rgba(9, 44, 76, 0.1);
+    }
+  }
+  &.info {
+    background-color: rgba(23, 162, 184, 0.1);
+    border-inline-start: 2px solid #17a2b8;
+    &:before {
+      color: rgba(23, 162, 184, 0.1);
+    }
+  }
+  &.warning {
+    background-color: rgba(255, 153, 0, 0.1);
+    border-inline-start: 2px solid #FF9900;
+    &:before {
+      color: rgba(255, 153, 0, 0.1);
+    }
+  }
+  &.success {
+    background-color: rgba(40, 199, 111, 0.1);
+    border-inline-start: 2px solid #28C76F;
+    &:before {
+      color: rgba(40, 199, 111, 0.1);
+    }
+  }
+  &.danger {
+    background-color: rgba(255, 0, 0, 0.1);
+    border-inline-start: 2px solid #FF0000;
+    &:before {
+      color: rgba(255, 0, 0, 0.1);
+    }
+  }
+}

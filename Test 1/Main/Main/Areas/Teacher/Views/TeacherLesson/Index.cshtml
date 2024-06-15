@@ -1,0 +1,55 @@
+﻿@using Business.DTOs.Teacher.TeacherLessonsDto
+@model TeacherLessonDto
+
+<div class="page-wrapper justify-content-center">
+    <h1>@Model.Lesson.Name</h1>
+    <h1>@Model.Lesson.Group.Name</h1>
+    <div class="container justify-content-center">
+        <table class="table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Student</th>
+                @foreach (var lessonTime in Model.LessonTimes)
+                {
+                    <th style="writing-mode: tb-rl;">@lessonTime.Date.ToShortDateString()</th>
+                }
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in Model.Students)
+            {
+                <tr>
+                    <td>@(student.Name + " " + student.Surname)</td>
+                    @foreach (var lessonTime in Model.LessonTimes)
+                    {
+                        <td>
+                            <form method="post" action="/YourController/YourAction">
+                                <input type="hidden" name="studentId" value="@student.Id" />
+                                <input type="hidden" name="lessonTimeId" value="@lessonTime.Id" />
+                                <select name="selectedValue" class="text-bg-dark" onchange="this.form.submit()">
+                                    <option selected>~</option>
+                                    <option value="i.e">i.e</option>
+                                    <option value="qb">qb</option>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </form>
+                        </td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+    </div>
+</div>
+
+

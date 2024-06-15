@@ -1,0 +1,41 @@
+.fc-button {
+    background: $light-400;
+    border: none;
+    color: $secondary-600;
+    text-transform: capitalize;
+    box-shadow: none ;
+    height: auto ;
+    @include rounded(3px);
+    @include margin-padding(0 3px !important, 6px 12px);
+}
+.fc-state-down, 
+.fc-state-active, 
+.fc-state-disabled {
+    background-color: $primary !important;
+    color: $white !important;
+    text-shadow: none !important;
+}
+.fc-toolbar {
+    h2 {
+        font-size: $font-size-18;
+        font-weight: $font-weight-semibold;
+        line-height: 30px;
+        text-transform: uppercase;
+    }
+}
+th.fc-widget-header {
+    background: $light-600;
+    font-size: $font-size-14;
+    line-height: 20px;
+    text-transform: uppercase;
+    border-color: $light-300;
+    @include margin-padding(null, 10px 0);
+}
+.fc-event {
+    border: none;
+    cursor: move;
+    font-size: $font-size-13;
+    text-align: center;
+    @include rounded(2px);
+    @include margin-padding(1px 7px, 5px);
+}

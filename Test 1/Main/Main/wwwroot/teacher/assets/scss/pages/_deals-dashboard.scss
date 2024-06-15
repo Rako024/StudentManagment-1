@@ -1,0 +1,56 @@
+.daterange-picker{
+    .form-sort{
+        margin-left: 10px;
+       input{
+            padding-left: 25px;
+            height:38px;
+       }
+       .select2-container {
+            .select2-selection.select2-selection--single {
+                height: 38px;
+                .select2-selection__rendered{
+                    line-height: 38px;
+                }
+                .select2-selection__arrow {
+                    height: 38px;
+                }
+            }
+        }
+    }
+}
+
+.card-select{
+    ul{
+        display: flex;
+        align-items: center;
+        li{
+            + li{
+                margin-left: 5px;
+                
+            }
+            .select2-container {
+                .select2-selection.select2-selection--single {
+                    height: 38px;
+                    .select2-selection__rendered{
+                        line-height: 38px;
+                    }
+                    .select2-selection__arrow {
+                        height: 38px;
+                    }
+                }
+            }
+        }
+    }        
+}
+#leadpiechart{
+    .apexcharts-legend.apexcharts-align-center.position-right {
+        display: block;
+    }
+    .apexcharts-toolbar {
+        display: block !important;
+    }
+    .apexcharts-canvas {
+        width: auto !important;
+    }
+}
+

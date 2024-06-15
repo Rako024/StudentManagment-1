@@ -1,0 +1,48 @@
+.topics {
+    background-color: $white;
+    border: 1px solid $secondary-100;
+    @include rounded(4px);
+    @include box-shadow(null, 0, 1px, 1px, null, rgba(0, 0, 0, .20));
+    @include margin-padding(0 0 30px, 20px);
+    .topic-title {
+        color: $secondary-900;
+        @include margin-padding(0 0 20px, 0 25px 0 0);
+        position: relative;
+        a {
+            color: $secondary-900;
+            font-size: $font-size-20;
+            font-weight: $font-weight-medium;
+            text-decoration: none;
+            i {
+                color: $primary;
+                margin-right: 5px;
+            }
+            span {
+                color: $primary;
+            }
+        }
+    }
+    .topics-list {
+        @include margin-padding(0, 0);
+        li {
+            position: relative;
+            list-style: none;
+            line-height: 2;
+            &:before {
+                font-family: FontAwesome;
+                content: "\f016";
+                color: $secondary-800;
+                font-size: $font-size-15;
+                @include position(absolute,0,null,null,0)
+            }
+            a {
+                padding-left: 25px;
+                color: $secondary-800;
+                font-size: $font-size-14;
+                font-weight: $font-weight-normal;
+                text-decoration: none;
+                outline: 0 none;
+            }
+        }
+    }
+}
