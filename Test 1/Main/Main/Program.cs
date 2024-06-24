@@ -32,6 +32,12 @@ public class Program
         builder.Services.AddScoped<ILessonTimeRepository, LessonTimeRepository>();
         builder.Services.AddScoped<ILessonTimeService, LessonTimeService>();
 
+        builder.Services.AddScoped<IGradeAndAttendaceRepository, GradeAndAttendaceRepository>();
+        builder.Services.AddScoped<IGradeAndAttendaceService, GradeAndAttendaceService>();
+
+        builder.Services.AddScoped<IColloquiumRepository, ColloquiumRepository>();
+        builder.Services.AddScoped<IColloquiumService, ColloquiumService>();
+
         builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
         {
             opt.Password.RequireDigit = false;

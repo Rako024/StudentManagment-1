@@ -2,54 +2,330 @@
 @model TeacherLessonDto
 
 <div class="page-wrapper justify-content-center">
-    <h1>@Model.Lesson.Name</h1>
-    <h1>@Model.Lesson.Group.Name</h1>
+    <div class="container mt-5 mb-5">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <h1>@Model.Lesson.Name</h1>
+                <h1>@Model.Lesson.Group.Name</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <a class="btn btn-warning m-1 col-md-2 mb-3 " asp-action="Details">Daily Grade</a>
+            <a class="btn btn-primary m-1 col-md-2 mb-3" asp-action="Colloquium" asp-route-id="@Model.Lesson.Id">Colloquium</a>
+            <a class="btn btn-primary m-1 col-md-2 mb-3" asp-action="DetailsLessonTimes">Freelance work</a>
+            <a class="btn btn-primary m-1 col-md-2 mb-3" asp-action="DetailsLessonTimes">Entry points</a>
+        </div>
+    </div>
+    
     <div class="container justify-content-center">
-        <table class="table-bordered table-striped">
-        <thead>
-            <tr>
-                <th>Student</th>
-                @foreach (var lessonTime in Model.LessonTimes)
-                {
-                    <th style="writing-mode: tb-rl;">@lessonTime.Date.ToShortDateString()</th>
-                }
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var student in Model.Students)
-            {
-                <tr>
-                    <td>@(student.Name + " " + student.Surname)</td>
-                    @foreach (var lessonTime in Model.LessonTimes)
+        <div class="table-responsive">
+            <table class="table-bordered  table-striped grade-and-attendace-table">
+                <thead>
+                    <tr>
+                        <th class="sticky-col">Student</th>
+                        @foreach (var lessonTime in Model.LessonTimes)
+                        {
+                            <th style="writing-mode: tb-rl;">@lessonTime.Date.ToShortDateString()</th>
+                        }
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var student in Model.Students)
                     {
-                        <td>
-                            <form method="post" action="/YourController/YourAction">
-                                <input type="hidden" name="studentId" value="@student.Id" />
-                                <input type="hidden" name="lessonTimeId" value="@lessonTime.Id" />
-                                <select name="selectedValue" class="text-bg-dark" onchange="this.form.submit()">
-                                    <option selected>~</option>
-                                    <option value="i.e">i.e</option>
-                                    <option value="qb">qb</option>
-                                    <option value="0">0</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                </select>
-                            </form>
-                        </td>
+                        <tr>
+                            <td class="sticky-col">@(student.Name + " " + student.Surname)</td>
+                            @foreach (var lessonTime in Model.LessonTimes)
+                            {
+                                <td>
+                                    @{
+                                        var gradeAndAttendance = Model.GradeAndAttendances
+                                        .FirstOrDefault(g => g.StudentUserId == student.Id && g.LessonTimeId == lessonTime.Id);
+                                        var selectedValue = "~";
+                                        
+                                        if (gradeAndAttendance != null)
+                                        {
+                                            if (gradeAndAttendance.IsPresent == true && gradeAndAttendance.Score != null)
+                                            {
+                                                selectedValue = gradeAndAttendance.Score.ToString();
+                                            }
+                                            else if (gradeAndAttendance.IsPresent == false)
+                                            {
+                                                selectedValue = "qb";
+                                            }
+                                            else if (gradeAndAttendance.IsPresent == true)
+                                            {
+                                                selectedValue = "i.e";
+                                            }
+                                        }
+
+                                    }
+                                    <form method="post" action="/Teacher/TeacherLesson/AddOrUpdateGradeAndAttendace">
+                                        <input type="hidden" name="StudentId" value="@student.Id" />
+                                        <input type="hidden" name="LessonTimeId" value="@lessonTime.Id" />
+                                        <input type="hidden" name="LessonId" value="@Model.Lesson.Id" />
+                                        <select name="GradeAndAttendance" onchange="this.form.submit()" 
+                                         style="appearance: none; 
+                                                -webkit-appearance: none; 
+                                                -moz-appearance: none;
+                                                border: 2px solid #FF902F;
+                                                border-radius: 5px;
+                                                padding: 5px;
+                                                color: #333;
+                                                background-color: #fff; 
+                                                font-size: 14px; 
+                                                width:100%;">
+                                            @if (selectedValue == "~")
+                                            {
+                                                <option selected>~</option>
+                                                <option value="i.e">i.e</option>
+                                                <option value="qb">qb</option>
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                            }
+                                            else if (selectedValue == "i.e")
+                                            {
+                                                <option>~</option>
+                                                <option value="i.e" selected>i.e</option>
+                                                <option value="qb">qb</option>
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                            }
+                                            else if (selectedValue == "qb")
+                                            {
+                                                <option>~</option>
+                                                <option value="i.e">i.e</option>
+                                                <option value="qb" selected>qb</option>
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                            }
+
+                                            else if (selectedValue == "0")
+                                            {
+                                                <option>~</option>
+                                                <option value="i.e">i.e</option>
+                                                <option value="qb">qb</option>
+                                                <option value="0" selected>0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                            }
+                                            else if (selectedValue == "1")
+                                            {
+                                                <option>~</option>
+                                                <option value="i.e">i.e</option>
+                                                <option value="qb">qb</option>
+                                                <option value="0">0</option>
+                                                <option value="1" selected>1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                            }
+                                            else if (selectedValue == "2")
+                                            {
+                                                <option>~</option>
+                                                <option value="i.e">i.e</option>
+                                                <option value="qb">qb</option>
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2" selected>2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                            }
+                                            else if (selectedValue == "3")
+                                            {
+                                                <option>~</option>
+                                                <option value="i.e">i.e</option>
+                                                <option value="qb">qb</option>
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3" selected>3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                            }
+                                            else if (selectedValue == "4")
+                                            {
+                                                <option>~</option>
+                                                <option value="i.e">i.e</option>
+                                                <option value="qb">qb</option>
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4" selected>4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                            }
+                                            else if (selectedValue == "5")
+                                            {
+                                                <option>~</option>
+                                                <option value="i.e">i.e</option>
+                                                <option value="qb">qb</option>
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5" selected>5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                            }
+                                            else if (selectedValue == "6")
+                                            {
+                                                <option>~</option>
+                                                <option value="i.e">i.e</option>
+                                                <option value="qb">qb</option>
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6" selected>6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                            }
+                                            else if (selectedValue == "7")
+                                            {
+                                                <option>~</option>
+                                                <option value="i.e">i.e</option>
+                                                <option value="qb">qb</option>
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7" selected>7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                            }
+                                            else if (selectedValue == "8")
+                                            {
+                                                <option>~</option>
+                                                <option value="i.e">i.e</option>
+                                                <option value="qb">qb</option>
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8" selected>8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                            }
+                                            else if (selectedValue == "9")
+                                            {
+                                                <option>~</option>
+                                                <option value="i.e">i.e</option>
+                                                <option value="qb">qb</option>
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9" selected>9</option>
+                                                <option value="10">10</option>
+                                            }
+                                            else if (selectedValue == "10")
+                                            {
+                                                <option>~</option>
+                                                <option value="i.e">i.e</option>
+                                                <option value="qb">qb</option>
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10" selected>10</option>
+                                            }
+
+                                        </select>
+                                    </form>
+                                </td>
+                            }
+                        </tr>
                     }
-                </tr>
-            }
-        </tbody>
-    </table>
+                    
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
-
-

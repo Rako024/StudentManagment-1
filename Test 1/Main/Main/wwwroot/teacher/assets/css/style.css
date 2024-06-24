@@ -21837,4 +21837,56 @@ textarea.form-control {
   width: auto !important;
 }
 
+
+.table-responsive {
+    overflow-x: auto;
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: #F5F5F5;
+    border-radius:7px;
+}
+
+.grade-and-attendace-table {
+    width: 100%;
+    border-radius: 50px;
+}
+th.sticky-col, td.sticky-col {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0;
+    background-color: #F5F5F5;
+    z-index: 1;
+}
+
+.grade-and-attendace-table th {
+    background-color: #FF902F;
+    color: white; 
+}
+
+.grade-and-attendace-table td {
+    background-color: #FFD7B5; 
+}
+
+.grade-and-attendace-table tr:nth-child(even) td {
+    background-color: #FFEBD9
+}
+.selected-part {
+    color: aqua;
+}
+
+.grade-and-attendace-table select {
+   
+}
+
+    /* Hover durumu için stil */
+    .grade-and-attendace-table select:hover {
+        border-color: #FF6F00; /* Hover durumunda daha koyu turuncu */
+    }
+
+/* Seçeneklerin arka plan rengini değiştirme */
+.grade-and-attendace-table option {
+    background-color: #fff; /* Arka plan rengi */
+    color: #333; /* Yazı rengi */
+}
+
 /*# sourceMappingURL=style.css.map */

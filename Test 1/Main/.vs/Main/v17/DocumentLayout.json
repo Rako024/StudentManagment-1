@@ -3,24 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\main\\areas\\teacher\\views\\teacherlesson\\colloquium.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|solutionrelative:main\\areas\\teacher\\views\\teacherlesson\\colloquium.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\main\\areas\\teacher\\views\\teacherlesson\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|solutionrelative:main\\areas\\teacher\\views\\teacherlesson\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11F6EA27-9E49-4A61-9943-1D8A8C913DD8}|Core\\Core.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\core\\models\\lessontime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11F6EA27-9E49-4A61-9943-1D8A8C913DD8}|Core\\Core.csproj|solutionrelative:core\\models\\lessontime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\main\\wwwroot\\teacher\\assets\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|solutionrelative:main\\wwwroot\\teacher\\assets\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11F6EA27-9E49-4A61-9943-1D8A8C913DD8}|Core\\Core.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\core\\models\\lesson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11F6EA27-9E49-4A61-9943-1D8A8C913DD8}|Core\\Core.csproj|solutionrelative:core\\models\\lesson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{47A14DE4-8F31-4BF5-9A13-1A201984553C}|Business\\Business.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\business\\services\\concretes\\colloquiumservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47A14DE4-8F31-4BF5-9A13-1A201984553C}|Business\\Business.csproj|solutionrelative:business\\services\\concretes\\colloquiumservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{47A14DE4-8F31-4BF5-9A13-1A201984553C}|Business\\Business.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\business\\dtos\\teacher\\teacherlessonsdto\\teacherlessondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47A14DE4-8F31-4BF5-9A13-1A201984553C}|Business\\Business.csproj|solutionrelative:business\\dtos\\teacher\\teacherlessonsdto\\teacherlessondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{47A14DE4-8F31-4BF5-9A13-1A201984553C}|Business\\Business.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\business\\dtos\\teacher\\teacherlessonsdto\\colloquiumdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47A14DE4-8F31-4BF5-9A13-1A201984553C}|Business\\Business.csproj|solutionrelative:business\\dtos\\teacher\\teacherlessonsdto\\colloquiumdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\main\\areas\\teacher\\controllers\\teacherlessoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|solutionrelative:main\\areas\\teacher\\controllers\\teacherlessoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11F6EA27-9E49-4A61-9943-1D8A8C913DD8}|Core\\Core.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\core\\models\\colloquium.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11F6EA27-9E49-4A61-9943-1D8A8C913DD8}|Core\\Core.csproj|solutionrelative:core\\models\\colloquium.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,71 +38,97 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LessonTime.cs",
-              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Core\\Models\\LessonTime.cs",
-              "RelativeDocumentMoniker": "Core\\Models\\LessonTime.cs",
-              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Core\\Models\\LessonTime.cs",
-              "RelativeToolTip": "Core\\Models\\LessonTime.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T01:57:06.92Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Lesson.cs",
-              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Core\\Models\\Lesson.cs",
-              "RelativeDocumentMoniker": "Core\\Models\\Lesson.cs",
-              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Core\\Models\\Lesson.cs",
-              "RelativeToolTip": "Core\\Models\\Lesson.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAswCEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T01:57:01.591Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Teacher\\Views\\TeacherLesson\\Index.cshtml",
-              "RelativeDocumentMoniker": "Main\\Areas\\Teacher\\Views\\TeacherLesson\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Teacher\\Views\\TeacherLesson\\Index.cshtml",
-              "RelativeToolTip": "Main\\Areas\\Teacher\\Views\\TeacherLesson\\Index.cshtml",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAACEAAABAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-15T01:46:07.194Z",
+              "Title": "style.css",
+              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\wwwroot\\teacher\\assets\\css\\style.css",
+              "RelativeDocumentMoniker": "Main\\wwwroot\\teacher\\assets\\css\\style.css",
+              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\wwwroot\\teacher\\assets\\css\\style.css",
+              "RelativeToolTip": "Main\\wwwroot\\teacher\\assets\\css\\style.css",
+              "ViewState": "AQIAAGlVAAAAAAAAAAAAAHVVAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-06-24T03:25:41.877Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "TeacherLessonDto.cs",
-              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Business\\DTOs\\Teacher\\TeacherLessonsDto\\TeacherLessonDto.cs",
-              "RelativeDocumentMoniker": "Business\\DTOs\\Teacher\\TeacherLessonsDto\\TeacherLessonDto.cs",
-              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Business\\DTOs\\Teacher\\TeacherLessonsDto\\TeacherLessonDto.cs",
-              "RelativeToolTip": "Business\\DTOs\\Teacher\\TeacherLessonsDto\\TeacherLessonDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
+              "Title": "ColloquiumService.cs",
+              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Business\\Services\\Concretes\\ColloquiumService.cs",
+              "RelativeDocumentMoniker": "Business\\Services\\Concretes\\ColloquiumService.cs",
+              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Business\\Services\\Concretes\\ColloquiumService.cs",
+              "RelativeToolTip": "Business\\Services\\Concretes\\ColloquiumService.cs",
+              "ViewState": "AQIAAFAAAAAAAAAAAAAAAFcAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T01:47:50.311Z",
+              "WhenOpened": "2024-06-24T02:32:03.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Teacher\\Views\\TeacherLesson\\Index.cshtml",
+              "RelativeDocumentMoniker": "Main\\Areas\\Teacher\\Views\\TeacherLesson\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Teacher\\Views\\TeacherLesson\\Index.cshtml",
+              "RelativeToolTip": "Main\\Areas\\Teacher\\Views\\TeacherLesson\\Index.cshtml",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAAEUAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-24T02:27:16.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Colloquium.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Teacher\\Views\\TeacherLesson\\Colloquium.cshtml",
+              "RelativeDocumentMoniker": "Main\\Areas\\Teacher\\Views\\TeacherLesson\\Colloquium.cshtml",
+              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Teacher\\Views\\TeacherLesson\\Colloquium.cshtml",
+              "RelativeToolTip": "Main\\Areas\\Teacher\\Views\\TeacherLesson\\Colloquium.cshtml",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAAAE0AAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-24T02:09:15.31Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "ColloquiumDto.cs",
+              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Business\\DTOs\\Teacher\\TeacherLessonsDto\\ColloquiumDto.cs",
+              "RelativeDocumentMoniker": "Business\\DTOs\\Teacher\\TeacherLessonsDto\\ColloquiumDto.cs",
+              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Business\\DTOs\\Teacher\\TeacherLessonsDto\\ColloquiumDto.cs",
+              "RelativeToolTip": "Business\\DTOs\\Teacher\\TeacherLessonsDto\\ColloquiumDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T01:33:32.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Colloquium.cs",
+              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Core\\Models\\Colloquium.cs",
+              "RelativeDocumentMoniker": "Core\\Models\\Colloquium.cs",
+              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Core\\Models\\Colloquium.cs",
+              "RelativeToolTip": "Core\\Models\\Colloquium.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAADwvwkAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T01:21:31.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "TeacherLessonController.cs",
               "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Teacher\\Controllers\\TeacherLessonController.cs",
               "RelativeDocumentMoniker": "Main\\Areas\\Teacher\\Controllers\\TeacherLessonController.cs",
               "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Teacher\\Controllers\\TeacherLessonController.cs",
               "RelativeToolTip": "Main\\Areas\\Teacher\\Controllers\\TeacherLessonController.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAkwCAAAAAYAAAA",
+              "ViewState": "AQIAACgAAAAAAAAAAAAuwDsAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T01:46:09.892Z",
+              "WhenOpened": "2024-06-24T01:19:31.328Z",
               "EditorCaption": ""
             }
           ]

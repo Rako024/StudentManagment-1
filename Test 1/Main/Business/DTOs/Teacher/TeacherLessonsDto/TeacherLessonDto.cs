@@ -12,5 +12,6 @@ namespace Business.DTOs.Teacher.TeacherLessonsDto
         public Lesson Lesson { get; set; }
 		public List<StudentUser> Students { get; set; }
         public List<LessonTime> LessonTimes { get; set; }
+        public List<GradeAndAttendace> GradeAndAttendances { get; set; }
     }
 }

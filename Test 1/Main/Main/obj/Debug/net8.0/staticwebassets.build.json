@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "dGN28efG4c136u1NL7RrNjhyImNgFa5H9/sdyhj7mBc=",
+  "Hash": "YqmZoecyvG0kbir16rigSNu08X2/Fr/JlsKkqiXggZU=",
   "Source": "Main",
   "BasePath": "_content/Main",
   "Mode": "Default",
@@ -46299,6 +46299,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\teacher\\assets\\img\\avatar\\avatar-9.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\wwwroot\\teacher\\assets\\img\\avatar\\teacher-avatar-pp.png",
+      "SourceId": "Main",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\wwwroot\\",
+      "BasePath": "_content/Main",
+      "RelativePath": "teacher/assets/img/avatar/teacher-avatar-pp.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\teacher\\assets\\img\\avatar\\teacher-avatar-pp.png"
     },
     {
       "Identity": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\wwwroot\\teacher\\assets\\img\\bg\\card-bg.png",

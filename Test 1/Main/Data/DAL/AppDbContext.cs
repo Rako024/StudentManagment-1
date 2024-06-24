@@ -21,6 +21,8 @@ namespace Data.DAL
         public DbSet<Group> Groups { get; set; }
         public DbSet<Lesson> Lessons { get; set; }
         public DbSet<LessonTime> LessonTimes { get; set; }
+        public DbSet<GradeAndAttendace> GradeAndAttendaces { get; set; }
+        public DbSet<Colloquium> Colloquia { get; set; }
 
 
     }
