@@ -3,12 +3,14 @@ using Business.Exceptions;
 using Business.Services.Abstracts;
 using Core.Models;
 using Main.DTOs.Admin;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Main.Areas.Admin.Controllers;
 
 [Area("Admin")]
+[Authorize(Roles = "Admin,Cordinator")]
 public class StudentController : Controller
 {
     UserManager<AppUser> _userManager;

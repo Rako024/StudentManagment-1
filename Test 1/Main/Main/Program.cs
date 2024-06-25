@@ -1,3 +1,4 @@
+using Business.LayoutServices;
 using Business.Services.Abstracts;
 using Business.Services.Concretes;
 using Core.Models;
@@ -38,6 +39,8 @@ public class Program
         builder.Services.AddScoped<IColloquiumRepository, ColloquiumRepository>();
         builder.Services.AddScoped<IColloquiumService, ColloquiumService>();
 
+        builder.Services.AddScoped<AdminLayoutService>();
+
         builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
         {
             opt.Password.RequireDigit = false;
@@ -56,6 +59,9 @@ public class Program
         var app = builder.Build();
 
         app.UseStaticFiles();
+
+        app.UseAuthentication();
+        app.UseAuthorization();
         app.MapControllerRoute(
             name: "areas",
             pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}"

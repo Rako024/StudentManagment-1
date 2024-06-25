@@ -67,7 +67,7 @@ public class AccountController : Controller
         {
             return RedirectToAction("Index", "Dashboard", new { area = "Student", id = user.Id });
         }
-        else if (role == RolesEnum.Cordinator.ToString() || role == RolesEnum.SuperAdmin.ToString())
+        else if (role == RolesEnum.Cordinator.ToString() || role == RolesEnum.SuperAdmin.ToString() || role == RolesEnum.Admin.ToString())
         {
             return RedirectToAction("Index", "Dashboard", new { area = "Admin", id = user.Id });
         }
@@ -78,17 +78,47 @@ public class AccountController : Controller
         
     }
 
-    public async Task<IActionResult> CreateRoles()
+    public async Task<IActionResult> LogOut()
     {
-        IdentityRole role1 = new IdentityRole(RolesEnum.Admin.ToString());
-        IdentityRole role2 = new IdentityRole(RolesEnum.Cordinator.ToString());
-        IdentityRole role3 = new IdentityRole(RolesEnum.Teacher.ToString());
-        IdentityRole role4 = new IdentityRole(RolesEnum.Student.ToString());
-
-        await _roleManager.CreateAsync(role1);
-        await _roleManager.CreateAsync(role2);
-        await _roleManager.CreateAsync(role3);
-        await _roleManager.CreateAsync(role4);
-        return Ok("salam exi");
+        await _signInManager.SignOutAsync();
+        return RedirectToAction(nameof(Login));
     }
+
+    //public async Task<IActionResult> CreateRoles()
+    //{
+    //    IdentityRole role1 = new IdentityRole(RolesEnum.Admin.ToString());
+    //    IdentityRole role2 = new IdentityRole(RolesEnum.Cordinator.ToString());
+    //    IdentityRole role3 = new IdentityRole(RolesEnum.Teacher.ToString());
+    //    IdentityRole role4 = new IdentityRole(RolesEnum.Student.ToString());
+
+    //    await _roleManager.CreateAsync(role1);
+    //    await _roleManager.CreateAsync(role2);
+    //    await _roleManager.CreateAsync(role3);
+    //    await _roleManager.CreateAsync(role4);
+    //    return Ok("salam exi");
+    //}
+    //public async Task<IActionResult> CreateAdmin()
+    //{
+    //    AppUser user = new AppUser() 
+    //    {
+    //        UserName="Admin",
+    //        Email = "admin@gmail.com",
+    //        Name = "admin",
+    //        Surname = "admin",
+    //    };
+    //    var result = await _userManager.CreateAsync(user,"Salam123@");
+    //    if(result.Succeeded)
+    //    {
+    //        var roleResult = await _userManager.AddToRoleAsync(user, "Admin");
+    //        if(!roleResult.Succeeded)
+    //        {
+    //            return BadRequest(roleResult.Errors);
+    //        }
+    //        return Ok("Yarandi");
+    //    }
+    //    else
+    //    {
+    //        return BadRequest(result.Errors);
+    //    }
+    //}
 }

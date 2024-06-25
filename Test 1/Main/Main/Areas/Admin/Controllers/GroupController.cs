@@ -1,11 +1,13 @@
 ﻿using Business.Exceptions;
 using Business.Services.Abstracts;
 using Core.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Main.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin,Cordinator")]
     public class GroupController : Controller
     {
         IGroupService _groupService;

@@ -123,7 +123,7 @@ namespace Business.Services.Concretes
             {
                 gradeAndAttendace.IsPresent = false;
                 gradeAndAttendace.Score = null;
-            }else if(dto.GradeAndAttendance == null)
+            }else if(dto.GradeAndAttendance == "~")
             {
                 gradeAndAttendace.IsPresent = null;
                 gradeAndAttendace.Score = null;

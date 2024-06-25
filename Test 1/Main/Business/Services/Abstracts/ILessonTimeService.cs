@@ -16,6 +16,7 @@ namespace Business.Services.Abstracts
         void SoftDeleteLessonTime(int id);
         void UpdateLessonTime(int id, LessonTime lessonTime);
         LessonTime GetLessonTime(Func<LessonTime, bool>? func = null);
+        Task<LessonTime> GetLessonTimeAsync(Expression<Func<LessonTime, bool>> func);
         Task<List<LessonTime>> GetAllLessonTimes(Expression<Func<LessonTime, bool>>? func = null,
              Expression<Func<LessonTime, object>>? orderBy = null,
              bool isOrderByDesting = false,

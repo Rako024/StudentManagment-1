@@ -3,12 +3,14 @@ using Business.Exceptions;
 using Business.Services.Abstracts;
 using Business.Services.Concretes;
 using Core.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Main.Areas.Admin.Controllers;
 
 [Area("Admin")]
+[Authorize(Roles = "Admin,Cordinator")]
 public class TeacherController : Controller
 {
     ITeacherUserService _userService;

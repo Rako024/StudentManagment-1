@@ -74,7 +74,10 @@ namespace Business.Services.Concretes
         {
             return _lessonTimeRepository.Get(func);
         }
-
+        public async Task<LessonTime> GetLessonTimeAsync(Expression<Func<LessonTime, bool>> func)
+        {
+            return await _lessonTimeRepository.GetAsync(func);
+        }
         public void UpdateLessonTime(int id, LessonTime lessonTime)
         {
             LessonTime oldLessonTime = _lessonTimeRepository.Get(x => x.Id == id);

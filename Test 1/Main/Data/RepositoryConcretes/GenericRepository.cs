@@ -36,7 +36,11 @@ namespace Data.RepositoryConcretes
             return func == null ? _dbContext.Set<T>().FirstOrDefault() :
                                   _dbContext.Set<T>().Where(func).FirstOrDefault();
         }
-
+        public async Task<T> GetAsync(Expression<Func<T, bool>> func)
+        {
+            return await (func == null ? _dbContext.Set<T>().FirstOrDefaultAsync() :
+                                         _dbContext.Set<T>().FirstOrDefaultAsync(func));
+        }
         public async Task<IQueryable<T>> GetAll
             (Expression<Func<T, bool>>? func = null,
              Expression<Func<T, object>>? orderBy = null,

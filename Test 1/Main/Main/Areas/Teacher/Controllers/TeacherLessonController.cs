@@ -1,12 +1,14 @@
 ﻿using Business.DTOs.Teacher.TeacherLessonsDto;
 using Business.Services.Abstracts;
 using Core.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Main.Areas.Teacher.Controllers
 {
 	[Area("Teacher")]
-	public class TeacherLessonController : Controller
+    [Authorize(Roles = "Teacher")]
+    public class TeacherLessonController : Controller
 	{
 		ILessonService _lessonService;
 		IStudentUserService _studenUserService;
