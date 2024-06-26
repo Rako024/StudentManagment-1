@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\student\" />
+    <Folder Include="wwwroot\upload\termpapers\" />
   </ItemGroup>
 
 </Project>

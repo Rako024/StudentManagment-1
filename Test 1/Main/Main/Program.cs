@@ -39,6 +39,9 @@ public class Program
         builder.Services.AddScoped<IColloquiumRepository, ColloquiumRepository>();
         builder.Services.AddScoped<IColloquiumService, ColloquiumService>();
 
+        builder.Services.AddScoped<ITermPaperRepository, TermPaperRepository>();
+        builder.Services.AddScoped<ITermPaperService, TermPaperService>();
+
         builder.Services.AddScoped<AdminLayoutService>();
 
         builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>

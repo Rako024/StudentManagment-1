@@ -1,0 +1,55 @@
+﻿@using Business.DTOs.Student.Files
+@using Core.CoreEnums
+
+@model TermPaperIndexDto
+@{
+    int count = 1;
+}
+<div class="container">
+    <div class="row justify-content-center">
+
+    <h1>Term Papers</h1>
+    </div>
+    <h3>Lessons</h3>
+   
+</div>
+<div class="container justify-content-center">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Group Name</th>
+                <th scope="col">Teacher Name</th>
+                <th scope="col">Semester</th>
+                <th scope="col">Actions</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Lessons)
+            {
+                <tr>
+                    <th >@count</th>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Group.Name</td>
+                    <td>@item.TeacherUser.Name</td>
+                    <td>@((Semesters) item.Semester)</td>
+
+                    <td>
+                        <a class="btn btn-warning" asp-action="Details" asp-route-userId="@Model.UserId" asp-route-lessonId="@item.Id">Details</a>
+                        
+                    </td>
+                </tr>
+
+                count++;
+            }
+
+        </tbody>
+    </table>
+
+    <div asp-validation-summary=All class="text-danger"></div>
+</div>

@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Data\Data.csproj" />
+	  <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
 </Project>

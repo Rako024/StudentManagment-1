@@ -9,9 +9,13 @@ namespace Business.Exceptions
     public class GlobalException:Exception
     {
         public int ErrorCode { get; set; }
-
+        public string ProperyName { get; set; }
         public GlobalException() : base() { }
 
+        public GlobalException(string propName, string message):base(message) 
+        {
+            ProperyName = propName;
+        }
         public GlobalException(string message) : base(message) { }
 
         public GlobalException(string message, Exception innerException) : base(message, innerException) { }

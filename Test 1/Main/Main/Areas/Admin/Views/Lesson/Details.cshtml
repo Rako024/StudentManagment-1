@@ -52,7 +52,7 @@
                     <td>
                         <a class="btn btn-info" asp-action="Update" asp-controller="LessonTime" asp-route-id="@item.Id">Update</a>
                         <a class="btn btn-warning" asp-action="Details" asp-controller="Group" asp-route-id="@item.Lesson.GroupId">Group</a>
-                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        <a class="btn btn-danger" asp-action="SoftDelete" asp-controller="LessonTime" asp-route-id="@item.Id">Delete</a>
                     </td>
                 </tr>
 

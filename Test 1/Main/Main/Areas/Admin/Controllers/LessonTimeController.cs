@@ -1,4 +1,5 @@
-﻿using Business.Exceptions.Lesson;
+﻿using Business.Exceptions;
+using Business.Exceptions.Lesson;
 using Business.Exceptions.LessonTime;
 using Business.Services.Abstracts;
 using Core.Models;
@@ -56,23 +57,29 @@ namespace Main.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(LessonTime lessonTime) 
+        public async Task<IActionResult> Create(LessonTime lessonTime) 
         {
             if(!ModelState.IsValid)
             {
-                ViewBag.Lessons = _lessonService.GetAllLessons(x => x.IsDeleted == false, x => true, false, x => x.Group, x => x.TeacherUser);
+                ViewBag.Lessons = await _lessonService.GetAllLessons(x => x.IsDeleted == false, x => true, false, x => x.Group, x => x.TeacherUser);
                 return View();
             }
             try
             {
-                _lessonTimeService.CreateLessonTime(lessonTime);
+                await _lessonTimeService.CreateLessonTime(lessonTime);
             }
             catch (LessonNotFoundException ex)
             {
-                ViewBag.Lessons = _lessonService.GetAllLessons(x => x.IsDeleted == false, x => true, false, x => x.Group, x => x.TeacherUser);
+                ViewBag.Lessons = await _lessonService.GetAllLessons(x => x.IsDeleted == false, x => true, false, x => x.Group, x => x.TeacherUser);
                 ModelState.AddModelError("LessonId", ex.Message);
                 return View();
+            }catch(GlobalException ex)
+            {
+                ViewBag.Lessons =  await _lessonService.GetAllLessons(x => x.IsDeleted == false, x => true, false, x => x.Group, x => x.TeacherUser);
+                ModelState.AddModelError(ex.ProperyName, ex.Message);
+                return View();
             }
+
             catch (Exception)
             {
                 return View("Error");
@@ -98,7 +105,24 @@ namespace Main.Areas.Admin.Controllers
             }
             return RedirectToAction(nameof(Index));
         }
+        public IActionResult SoftDelete(int id)
+        {
+            LessonTime lessonTime = _lessonTimeService.GetLessonTime(x => x.Id == id);
+            if (lessonTime == null)
+            {
+                return View("Error");
+            }
+            try
+            {
+                _lessonTimeService.SoftDeleteLessonTime(id);
+            }
+            catch (LessonTimeNotFoundException ex)
+            {
+                return View("Error");
 
+            }
+            return RedirectToAction(nameof(Index));
+        }
 
         public async Task<IActionResult> Update(int id) 
         {
@@ -122,7 +146,7 @@ namespace Main.Areas.Admin.Controllers
 
             try
             {
-                _lessonTimeService.UpdateLessonTime(lessonTime.Id, lessonTime);
+               await _lessonTimeService.UpdateLessonTime(lessonTime.Id, lessonTime);
             }catch(LessonTimeNotFoundException ex)
             {
                 return View("Error");
@@ -130,6 +154,12 @@ namespace Main.Areas.Admin.Controllers
             {
                 ViewBag.Lessons = await _lessonService.GetAllLessons(x => x.IsDeleted == false, x => true, false, x => x.Group, x => x.TeacherUser);
                 ModelState.AddModelError("LessonId", ex.Message);
+                return View();
+            }
+            catch (GlobalException ex)
+            {
+                ViewBag.Lessons = await _lessonService.GetAllLessons(x => x.IsDeleted == false, x => true, false, x => x.Group, x => x.TeacherUser);
+                ModelState.AddModelError(ex.ProperyName, ex.Message);
                 return View();
             }
             return RedirectToAction("Details", "Lesson", new { id = lessonTime.LessonId });

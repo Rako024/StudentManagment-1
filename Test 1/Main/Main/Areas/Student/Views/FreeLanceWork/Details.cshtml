@@ -1,0 +1,62 @@
+﻿@using Business.DTOs.Student.Files
+@using Core.CoreEnums
+
+@model TermPaperDetailsDto
+@{
+    int count = 1;
+}
+<div class="container">
+    <div class="row justify-content-center">
+
+        <h1>Term Papers</h1>
+    </div>
+    <h3>Termpaper Details</h3>
+    <a class="btn btn-primary" asp-action="Create" asp-controller="FreeLanceWork" asp-route-userId="@Model.UserId" asp-route-lessonId="@Model.LessonId">Create</a>
+</div>
+<div class="container justify-content-center">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Lesson Name</th>
+                <th scope="col">Teacher Name</th>
+                <th scope="col">Semester</th>
+                <th scope="col">Actions</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.TermPapers)
+            {
+                <tr>
+                    <th>@count</th>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Lesson.Name</td>
+                    <td>@item.Lesson.TeacherUser.Name</td>
+                    <td>
+                        @if (!string.IsNullOrEmpty(item.FileUrl))
+                        {
+                            <a href="~/upload/termpapers/@item.FileUrl" download>Download</a>
+                        }
+                    </td>
+
+                    <td>
+                        <a class="btn btn-warning" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                        <a class="btn btn-info" asp-action="Update" asp-route-id="@item.Id">Update</a>
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+
+                    </td>
+                </tr>
+
+                count++;
+            }
+
+        </tbody>
+    </table>
+
+    <div asp-validation-summary=All class="text-danger"></div>
+</div>

@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@using Core.Models
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<AppUser> _userManager
+@{
+    AppUser user = await _userManager.GetUserAsync(User);
+}
+<!DOCTYPE html>
 <html lang="en"
       dir="ltr"
       class="dark-mode">
@@ -95,7 +101,7 @@
                 </button>
 
                 <!-- Navbar Brand -->
-                <a href="index.html"
+                <a asp-action="Index" asp-controller="Dashboard" asp-route-id="@user.Id"
                    class="navbar-brand mr-16pt d-lg-none">
                     <!-- <img class="navbar-brand-icon" src="~/student/public/images/logo/white-100@2x.png" width="30" alt="Luma"> -->
 
@@ -114,7 +120,7 @@
 
                 <ul class="nav navbar-nav d-none d-sm-flex flex justify-content-start ml-8pt">
                     <li class="nav-item active">
-                        <a href="index.html"
+                        <a asp-action="Index" asp-controller="Dashboard" asp-route-id="@user.Id"
                            class="nav-link">Home</a>
                     </li>
                     <li class="nav-item dropdown">
@@ -228,18 +234,8 @@
                 </ul>
 
                 <ul class="nav navbar-nav ml-auto mr-0">
-                    <li class="nav-item">
-                        <a href="login.html"
-                           class="nav-link"
-                           data-toggle="tooltip"
-                           data-title="Login"
-                           data-placement="bottom"
-                           data-boundary="window"><i class="material-icons">lock_open</i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="signup.html"
-                           class="btn btn-outline-white">Get Started</a>
-                    </li>
+                    
+                    
                 </ul>
             </div>
 
@@ -249,20 +245,9 @@
 
                 <div class=" border-top-2 mt-auto">
                     <div class="container page__container page-section d-flex flex-column">
-                        <p class="text-70 brand mb-24pt">
-                            <img class="brand-icon"
-                                 src="~/student/public/images/logo/black-70@2x.png"
-                                 width="30"
-                                 alt="Luma"> Luma
-                        </p>
-                        <p class="measure-lead-max text-50 small mr-8pt">Luma is a beautifully crafted user interface for modern Education Platforms, including Courses & Tutorials, Video Lessons, Student and Teacher Dashboard, Curriculum Management, Earnings and Reporting, ERP, HR, CMS, Tasks, Projects, eCommerce and more.</p>
-                        <p class="mb-8pt d-flex">
-                            <a href=""
-                               class="text-70 text-underline mr-8pt small">Terms</a>
-                            <a href=""
-                               class="text-70 text-underline small">Privacy policy</a>
-                        </p>
-                        <p class="text-50 small mt-n1 mb-0">Copyright 2019 &copy; All rights reserved.</p>
+                        
+                        
+                        <p class="text-50 small mt-n1 mb-0">Copyright 2024 &copy; All rights reserved.</p>
                     </div>
                 </div>
 
@@ -293,7 +278,7 @@
                             </form>
                         </div>
 
-                        <a href="index.html"
+                    <a asp-action="Index" asp-controller="Dashboard" asp-route-id="@user.Id"
                            class="sidebar-brand ">
                             <!-- <img class="sidebar-brand-icon" src="~/student/public/images/illustration/student/128/white.svg" alt="Luma"> -->
 
@@ -305,7 +290,7 @@
 
                             </span>
 
-                            <span>Luma</span>
+                            <span>@(user.Name+" "+ user.Surname)</span> @* Student Name*@
                         </a>
 
                         <div class="sidebar-heading">Student</div>
@@ -313,7 +298,7 @@
 
                             <li class="sidebar-menu-item active">
                                 <a class="sidebar-menu-button"
-                                   href="index.html">
+                               asp-action="Index" asp-controller="Dashboard" asp-route-id="@user.Id">
                                     <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">home</span>
                                     <span class="sidebar-menu-text">Home</span>
                                 </a>
@@ -375,11 +360,11 @@
                                 </a>
                             </li>
                             <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button"
-                                   href="student-take-course.html">
+                                <a class="sidebar-menu-button" asp-action="Index" asp-controller="FreeLanceWork" asp-route-id="@user.Id"
+                                   >
                                     <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">class</span>
-                                    <span class="sidebar-menu-text">Take Course</span>
-                                    <span class="sidebar-menu-badge badge badge-accent badge-notifications ml-auto">PRO</span>
+                                    <span class="sidebar-menu-text">Term Papers</span>
+                                   
                                 </a>
                             </li>
                             <li class="sidebar-menu-item">

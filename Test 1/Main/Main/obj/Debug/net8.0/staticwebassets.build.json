@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YqmZoecyvG0kbir16rigSNu08X2/Fr/JlsKkqiXggZU=",
+  "Hash": "YTs6VIc23fj3NIV7Mjv+6IE9xoVcsF1LBXJKKJumBYM=",
   "Source": "Main",
   "BasePath": "_content/Main",
   "Mode": "Default",
@@ -65755,6 +65755,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\teacher\\assets\\scss\\vendors\\_select2.scss"
+    },
+    {
+      "Identity": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\wwwroot\\upload\\termpapers\\6727393f-d720-4a3a-bc09-73b218d9c139.txt",
+      "SourceId": "Main",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\wwwroot\\",
+      "BasePath": "_content/Main",
+      "RelativePath": "upload/termpapers/6727393f-d720-4a3a-bc09-73b218d9c139.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\upload\\termpapers\\6727393f-d720-4a3a-bc09-73b218d9c139.txt"
     }
   ]
 }

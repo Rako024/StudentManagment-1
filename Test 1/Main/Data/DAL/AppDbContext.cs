@@ -23,6 +23,7 @@ namespace Data.DAL
         public DbSet<LessonTime> LessonTimes { get; set; }
         public DbSet<GradeAndAttendace> GradeAndAttendaces { get; set; }
         public DbSet<Colloquium> Colloquia { get; set; }
+        public DbSet<TermPaper> TermPapers { get; set; }
 
 
     }

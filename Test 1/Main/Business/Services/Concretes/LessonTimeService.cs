@@ -1,4 +1,5 @@
-﻿using Business.Exceptions.Lesson;
+﻿using Business.Exceptions;
+using Business.Exceptions.Lesson;
 using Business.Exceptions.LessonTime;
 using Business.Services.Abstracts;
 using Core.Helper;
@@ -24,7 +25,7 @@ namespace Business.Services.Concretes
             _lessonService = lessonService;
         }
 
-        public void CreateLessonTime(LessonTime lessonTime)
+        public async Task CreateLessonTime(LessonTime lessonTime)
         {
             Lesson lesson = _lessonService.GetLesson(x => x.Id == lessonTime.LessonId);
             if (lesson == null)
@@ -32,6 +33,11 @@ namespace Business.Services.Concretes
                 throw new LessonNotFoundException();
             }
             lessonTime.EndDate = lessonTime.Date.AddMinutes(95);
+            bool checkDate = await CheckDate(lessonTime.Date, lessonTime.LessonId);
+            if (checkDate)
+            {
+                throw new GlobalException("Date", "Date is not correct value, because dupicate Date");
+            }
             _lessonTimeRepository.Add(lessonTime);
             _lessonTimeRepository.Commit();
         }
@@ -78,7 +84,10 @@ namespace Business.Services.Concretes
         {
             return await _lessonTimeRepository.GetAsync(func);
         }
-        public void UpdateLessonTime(int id, LessonTime lessonTime)
+
+
+
+        public async Task UpdateLessonTime(int id, LessonTime lessonTime)
         {
             LessonTime oldLessonTime = _lessonTimeRepository.Get(x => x.Id == id);
             if (oldLessonTime == null)
@@ -89,6 +98,11 @@ namespace Business.Services.Concretes
             if (lesson == null)
             {
                 throw new LessonNotFoundException();
+            }
+            bool checkDate = await CheckDate(lessonTime, lessonTime.LessonId);
+            if(checkDate)
+            {
+                throw new GlobalException("Date", "Date is not correct value, because dupicate Date");
             }
             oldLessonTime.LessonId = lessonTime.LessonId;
             oldLessonTime.Date = lessonTime.Date;
@@ -122,6 +136,23 @@ namespace Business.Services.Concretes
                 PageSize = pageSize,
                 TotalCount = totalCount
             };
+        }
+
+        public async Task<bool> CheckDate(DateTime date, int lessonId)
+        {
+            Lesson lesson = _lessonService.GetLessonsWithGroupAndTeacherUser(x => x.Id == lessonId);
+            IQueryable<LessonTime>lessons =  await _lessonTimeRepository.GetAll(x => !x.IsDeleted && x.Lesson.GroupId == lesson.GroupId);
+              return await  lessons.AnyAsync(lessonTime => (date >= lessonTime.Date && date <= lessonTime.EndDate) 
+              || (date.AddMinutes(95)>=lessonTime.Date && date.AddMinutes(95) <= lessonTime.EndDate) );
+        }
+
+
+        public async Task<bool> CheckDate(LessonTime lessonTime, int lessonId)
+        {
+            Lesson lesson =  _lessonService.GetLessonsWithGroupAndTeacherUser(x=>x.Id == lessonId);
+            IQueryable<LessonTime> lessons = await _lessonTimeRepository.GetAll(x => !x.IsDeleted && x.Lesson.GroupId == lesson.GroupId && x.Id!=lessonTime.Id);
+            return await lessons.AnyAsync(lesson => (lessonTime.Date >= lesson.Date && lessonTime.Date <= lesson.EndDate)
+            || (lessonTime.EndDate >= lesson.Date && lessonTime.EndDate <= lesson.EndDate));
         }
     }
 }

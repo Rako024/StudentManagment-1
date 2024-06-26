@@ -13841,6 +13841,10 @@
       "PackagePath": "staticwebassets\\teacher\\assets\\scss\\vendors\\_select2.scss"
     },
     {
+      "Id": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\wwwroot\\upload\\termpapers\\6727393f-d720-4a3a-bc09-73b218d9c139.txt",
+      "PackagePath": "staticwebassets\\upload\\termpapers\\6727393f-d720-4a3a-bc09-73b218d9c139.txt"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Main.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

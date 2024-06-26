@@ -11,10 +11,12 @@ namespace Business.Services.Abstracts
 {
     public interface ILessonTimeService
     {
-        void CreateLessonTime(LessonTime lessonTime);
+        Task CreateLessonTime(LessonTime lessonTime);
         void DeleteLessonTime(int id);
         void SoftDeleteLessonTime(int id);
-        void UpdateLessonTime(int id, LessonTime lessonTime);
+        Task UpdateLessonTime(int id, LessonTime lessonTime);
+        Task<bool> CheckDate(DateTime date, int lessonId);
+        Task<bool> CheckDate(LessonTime lessonTime, int lessonId);
         LessonTime GetLessonTime(Func<LessonTime, bool>? func = null);
         Task<LessonTime> GetLessonTimeAsync(Expression<Func<LessonTime, bool>> func);
         Task<List<LessonTime>> GetAllLessonTimes(Expression<Func<LessonTime, bool>>? func = null,
