@@ -1,0 +1,54 @@
+﻿@using Business.DTOs.EntryPoints
+@model EnrtryPointPageDto
+
+<div class="page-wrapper justify-content-center">
+    <div class="container mt-5 mb-5">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <h1>@Model.Lesson.Name</h1>
+                <h1>@Model.Lesson.Group.Name</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <a class="btn btn-primary m-1 col-md-2 mb-3 " asp-action="Index" asp-controller="TeacherLesson" asp-route-id="@Model.Lesson.Id">Daily Grade</a>
+            <a class="btn btn-primary m-1 col-md-2 mb-3" asp-action="Colloquium" asp-controller="TeacherLesson" asp-route-id="@Model.Lesson.Id">Colloquium</a>
+            <a class="btn btn-primary m-1 col-md-2 mb-3" asp-action="TermPaper" asp-controller="TeacherLesson" asp-route-id="@Model.Lesson.Id">Term Papers</a>
+            <a class="btn btn-warning m-1 col-md-2 mb-3" asp-action="Index" asp-controller="EntryPoint" asp-route-lessonId="@Model.Lesson.Id">Entry points</a>
+        </div>
+    </div>
+
+    <div class="container justify-content-center">
+        <div class="table-responsive">
+            <table class="table-bordered  table-striped grade-and-attendace-table">
+                <thead>
+                    <tr>
+                        <th class="sticky-col">Student</th>
+                        <th>Entry Point</th>
+                        <th>Failed</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var student in Model.StudentUsers)
+                    {
+                       
+                            var result = @Model.EntryPoints.FirstOrDefault(x => x.StudentUserId == student.Id);
+                        
+                        <tr>
+                            <td class="sticky-col">@(student.Name + " " + student.Surname)</td>
+                            <td>
+                                @result.TotalPoint
+                            </td>
+                            <td>
+                                @result.IsFailed
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

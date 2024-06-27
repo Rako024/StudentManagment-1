@@ -8,6 +8,7 @@ using Data.RepositoryConcretes;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using System.Configuration;
 
 namespace Main;
 
@@ -41,6 +42,16 @@ public class Program
 
         builder.Services.AddScoped<ITermPaperRepository, TermPaperRepository>();
         builder.Services.AddScoped<ITermPaperService, TermPaperService>();
+
+        builder.Services.AddScoped<ITermPaperGradeRepository, TermPaperGradeRepository>();
+        builder.Services.AddScoped<ITermPaperGradeService, TermPaperGradeService>();
+        
+        builder.Services.AddScoped<ISemesterRepository, SemesterRepository>();
+        builder.Services.AddScoped<ISemesterService, SemesterService>();
+
+        builder.Services.AddScoped<IMailService, MailService>();
+
+        builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
 
         builder.Services.AddScoped<AdminLayoutService>();
 

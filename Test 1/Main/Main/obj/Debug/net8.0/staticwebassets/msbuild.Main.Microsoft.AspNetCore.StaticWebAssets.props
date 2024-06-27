@@ -55360,12 +55360,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\teacher\assets\scss\vendors\_select2.scss))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\upload\termpapers\6727393f-d720-4a3a-bc09-73b218d9c139.txt))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\upload\termpapers\0125bcf7-7615-40ac-abef-fd706a81c701.pdf))">
       <SourceType>Package</SourceType>
       <SourceId>Main</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Main</BasePath>
-      <RelativePath>upload/termpapers/6727393f-d720-4a3a-bc09-73b218d9c139.txt</RelativePath>
+      <RelativePath>upload/termpapers/0125bcf7-7615-40ac-abef-fd706a81c701.pdf</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -55374,7 +55374,39 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\upload\termpapers\6727393f-d720-4a3a-bc09-73b218d9c139.txt))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\upload\termpapers\0125bcf7-7615-40ac-abef-fd706a81c701.pdf))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\upload\termpapers\47b76347-1e6e-4825-bed5-b111efc73392.txt))">
+      <SourceType>Package</SourceType>
+      <SourceId>Main</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Main</BasePath>
+      <RelativePath>upload/termpapers/47b76347-1e6e-4825-bed5-b111efc73392.txt</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\upload\termpapers\47b76347-1e6e-4825-bed5-b111efc73392.txt))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\upload\termpapers\eb85b91b-861d-4677-9da9-610b33e3ebd3.txt))">
+      <SourceType>Package</SourceType>
+      <SourceId>Main</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Main</BasePath>
+      <RelativePath>upload/termpapers/eb85b91b-861d-4677-9da9-610b33e3ebd3.txt</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\upload\termpapers\eb85b91b-861d-4677-9da9-610b33e3ebd3.txt))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

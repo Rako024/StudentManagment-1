@@ -1,6 +1,8 @@
 ﻿using Business.Exceptions;
 using Business.Services.Abstracts;
+using Core.CoreEnums;
 using Core.Models;
+using MailKit.Search;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,6 +16,7 @@ namespace Main.Areas.Admin.Controllers
         IStudentUserService _studentUserService;
         ILessonService _lessonService;
         ILessonTimeService _lessonTimeService;
+        ISemesterService _semesterService;
 
 
         public GroupController
@@ -22,17 +25,31 @@ namespace Main.Areas.Admin.Controllers
             IStudentUserService studentUserService,
             ILessonService lessonService,
             ILessonTimeService lessonTimeService
-            )
+,
+            ISemesterService semesterService)
         {
             _groupService = groupService;
             _studentUserService = studentUserService;
             _lessonService = lessonService;
             _lessonTimeService = lessonTimeService;
+            _semesterService = semesterService;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string? searchTerm)
         {
-            List<Group> groups = await _groupService.GetAllGroup(x=>x.IsDeleted==false,x=>x.Name);
+            List<Group> groups;
+            if (string.IsNullOrEmpty(searchTerm))
+            {
+                groups = await _groupService.GetAllGroup(g => !g.IsDeleted, g => g.Name);
+            }
+            else
+            {
+                string upperSearchTerm = searchTerm.ToUpper();
+                groups = await _groupService.GetAllGroup(
+                    g => !g.IsDeleted && g.Name.ToUpper().Contains(upperSearchTerm),
+                    g => g.Name);
+            }
+            ViewBag.SearchTerm = searchTerm;
             return View(groups);
         }
 
@@ -117,7 +134,9 @@ namespace Main.Areas.Admin.Controllers
                 return View("Error");
             }
             ViewBag.Group = group;
-            List<Lesson> lessons = await _lessonService.GetAllLessons(x=>x.GroupId == id && x.IsDeleted == false, x => x.Name,false,x=>x.Group, x => x.TeacherUser);
+            Semester activeSemester = _semesterService.GetSemester(x=>x.IsActive);
+            
+            List<Lesson> lessons = await _lessonService.GetAllLessons(x=>x.GroupId == id && x.IsDeleted == false && (int)x.Semester == activeSemester.SemesterNumber, x => x.Name,false,x=>x.Group, x => x.TeacherUser);
             return View(lessons);
         }
 

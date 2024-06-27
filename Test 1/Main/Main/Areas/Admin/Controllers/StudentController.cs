@@ -2,6 +2,7 @@
 using Business.Exceptions;
 using Business.Services.Abstracts;
 using Core.Models;
+using MailKit.Search;
 using Main.DTOs.Admin;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -24,9 +25,21 @@ public class StudentController : Controller
         _groupService = groupService;
     }
 
-    public async Task<IActionResult> Index()
+    public async Task<IActionResult> Index(string? searchTerm)
     {
-        List<StudentUser> students = await _studentUserService.GetAll(x=> x.IsDeleted == false,x=>x.Surname,false,x=>x.Group);
+        List<StudentUser> students;
+        if (string.IsNullOrEmpty(searchTerm))
+        {
+            students = await _studentUserService.GetAll(x => x.IsDeleted == false, x => x.Surname, false, x => x.Group);
+        }
+        else
+        {
+            string upperSearchTerm = searchTerm.ToUpper();
+            students = await _studentUserService.GetAll(
+                x => !x.IsDeleted && (x.Name.ToUpper().Contains(upperSearchTerm) || x.Surname.ToUpper().Contains(upperSearchTerm) || (x.Name + " " + x.Surname).ToUpper().Contains(upperSearchTerm)),
+                x => x.Surname, false, x => x.Group);
+        }
+        ViewBag.SearchTerm = searchTerm;
         return View(students);
     }
 

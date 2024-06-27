@@ -3,52 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\main\\areas\\student\\views\\freelancework\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|solutionrelative:main\\areas\\student\\views\\freelancework\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\main\\areas\\teacher\\controllers\\entrypointcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|solutionrelative:main\\areas\\teacher\\controllers\\entrypointcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\main\\areas\\student\\views\\freelancework\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|solutionrelative:main\\areas\\student\\views\\freelancework\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{47A14DE4-8F31-4BF5-9A13-1A201984553C}|Business\\Business.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\business\\helper\\entrypointcalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47A14DE4-8F31-4BF5-9A13-1A201984553C}|Business\\Business.csproj|solutionrelative:business\\helper\\entrypointcalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\main\\areas\\student\\controllers\\freelancework.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|solutionrelative:main\\areas\\student\\controllers\\freelancework.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{47A14DE4-8F31-4BF5-9A13-1A201984553C}|Business\\Business.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\business\\dtos\\entrypoints\\entrypointcalculatordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47A14DE4-8F31-4BF5-9A13-1A201984553C}|Business\\Business.csproj|solutionrelative:business\\dtos\\entrypoints\\entrypointcalculatordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{47A14DE4-8F31-4BF5-9A13-1A201984553C}|Business\\Business.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\business\\dtos\\student\\files\\termfileupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47A14DE4-8F31-4BF5-9A13-1A201984553C}|Business\\Business.csproj|solutionrelative:business\\dtos\\student\\files\\termfileupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\main\\areas\\teacher\\views\\entrypoint\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|solutionrelative:main\\areas\\teacher\\views\\entrypoint\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{47A14DE4-8F31-4BF5-9A13-1A201984553C}|Business\\Business.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\business\\services\\concretes\\termpaperservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47A14DE4-8F31-4BF5-9A13-1A201984553C}|Business\\Business.csproj|solutionrelative:business\\services\\concretes\\termpaperservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\main\\areas\\teacher\\controllers\\teacherlessoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|solutionrelative:main\\areas\\teacher\\controllers\\teacherlessoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{47A14DE4-8F31-4BF5-9A13-1A201984553C}|Business\\Business.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\business\\services\\abstracts\\itermpaperservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47A14DE4-8F31-4BF5-9A13-1A201984553C}|Business\\Business.csproj|solutionrelative:business\\services\\abstracts\\itermpaperservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\main\\areas\\teacher\\views\\teacherlesson\\colloquium.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|solutionrelative:main\\areas\\teacher\\views\\teacherlesson\\colloquium.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AA92E5A0-9567-4C38-9FFE-4EADC8E37148}|Data\\Data.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\data\\dal\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AA92E5A0-9567-4C38-9FFE-4EADC8E37148}|Data\\Data.csproj|solutionrelative:data\\dal\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47A14DE4-8F31-4BF5-9A13-1A201984553C}|Business\\Business.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\business\\dtos\\student\\files\\termfiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47A14DE4-8F31-4BF5-9A13-1A201984553C}|Business\\Business.csproj|solutionrelative:business\\dtos\\student\\files\\termfiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\main\\areas\\student\\views\\freelancework\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|solutionrelative:main\\areas\\student\\views\\freelancework\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47A14DE4-8F31-4BF5-9A13-1A201984553C}|Business\\Business.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\business\\business.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{47A14DE4-8F31-4BF5-9A13-1A201984553C}|Business\\Business.csproj|solutionrelative:business\\business.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11F6EA27-9E49-4A61-9943-1D8A8C913DD8}|Core\\Core.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\core\\models\\termpaper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11F6EA27-9E49-4A61-9943-1D8A8C913DD8}|Core\\Core.csproj|solutionrelative:core\\models\\termpaper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47A14DE4-8F31-4BF5-9A13-1A201984553C}|Business\\Business.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\business\\layoutservices\\studentlayoutservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47A14DE4-8F31-4BF5-9A13-1A201984553C}|Business\\Business.csproj|solutionrelative:business\\layoutservices\\studentlayoutservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{47A14DE4-8F31-4BF5-9A13-1A201984553C}|Business\\Business.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\business\\dtos\\entrypoints\\entrypointresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47A14DE4-8F31-4BF5-9A13-1A201984553C}|Business\\Business.csproj|solutionrelative:business\\dtos\\entrypoints\\entrypointresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,162 +38,97 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ITermPaperService.cs",
-              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Business\\Services\\Abstracts\\ITermPaperService.cs",
-              "RelativeDocumentMoniker": "Business\\Services\\Abstracts\\ITermPaperService.cs",
-              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Business\\Services\\Abstracts\\ITermPaperService.cs",
-              "RelativeToolTip": "Business\\Services\\Abstracts\\ITermPaperService.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAowBgAAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T04:24:51.558Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Update.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Student\\Views\\FreeLanceWork\\Update.cshtml",
-              "RelativeDocumentMoniker": "Main\\Areas\\Student\\Views\\FreeLanceWork\\Update.cshtml",
-              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Student\\Views\\FreeLanceWork\\Update.cshtml",
-              "RelativeToolTip": "Main\\Areas\\Student\\Views\\FreeLanceWork\\Update.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-26T03:58:16.881Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "TermFileUpdateDto.cs",
-              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Business\\DTOs\\Student\\Files\\TermFileUpdateDto.cs",
-              "RelativeDocumentMoniker": "Business\\DTOs\\Student\\Files\\TermFileUpdateDto.cs",
-              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Business\\DTOs\\Student\\Files\\TermFileUpdateDto.cs",
-              "RelativeToolTip": "Business\\DTOs\\Student\\Files\\TermFileUpdateDto.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAIA2wBgAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T03:56:30.56Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Student\\Views\\FreeLanceWork\\Create.cshtml",
-              "RelativeDocumentMoniker": "Main\\Areas\\Student\\Views\\FreeLanceWork\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Student\\Views\\FreeLanceWork\\Create.cshtml",
-              "RelativeToolTip": "Main\\Areas\\Student\\Views\\FreeLanceWork\\Create.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAuAAAA",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Teacher\\Views\\EntryPoint\\Index.cshtml",
+              "RelativeDocumentMoniker": "Main\\Areas\\Teacher\\Views\\EntryPoint\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Teacher\\Views\\EntryPoint\\Index.cshtml",
+              "RelativeToolTip": "Main\\Areas\\Teacher\\Views\\EntryPoint\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-26T02:53:45.451Z",
+              "WhenOpened": "2024-06-30T03:18:47.98Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TermFileDto.cs",
-              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Business\\DTOs\\Student\\Files\\TermFileDto.cs",
-              "RelativeDocumentMoniker": "Business\\DTOs\\Student\\Files\\TermFileDto.cs",
-              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Business\\DTOs\\Student\\Files\\TermFileDto.cs",
-              "RelativeToolTip": "Business\\DTOs\\Student\\Files\\TermFileDto.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAuwA4AAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T01:16:50.426Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FreeLanceWork.cs",
-              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Student\\Controllers\\FreeLanceWork.cs",
-              "RelativeDocumentMoniker": "Main\\Areas\\Student\\Controllers\\FreeLanceWork.cs",
-              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Student\\Controllers\\FreeLanceWork.cs",
-              "RelativeToolTip": "Main\\Areas\\Student\\Controllers\\FreeLanceWork.cs",
-              "ViewState": "AQIAAH4AAAAAAAAAAAAjwIoAAABBAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T22:44:35.541Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Student\\Views\\FreeLanceWork\\Details.cshtml",
-              "RelativeDocumentMoniker": "Main\\Areas\\Student\\Views\\FreeLanceWork\\Details.cshtml",
-              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Student\\Views\\FreeLanceWork\\Details.cshtml",
-              "RelativeToolTip": "Main\\Areas\\Student\\Views\\FreeLanceWork\\Details.cshtml",
-              "ViewState": "AQIAACAAAAAAAAAAAAAAADIAAAAAAAAA",
+              "DocumentIndex": 5,
+              "Title": "Colloquium.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Teacher\\Views\\TeacherLesson\\Colloquium.cshtml",
+              "RelativeDocumentMoniker": "Main\\Areas\\Teacher\\Views\\TeacherLesson\\Colloquium.cshtml",
+              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Teacher\\Views\\TeacherLesson\\Colloquium.cshtml",
+              "RelativeToolTip": "Main\\Areas\\Teacher\\Views\\TeacherLesson\\Colloquium.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAACNAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-26T02:33:24.642Z",
+              "WhenOpened": "2024-06-30T03:18:25.075Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "TermPaperService.cs",
-              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Business\\Services\\Concretes\\TermPaperService.cs",
-              "RelativeDocumentMoniker": "Business\\Services\\Concretes\\TermPaperService.cs",
-              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Business\\Services\\Concretes\\TermPaperService.cs",
-              "RelativeToolTip": "Business\\Services\\Concretes\\TermPaperService.cs",
-              "ViewState": "AQIAAGEAAAAAAAAAAAASwGgAAABMAAAA",
+              "Title": "TeacherLessonController.cs",
+              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Teacher\\Controllers\\TeacherLessonController.cs",
+              "RelativeDocumentMoniker": "Main\\Areas\\Teacher\\Controllers\\TeacherLessonController.cs",
+              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Teacher\\Controllers\\TeacherLessonController.cs",
+              "RelativeToolTip": "Main\\Areas\\Teacher\\Controllers\\TeacherLessonController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABoAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T01:22:23.48Z",
+              "WhenOpened": "2024-06-30T02:45:08.363Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EntryPointController.cs",
+              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Teacher\\Controllers\\EntryPointController.cs",
+              "RelativeDocumentMoniker": "Main\\Areas\\Teacher\\Controllers\\EntryPointController.cs",
+              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Teacher\\Controllers\\EntryPointController.cs",
+              "RelativeToolTip": "Main\\Areas\\Teacher\\Controllers\\EntryPointController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAwEIAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T02:40:12.347Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Data\\DAL\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\DAL\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Data\\DAL\\AppDbContext.cs",
-              "RelativeToolTip": "Data\\DAL\\AppDbContext.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAAAA8AAAAIAAAA",
+              "Title": "EntryPointResultDto.cs",
+              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Business\\DTOs\\EntryPoints\\EntryPointResultDto.cs",
+              "RelativeDocumentMoniker": "Business\\DTOs\\EntryPoints\\EntryPointResultDto.cs",
+              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Business\\DTOs\\EntryPoints\\EntryPointResultDto.cs",
+              "RelativeToolTip": "Business\\DTOs\\EntryPoints\\EntryPointResultDto.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T00:57:34.91Z",
+              "WhenOpened": "2024-06-30T02:16:17.929Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "TermPaper.cs",
-              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Core\\Models\\TermPaper.cs",
-              "RelativeDocumentMoniker": "Core\\Models\\TermPaper.cs",
-              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Core\\Models\\TermPaper.cs",
-              "RelativeToolTip": "Core\\Models\\TermPaper.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAABUAAAAYAAAA",
+              "DocumentIndex": 2,
+              "Title": "EntryPointCalculatorDto.cs",
+              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Business\\DTOs\\EntryPoints\\EntryPointCalculatorDto.cs",
+              "RelativeDocumentMoniker": "Business\\DTOs\\EntryPoints\\EntryPointCalculatorDto.cs",
+              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Business\\DTOs\\EntryPoints\\EntryPointCalculatorDto.cs",
+              "RelativeToolTip": "Business\\DTOs\\EntryPoints\\EntryPointCalculatorDto.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABMAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T00:43:25.988Z",
+              "WhenOpened": "2024-06-30T01:52:25.494Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Business",
-              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Business\\Business.csproj",
-              "RelativeDocumentMoniker": "Business\\Business.csproj",
-              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Business\\Business.csproj",
-              "RelativeToolTip": "Business\\Business.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA8AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-06-26T00:39:56.279Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "StudentLayoutService.cs",
-              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Business\\LayoutServices\\StudentLayoutService.cs",
-              "RelativeDocumentMoniker": "Business\\LayoutServices\\StudentLayoutService.cs",
-              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Business\\LayoutServices\\StudentLayoutService.cs",
-              "RelativeToolTip": "Business\\LayoutServices\\StudentLayoutService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "EntryPointCalculator.cs",
+              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Business\\Helper\\EntryPointCalculator.cs",
+              "RelativeDocumentMoniker": "Business\\Helper\\EntryPointCalculator.cs",
+              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Business\\Helper\\EntryPointCalculator.cs",
+              "RelativeToolTip": "Business\\Helper\\EntryPointCalculator.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAC0AAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T22:32:37.446Z",
+              "WhenOpened": "2024-06-30T01:49:17.017Z",
               "EditorCaption": ""
             }
           ]

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YTs6VIc23fj3NIV7Mjv+6IE9xoVcsF1LBXJKKJumBYM=",
+  "Hash": "ZIov6MxwTkxEEgLCqs34uqwRbBuUEc0D0hoQBdyl/nw=",
   "Source": "Main",
   "BasePath": "_content/Main",
   "Mode": "Default",
@@ -65757,12 +65757,12 @@
       "OriginalItemSpec": "wwwroot\\teacher\\assets\\scss\\vendors\\_select2.scss"
     },
     {
-      "Identity": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\wwwroot\\upload\\termpapers\\6727393f-d720-4a3a-bc09-73b218d9c139.txt",
+      "Identity": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\wwwroot\\upload\\termpapers\\0125bcf7-7615-40ac-abef-fd706a81c701.pdf",
       "SourceId": "Main",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\wwwroot\\",
       "BasePath": "_content/Main",
-      "RelativePath": "upload/termpapers/6727393f-d720-4a3a-bc09-73b218d9c139.txt",
+      "RelativePath": "upload/termpapers/0125bcf7-7615-40ac-abef-fd706a81c701.pdf",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -65773,7 +65773,45 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\upload\\termpapers\\6727393f-d720-4a3a-bc09-73b218d9c139.txt"
+      "OriginalItemSpec": "wwwroot\\upload\\termpapers\\0125bcf7-7615-40ac-abef-fd706a81c701.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\wwwroot\\upload\\termpapers\\47b76347-1e6e-4825-bed5-b111efc73392.txt",
+      "SourceId": "Main",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\wwwroot\\",
+      "BasePath": "_content/Main",
+      "RelativePath": "upload/termpapers/47b76347-1e6e-4825-bed5-b111efc73392.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\upload\\termpapers\\47b76347-1e6e-4825-bed5-b111efc73392.txt"
+    },
+    {
+      "Identity": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\wwwroot\\upload\\termpapers\\eb85b91b-861d-4677-9da9-610b33e3ebd3.txt",
+      "SourceId": "Main",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\wwwroot\\",
+      "BasePath": "_content/Main",
+      "RelativePath": "upload/termpapers/eb85b91b-861d-4677-9da9-610b33e3ebd3.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\upload\\termpapers\\eb85b91b-861d-4677-9da9-610b33e3ebd3.txt"
     }
   ]
 }

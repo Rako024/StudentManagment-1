@@ -21888,5 +21888,15 @@ th.sticky-col, td.sticky-col {
     background-color: #fff; /* Arka plan rengi */
     color: #333; /* Yazı rengi */
 }
+.number-termpaper-grade {
+    border: 2px solid #FF902F;
+   
+    border-radius: 5px;
+    padding: 5px;
+    color: #333;
+    background-color: #fff;
+    font-size: 14px;
+    width: 100%;
+}
 
 /*# sourceMappingURL=style.css.map */

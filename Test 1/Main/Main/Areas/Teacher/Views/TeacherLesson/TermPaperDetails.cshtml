@@ -1,0 +1,60 @@
+﻿@using Business.DTOs.Student.Files
+@using Core.CoreEnums
+
+@model TermPaperDetailsDto
+@{
+    int count = 1;
+}
+<div class="page-wrapper justify-content-center">
+    <div class="container mt-5 mb-5">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <h1>@(Model.StudentUser.Name + " " + Model.StudentUser.Surname)</h1>
+                <h1>@Model.Lesson.Name</h1>
+            </div>
+        </div>
+    </div>
+<div class="container justify-content-center">
+        <div class="table-responsive">
+            <table class="table-bordered  table-striped grade-and-attendace-table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Id</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Lesson Name</th>
+                        <th scope="col">Teacher Name</th>
+                        <th scope="col">Download</th>
+                
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.TermPapers)
+                    {
+                        <tr>
+                            <td>@count</td>
+                            <td>@item.Id</td>
+                            <td>@item.Name</td>
+                            <td>@item.Lesson.Name</td>
+                            <td>@item.Lesson.TeacherUser.Name</td>
+                            <td>
+                                @if (!string.IsNullOrEmpty(item.FileUrl))
+                                {
+                                    <a class="btn btn-info" href="~/upload/termpapers/@item.FileUrl" download>Download</a>
+                                }
+                            </td>
+
+                    
+                        </tr>
+
+                        count++;
+                    }
+
+                </tbody>
+            </table>
+        </div>
+  
+</div>
+</div>

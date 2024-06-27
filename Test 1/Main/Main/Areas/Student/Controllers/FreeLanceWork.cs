@@ -3,11 +3,13 @@ using Business.Exceptions;
 using Business.Exceptions.File;
 using Business.Services.Abstracts;
 using Core.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Main.Areas.Student.Controllers
 {
     [Area("Student")]
+    [Authorize(Roles = "Student")]
     public class FreeLanceWork : Controller
     {
         IStudentUserService _studentUserService;

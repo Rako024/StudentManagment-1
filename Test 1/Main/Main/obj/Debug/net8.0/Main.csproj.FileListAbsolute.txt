@@ -523,3 +523,6 @@ C:\Users\Rashid\Desktop\Student Managment\StudentManagment-1\Test 1\Main\Main\ob
 C:\Users\Rashid\Desktop\Student Managment\StudentManagment-1\Test 1\Main\Main\obj\Debug\net8.0\Main.pdb
 C:\Users\Rashid\Desktop\Student Managment\StudentManagment-1\Test 1\Main\Main\obj\Debug\net8.0\Main.genruntimeconfig.cache
 C:\Users\Rashid\Desktop\Student Managment\StudentManagment-1\Test 1\Main\Main\obj\Debug\net8.0\ref\Main.dll
+C:\Users\Rashid\Desktop\Student Managment\StudentManagment-1\Test 1\Main\Main\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\Rashid\Desktop\Student Managment\StudentManagment-1\Test 1\Main\Main\bin\Debug\net8.0\MailKit.dll
+C:\Users\Rashid\Desktop\Student Managment\StudentManagment-1\Test 1\Main\Main\bin\Debug\net8.0\MimeKit.dll

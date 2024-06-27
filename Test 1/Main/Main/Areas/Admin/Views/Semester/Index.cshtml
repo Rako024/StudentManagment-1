@@ -1,0 +1,36 @@
+﻿@using Core.Models
+
+@model List<Semester>
+
+<div class="container justify-content-center">
+    <div class="row justify-content-center">
+        <h2 >Select Active Semester</h2>
+    </div>
+    <div class="row justify-content-center">
+        <form asp-action="SetActiveSemester" method="post">
+            @foreach (var sem in Model)
+            {
+                <div>
+                    @if (ViewBag.AciveSemester == sem)
+                    {
+                        <input type="radio" name="id" asp-for="@sem.IsActive" value="@sem.Id" checked />
+                        <label asp-for="@sem.IsActive">
+                            @sem.Name
+                        </label>
+                    }
+                    else
+                    {
+                        <input type="radio" name="id" asp-for="@sem.IsActive" value="@sem.Id" />
+                        <label asp-for="@sem.IsActive">@sem.Name</label>
+                    }
+
+                </div>
+
+            }
+
+            <button class="btn btn-primary" type="submit">Set Active Semester</button>
+        </form>
+        <div asp-validation-summary="All" class="text-danger"></div>
+    </div> 
+
+</div>

@@ -13841,8 +13841,16 @@
       "PackagePath": "staticwebassets\\teacher\\assets\\scss\\vendors\\_select2.scss"
     },
     {
-      "Id": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\wwwroot\\upload\\termpapers\\6727393f-d720-4a3a-bc09-73b218d9c139.txt",
-      "PackagePath": "staticwebassets\\upload\\termpapers\\6727393f-d720-4a3a-bc09-73b218d9c139.txt"
+      "Id": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\wwwroot\\upload\\termpapers\\0125bcf7-7615-40ac-abef-fd706a81c701.pdf",
+      "PackagePath": "staticwebassets\\upload\\termpapers\\0125bcf7-7615-40ac-abef-fd706a81c701.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\wwwroot\\upload\\termpapers\\47b76347-1e6e-4825-bed5-b111efc73392.txt",
+      "PackagePath": "staticwebassets\\upload\\termpapers\\47b76347-1e6e-4825-bed5-b111efc73392.txt"
+    },
+    {
+      "Id": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\wwwroot\\upload\\termpapers\\eb85b91b-861d-4677-9da9-610b33e3ebd3.txt",
+      "PackagePath": "staticwebassets\\upload\\termpapers\\eb85b91b-861d-4677-9da9-610b33e3ebd3.txt"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Main.Microsoft.AspNetCore.StaticWebAssets.props",

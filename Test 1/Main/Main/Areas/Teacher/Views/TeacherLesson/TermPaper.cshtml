@@ -1,0 +1,71 @@
+﻿@using Business.DTOs.Teacher.TeacherLessonsDto
+@using Core.Models
+@model TermPaperPageDto
+
+<div class="page-wrapper justify-content-center">
+    <div class="container mt-5 mb-5">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <h1>@Model.Lesson.Name</h1>
+                <h1>@Model.Lesson.Group.Name</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <a class="btn btn-primary m-1 col-md-2 mb-3 " asp-action="Index" asp-route-id="@Model.Lesson.Id">Daily Grade</a>
+            <a class="btn btn-primary m-1 col-md-2 mb-3" asp-action="Colloquium" asp-route-id="@Model.Lesson.Id">Colloquium</a>
+            <a class="btn btn-warning m-1 col-md-2 mb-3" asp-action="TermPaper" asp-route-id="@Model.Lesson.Id">Term Papers</a>
+            <a class="btn btn-primary m-1 col-md-2 mb-3" asp-action="Index" asp-controller="EntryPoint" asp-route-lessonId="@Model.Lesson.Id">Entry points</a>
+        </div>
+    </div>
+
+    <div class="container justify-content-center">
+        <div class="table-responsive">
+            <table class="table-bordered  table-striped grade-and-attendace-table">
+                <thead>
+                    <tr>
+                        <th class="sticky-col">Student</th>
+                        <th>Term Paper Grade</th>
+                        <th>Detail</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var student in Model.Students)
+                    {
+                        int grade = 0;
+                        TermPaperGrade paper = Model.TermPaperGrades.FirstOrDefault(x => x.StudentUserId == student.Id);
+                        if(paper != null)
+                        {
+                            grade = paper.Grade;
+                        }
+
+                        <tr>
+                            <td class="sticky-col">@(student.Name + " " + student.Surname)</td>
+                            <td>
+                                <form method="post" action="/Teacher/TeacherLesson/AddOrUpdateTermPape">
+                                    <input type="hidden" name="StudentUserId" value="@student.Id" />
+                                    <input type="hidden" name="LessonId" value="@Model.Lesson.Id" />
+                                    <input type="number" name="Grade" value="@grade" onchange="this.form.submit()" style=" border: 2px solid #FF902F;
+
+                                            border-radius: 5px;
+                                            padding: 5px;
+                                            color: #333;
+                                            background-color: #fff;
+                                            font-size: 14px;
+                                            width: 100%;" />
+                                </form>
+                            </td>
+                            <td class="text-center" >
+                                <a class="btn btn-warning" asp-action="TermPaperDetails" asp-controller="TeacherLesson" style="width: 100%;" asp-route-studentUserId="@student.Id" asp-route-lessonId="@Model.Lesson.Id">Details</a>
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+           
+        </div>
+    </div>
+</div>

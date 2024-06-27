@@ -1,5 +1,7 @@
 ﻿using Business.DTOs.Account;
+using Business.Services.Abstracts;
 using Core.Models;
+using MailKit;
 using Main.Enums;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -11,14 +13,18 @@ public class AccountController : Controller
     UserManager<AppUser> _userManager;
     RoleManager<IdentityRole> _roleManager;
     SignInManager<AppUser> _signInManager;
-    public AccountController(UserManager<AppUser> userManager, RoleManager<IdentityRole> roleManager, SignInManager<AppUser> signInManager)
+    private readonly Business.Services.Abstracts.IMailService _mailService;
+
+    public AccountController(UserManager<AppUser> userManager, RoleManager<IdentityRole> roleManager, SignInManager<AppUser> signInManager, Business.Services.Abstracts.IMailService mailService)
     {
         _userManager = userManager;
         _roleManager = roleManager;
         _signInManager = signInManager;
+        
+        _mailService = mailService;
     }
 
-   public IActionResult Login()
+    public IActionResult Login()
     {
         return View();
     }
@@ -83,7 +89,103 @@ public class AccountController : Controller
         await _signInManager.SignOutAsync();
         return RedirectToAction(nameof(Login));
     }
+    public IActionResult ForgotPassword()
+    {
+        return View();
+    }
+    [HttpPost]
+    public async Task<IActionResult> ForgotPassword(ForgotPasswordDto forgotPassword)
+    {
+        if (!ModelState.IsValid)
+        {
+            return View();  
+        }
+        var user = await _userManager.FindByEmailAsync(forgotPassword.Email);
+        if (user is null)
+        {
+            ModelState.AddModelError("Email", "Email not foud!");
+            return View();
+        }
+        string token = await _userManager.GeneratePasswordResetTokenAsync(user);
+        //https://localhost:7238/account/resetpassword
+        string link = Url.Action("ResetPassword","Account",new {userId = user.Id,token = token},HttpContext.Request.Scheme);
 
+
+        await _mailService.SendEmailAsync(new MailRequest
+        {
+            Subject = "Reset Password",
+            ToEmail = forgotPassword.Email,
+            Body = $"<a href='{link}'>Reset</a>"
+        });
+        return RedirectToAction(nameof(Login));
+    }
+
+    public async Task<IActionResult> ResetPassword(string userId , string token)
+    {
+        var user = await _userManager.FindByIdAsync(userId);
+        if (user is null)
+        {
+            return View("Error");   
+        }
+
+        return View();
+    }
+    [HttpPost]
+    public async Task<IActionResult> ResetPassword(ResetPasswordDto dto, string userId,string token)
+    {
+        if (!ModelState.IsValid)
+        {
+            return View();
+        }
+        var user = await _userManager.FindByIdAsync(userId);
+        if (user is null)
+        {
+            return View("Error");
+        }
+        var result = await _userManager.ResetPasswordAsync(user, token,dto.Password);
+        return RedirectToAction(nameof(Login));
+    }
+
+
+    public async Task<IActionResult> ChangePassword(string userId)
+    {
+        var user = await _userManager.FindByIdAsync(userId);
+        if (user is null)
+        {
+            return View("Error");
+        }
+        return View();
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> ChangePassword(ChangePasswordDto dto,string userId)
+    {
+        if (!ModelState.IsValid)
+        {
+            return View();
+        }
+		var user = await _userManager.FindByIdAsync(userId);
+		if (user is null)
+		{
+			return View("Error");
+		}
+		var result = await _userManager.ChangePasswordAsync(user, dto.PreviousPassword, dto.NewPassword);
+		if (result.Succeeded)
+		{
+			await LogOut();   
+			return RedirectToAction(nameof(Login));
+		}
+		else
+		{
+			
+			foreach (var error in result.Errors)
+			{
+				ModelState.AddModelError(string.Empty, error.Description);
+			}
+			return View(dto);
+		}
+
+	}
     //public async Task<IActionResult> CreateRoles()
     //{
     //    IdentityRole role1 = new IdentityRole(RolesEnum.Admin.ToString());

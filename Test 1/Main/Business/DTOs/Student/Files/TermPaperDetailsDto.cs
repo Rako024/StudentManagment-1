@@ -11,6 +11,8 @@ namespace Business.DTOs.Student.Files
     {
         public List<TermPaper> TermPapers { get; set; }
         public string UserId { get; set; }
+        public StudentUser? StudentUser { get; set; }
         public int LessonId { get; set; }
+        public Lesson? Lesson { get; set; }
     }
 }

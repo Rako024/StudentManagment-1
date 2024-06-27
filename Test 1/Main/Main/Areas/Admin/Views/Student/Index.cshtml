@@ -5,9 +5,21 @@
 @model List<StudentUser>
 
 <div class="container">
-    <h1>Students</h1>
-    <a class="btn btn-primary" asp-action="Create">Create</a>
-</div>
+    <div class="row mb-3 justify-content-center">
+        <h1 class="me-3">Students</h1>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md-6 d-flex align-items-center">
+            
+            <a class="btn btn-primary" asp-action="Create">Create</a>
+        </div>
+        <div class="col-md-6">
+            <form method="get" asp-action="Index" class="d-flex">
+                <input type="text" name="searchTerm" value="@ViewBag.SearchTerm" class="form-control me-2" placeholder="Search for students...">
+                <button type="submit" class="btn btn-secondary">Search</button>
+            </form>
+        </div>
+    </div>
 <div class="container justify-content-center">
     <table class="table">
         <thead>

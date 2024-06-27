@@ -4,12 +4,14 @@
 @using Microsoft.AspNetCore.Identity
 @inject UserManager<AppUser> _userManager
 @inject ILessonService _lessonlervice
+@inject ISemesterService _semesterservice
 
 @{
+	Semester activeSemester = _semesterservice.GetSemester(x => x.IsActive);
 	AppUser user = await _userManager.GetUserAsync(User);
 	List<Lesson> lessons = await _lessonlervice.GetAllLessons
 	(
-		x => x.TeacherUserId == user.Id && x.IsDeleted == false,
+		x => x.TeacherUserId == user.Id && x.IsDeleted == false && (int)x.Semester == activeSemester.SemesterNumber,
 		x => x.Name,
 		false,
 		x => x.TeacherUser,
@@ -288,9 +290,8 @@
 						<span>@User.Identity.Name</span>
 					</a>
 					<div class="dropdown-menu">
-						<a class="dropdown-item" href="profile.html">My Profile</a>
-						<a class="dropdown-item" href="settings.html">Settings</a>
-						<a class="dropdown-item" href="index.html">Logout</a>
+						<a class="dropdown-item" asp-action="ChangePassword" asp-controller="Account" asp-area="" asp-route-userId="@user.Id">Change Password</a>
+						<a class="dropdown-item" asp-action="LogOut" asp-controller="Account" asp-area="">Logout</a>
 					</div>
 				</li>
 			</ul>

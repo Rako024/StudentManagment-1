@@ -24,7 +24,8 @@ namespace Data.DAL
         public DbSet<GradeAndAttendace> GradeAndAttendaces { get; set; }
         public DbSet<Colloquium> Colloquia { get; set; }
         public DbSet<TermPaper> TermPapers { get; set; }
-
+        public DbSet<TermPaperGrade> TermPaperGrades { get;set; }
+        public DbSet<Semester> Semesters { get; set; }
 
     }
 }

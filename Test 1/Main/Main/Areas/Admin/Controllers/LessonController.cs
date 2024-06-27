@@ -25,11 +25,24 @@ namespace Main.Areas.Admin.Controllers
             _lessonTimeService = lessonTimeService;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string? searchTerm)
         {
-            List<Lesson> lessons = await _lessonService.GetAllLessons(x => x.IsDeleted == false, x => x.Name, false, x => x.Group, x => x.TeacherUser);
+            List<Lesson> lessons;
+            if (string.IsNullOrEmpty(searchTerm))
+            {
+                lessons = await _lessonService.GetAllLessons(x => x.IsDeleted == false, x => x.Name, false, x => x.Group, x => x.TeacherUser);
+            }
+            else
+            {
+                string upperSearchTerm = searchTerm.ToUpper();
+                lessons = await _lessonService.GetAllLessons(
+                    x => !x.IsDeleted && x.Name.ToUpper().Contains(upperSearchTerm),
+                    x => x.Name, false, x => x.Group, x => x.TeacherUser);
+            }
+            ViewBag.SearchTerm = searchTerm;
             return View(lessons);
         }
+
 
         public async Task<IActionResult> Create(int? groupId)
         {
