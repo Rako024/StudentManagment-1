@@ -11,7 +11,7 @@
 	AppUser user = await _userManager.GetUserAsync(User);
 	List<Lesson> lessons = await _lessonlervice.GetAllLessons
 	(
-		x => x.TeacherUserId == user.Id && x.IsDeleted == false && (int)x.Semester == activeSemester.SemesterNumber,
+		x => x.TeacherUserId == user.Id && x.IsDeleted == false && x.IsPast == false && (int)x.Semester == activeSemester.SemesterNumber,
 		x => x.Name,
 		false,
 		x => x.TeacherUser,

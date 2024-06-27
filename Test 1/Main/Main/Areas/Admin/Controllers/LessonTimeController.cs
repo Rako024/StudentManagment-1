@@ -26,7 +26,9 @@ namespace Main.Areas.Admin.Controllers
         var pagedResult = await _lessonTimeService.GetPagedLessonTimes(
             pageNumber, 
             pageSize, 
-            x => x.IsDeleted == false,
+            x => x.IsDeleted == false &&
+            x.Lesson.IsDeleted == false &&
+            x.Lesson.IsPast == false,
             x => x.Date,
             false,
             x => x.Lesson,
@@ -41,7 +43,7 @@ namespace Main.Areas.Admin.Controllers
         {
             if (lessonId == null)
             {
-                ViewBag.Lessons = await _lessonService.GetAllLessons(x => x.IsDeleted == false, x=>true,false,x => x.Group, x=>x.TeacherUser);
+                ViewBag.Lessons = await _lessonService.GetAllLessons(x => x.IsDeleted == false && x.IsPast == false, x=>true,false,x => x.Group, x=>x.TeacherUser);
                 
             }
             else
@@ -61,7 +63,7 @@ namespace Main.Areas.Admin.Controllers
         {
             if(!ModelState.IsValid)
             {
-                ViewBag.Lessons = await _lessonService.GetAllLessons(x => x.IsDeleted == false, x => true, false, x => x.Group, x => x.TeacherUser);
+                ViewBag.Lessons = await _lessonService.GetAllLessons(x => x.IsDeleted == false && x.IsPast == false, x => true, false, x => x.Group, x => x.TeacherUser);
                 return View();
             }
             try
@@ -70,12 +72,12 @@ namespace Main.Areas.Admin.Controllers
             }
             catch (LessonNotFoundException ex)
             {
-                ViewBag.Lessons = await _lessonService.GetAllLessons(x => x.IsDeleted == false, x => true, false, x => x.Group, x => x.TeacherUser);
+                ViewBag.Lessons = await _lessonService.GetAllLessons(x => x.IsDeleted == false && x.IsPast == false, x => true, false, x => x.Group, x => x.TeacherUser);
                 ModelState.AddModelError("LessonId", ex.Message);
                 return View();
             }catch(GlobalException ex)
             {
-                ViewBag.Lessons =  await _lessonService.GetAllLessons(x => x.IsDeleted == false, x => true, false, x => x.Group, x => x.TeacherUser);
+                ViewBag.Lessons =  await _lessonService.GetAllLessons(x => x.IsDeleted == false && x.IsPast == false, x => true, false, x => x.Group, x => x.TeacherUser);
                 ModelState.AddModelError(ex.ProperyName, ex.Message);
                 return View();
             }
@@ -126,7 +128,7 @@ namespace Main.Areas.Admin.Controllers
 
         public async Task<IActionResult> Update(int id) 
         {
-            ViewBag.Lessons = await _lessonService.GetAllLessons(x => x.IsDeleted == false, x => true, false, x => x.Group, x => x.TeacherUser);
+            ViewBag.Lessons = await _lessonService.GetAllLessons(x => x.IsDeleted == false && x.IsPast == false, x => true, false, x => x.Group, x => x.TeacherUser);
             LessonTime lessonTime = await _lessonTimeService.GetLessonTimeAsync(x => x.Id == id);
             if (lessonTime == null)
             {
@@ -140,7 +142,7 @@ namespace Main.Areas.Admin.Controllers
         {
             if (!ModelState.IsValid)
             {
-                ViewBag.Lessons = await _lessonService.GetAllLessons(x => x.IsDeleted == false, x => true, false, x => x.Group, x => x.TeacherUser);
+                ViewBag.Lessons = await _lessonService.GetAllLessons(x => x.IsDeleted == false && x.IsPast == false, x => true, false, x => x.Group, x => x.TeacherUser);
                 return View();
             }
 
@@ -152,13 +154,13 @@ namespace Main.Areas.Admin.Controllers
                 return View("Error");
             }catch (LessonNotFoundException ex)
             {
-                ViewBag.Lessons = await _lessonService.GetAllLessons(x => x.IsDeleted == false, x => true, false, x => x.Group, x => x.TeacherUser);
+                ViewBag.Lessons = await _lessonService.GetAllLessons(x => x.IsDeleted == false && x.IsPast == false, x => true, false, x => x.Group, x => x.TeacherUser);
                 ModelState.AddModelError("LessonId", ex.Message);
                 return View();
             }
             catch (GlobalException ex)
             {
-                ViewBag.Lessons = await _lessonService.GetAllLessons(x => x.IsDeleted == false, x => true, false, x => x.Group, x => x.TeacherUser);
+                ViewBag.Lessons = await _lessonService.GetAllLessons(x => x.IsDeleted == false && x.IsPast == false, x => true, false, x => x.Group, x => x.TeacherUser);
                 ModelState.AddModelError(ex.ProperyName, ex.Message);
                 return View();
             }

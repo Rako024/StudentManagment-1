@@ -24,5 +24,7 @@ namespace Business.Services.Abstracts
             );
         List<Lesson> GetAllLessinsWithGroupAndTeacherUser(Func<Lesson, bool>? func = null);
         Lesson GetLessonsWithGroupAndTeacherUser(Func<Lesson, bool>? func = null);
+
+        Task ChangeIsPast(int lessonId,bool isPast);
     }
 }

@@ -1,0 +1,161 @@
+﻿@using Business.DTOs.ExsamScores
+
+@model ExsamScorePageDto
+
+<style>
+    .table-responsive {
+        overflow-x: auto;
+        max-height: 400px;
+        overflow-y: auto;
+        background-color: #F5F5F5;
+        border-radius: 7px;
+    }
+
+    .grade-and-attendace-table {
+        width: 100%;
+        border-radius: 50px;
+    }
+
+    th.sticky-col, td.sticky-col {
+        position: -webkit-sticky;
+        position: sticky;
+        left: 0;
+        background-color: #F5F5F5;
+        z-index: 1;
+    }
+
+    .grade-and-attendace-table th {
+        background-color: #4e73df;
+        color: white;
+    }
+
+    .grade-and-attendace-table td {
+        background-color: #a7b9ef;
+    }
+
+    .grade-and-attendace-table tr:nth-child(even) td {
+        background-color: #caddf8
+    }
+
+    .selected-part {
+        color: aqua;
+    }
+
+    .grade-and-attendace-table select {
+    }
+
+
+        .grade-and-attendace-table select:hover {
+            border-color: #4e73df;
+        }
+
+
+    .grade-and-attendace-table option {
+        background-color: #fff;
+        color: #white;
+    }
+
+    .number-termpaper-grade {
+        border: 2px solid #FF902F;
+        border-radius: 5px;
+        padding: 5px;
+        color:  white;
+        background-color: #fff;
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .score-input {
+        width: 100%;
+        padding: 0.375rem 0.75rem;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        background-color: #fff;
+        box-sizing: border-box;
+    }
+
+        .score-input:focus {
+            border-color: #80bdff;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+
+    .form-inline {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+    <div class="container mt-5 mb-5">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <h1>@Model.Lesson.Name</h1>
+                <h1>@Model.Lesson.Group.Name</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container justify-content-center">
+        <div class="row justify-content-center">
+        <a class="btn btn-primary m-1 col-md-2 mb-3 " asp-action="Lessons" asp-route-id="@Model.Group.Id">Back To Page</a>
+        @if (Model.Lesson.IsPast)
+        {
+            <a class="btn btn-danger m-1 col-md-2 mb-3 " asp-action="ChangeIsPast" asp-route-lessonId="@Model.Lesson.Id" asp-route-isPast="@false" asp-route-groupId="@Model.Group.Id">Cancel confirmation</a>
+        }
+        else
+        {
+            <a class="btn btn-success m-1 col-md-2 mb-3 " asp-action="ChangeIsPast" asp-route-lessonId="@Model.Lesson.Id" asp-route-isPast="@true" asp-route-groupId="@Model.Group.Id">Confirm</a>
+        }
+        
+            
+        </div>
+    </div>
+
+    <div class="container justify-content-center">
+    <div class="table-responsive text-dark">
+            <table class="table-bordered  table-striped grade-and-attendace-table">
+                <thead>
+                    <tr>
+                        <th class="sticky-col">Student</th>
+                        <th>Entry Point</th>
+                        <th>Failed</th>
+                        <th>Exsam Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var student in Model.StudentUsers)
+                    {
+
+                        var result = Model.EntryPoints.FirstOrDefault(x => x.StudentUserId == student.Id);
+                    var exsamScores = Model.ExamScores.FirstOrDefault(x => x.StudentUserId == student.Id && x.LessonId == Model.Lesson.Id);
+                    <tr>
+                            <td class="sticky-col">@(student.Name + " " + student.Surname)</td>
+                            <td>
+                                @result.TotalPoint
+                            </td>
+                            <td>
+                                @result.IsFailed
+                            </td>
+                            <td>
+                            <form action="/Admin/ExamScore/CreateOrUpdateExsamScore" method="post" class="form-inline">
+                                <input name="StudentUserId" value="@student.Id" hidden/>
+                                <input name="LessonId" value="@Model.Lesson.Id" hidden/>
+                                @if(exsamScores != null)
+                                {
+
+                                    <input type="number" name="Score" value="@exsamScores.Score" onchange="this.form.submit()" class="score-input" />
+                                }
+                                else{
+                                    <input type="number" name="Score" onchange="this.form.submit()" class="score-input" />
+                                    
+                                    }
+                                </form>
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+

@@ -146,6 +146,36 @@ namespace Data.Migrations
                     b.ToTable("Colloquia");
                 });
 
+            modelBuilder.Entity("Core.Models.ExamScore", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("LessonId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Score")
+                        .HasColumnType("int");
+
+                    b.Property<string>("StudentUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LessonId");
+
+                    b.HasIndex("StudentUserId");
+
+                    b.ToTable("ExamScores");
+                });
+
             modelBuilder.Entity("Core.Models.GradeAndAttendace", b =>
                 {
                     b.Property<int>("Id")
@@ -222,6 +252,9 @@ namespace Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsPast")
                         .HasColumnType("bit");
 
                     b.Property<int>("LessonCount")
@@ -543,6 +576,25 @@ namespace Data.Migrations
                 });
 
             modelBuilder.Entity("Core.Models.Colloquium", b =>
+                {
+                    b.HasOne("Core.Models.Lesson", "Lesson")
+                        .WithMany()
+                        .HasForeignKey("LessonId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Core.Models.StudentUser", "StudentUser")
+                        .WithMany()
+                        .HasForeignKey("StudentUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Lesson");
+
+                    b.Navigation("StudentUser");
+                });
+
+            modelBuilder.Entity("Core.Models.ExamScore", b =>
                 {
                     b.HasOne("Core.Models.Lesson", "Lesson")
                         .WithMany()

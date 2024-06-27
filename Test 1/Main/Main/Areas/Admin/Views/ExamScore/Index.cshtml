@@ -1,0 +1,59 @@
+﻿@using Core.Models
+
+@{
+    int count = 1;
+}
+@model List<Group>
+
+<div class="container">
+    <div class="row mb-3 justify-content-center">
+        <h1 class="me-3">Groups</h1>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md-6 d-flex align-items-center">
+            <a class="btn btn-primary" asp-action="Create">Create</a>
+        </div>
+        <div class="col-md-6">
+            <form method="get" asp-action="Index" class="d-flex">
+                <input type="text" name="searchTerm" value="@ViewBag.SearchTerm" class="form-control me-2" placeholder="Search group name...">
+                <button type="submit" class="btn btn-secondary">Search</button>
+            </form>
+        </div>
+    </div>
+    <div class="container justify-content-center">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Facuty Name</th>
+                    <th scope="col">Specialty</th>
+                    <th scope="col">Actions</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <th scope="row">@count</th>
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        <td>@item.FacultyName</td>
+                        <td>@item.Specialty</td>
+
+                        <td>
+                            <a class="btn btn-warning" asp-action="Lessons" asp-route-id="@item.Id">Lessons</a>
+                            
+                        </td>
+                    </tr>
+
+                    count++;
+                }
+
+            </tbody>
+        </table>
+
+        <div asp-validation-summary=All class="text-danger"></div>
+    </div>

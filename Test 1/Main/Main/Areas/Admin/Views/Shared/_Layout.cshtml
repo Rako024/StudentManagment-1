@@ -92,6 +92,12 @@
                     <span>Lesson Times</span>
                 </a>
             </li>
+            <li class="nav-item active">
+                <a class="nav-link" asp-action="Index" asp-controller="ExamScore" asp-area="Admin">
+                    <i class="bi bi-calculator"></i>
+                    <span>Exam Scores</span>
+                </a>
+            </li>
             @if (User.IsInRole("Admin"))
             {
                 <li class="nav-item active">

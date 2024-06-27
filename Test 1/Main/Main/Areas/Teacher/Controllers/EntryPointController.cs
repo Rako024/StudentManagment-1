@@ -1,4 +1,5 @@
 ﻿using Business.DTOs.EntryPoints;
+using Business.DTOs.ExsamScores;
 using Business.Helper;
 using Business.Services.Abstracts;
 using Core.Models;
@@ -54,22 +55,24 @@ namespace Main.Areas.Teacher.Controllers
                     false,
                     x=>x.LessonTime
                     );
-                if(gradeAndAttendaces.IsNullOrEmpty())
+                if (!gradeAndAttendaces.IsNullOrEmpty())
                 {
-                    return View("Error");
-                }
-                foreach(var grade in gradeAndAttendaces)
-                {
-                    if(grade.Score != null)
+
+
+
+                    foreach (var grade in gradeAndAttendaces)
                     {
-                        grades.Add((int)grade.Score);
-                    }
-                    if (grade.IsPresent !=null &&!(bool) grade.IsPresent)
-                    {
-                        qbCount++;
+                        if (grade.Score != null)
+                        {
+                            grades.Add((int)grade.Score);
+                        }
+                        if (grade.IsPresent != null && !(bool)grade.IsPresent)
+                        {
+                            qbCount++;
+                        }
                     }
                 }
-               Colloquium col = await _colloquiumService.GetColloquiumAsync
+                Colloquium col = await _colloquiumService.GetColloquiumAsync
                     (
                     x => x.StudentUserId == student.Id &&
                     x.LessonId == lesson.Id
@@ -106,13 +109,14 @@ namespace Main.Areas.Teacher.Controllers
                 EntryPointResultDto entryResult =  EntryPointCalculator.Calculator(etry);
                 results.Add(entryResult);
             }
-
+            
             EnrtryPointPageDto enrtryPointPageDto = new EnrtryPointPageDto()
             {
                 StudentUsers = students,
                 Lesson = lesson,
                 EntryPoints = results
             };
+
             return View(enrtryPointPageDto);
         }
     }

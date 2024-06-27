@@ -1,0 +1,75 @@
+﻿@using Core.Models
+@model List<Lesson>
+@{
+    int count = 1;
+}
+
+
+<div class="container">
+    <div class="row col-md-12 justify-content-center">
+        <h2>@ViewBag.Group.Name</h2>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md-12 ms-auto">
+            <form method="get" asp-action="Lessons" class="form-inline d-flex align-items-center justify-content-end">
+                <div class="form-check me-3">
+                    @if (ViewBag.IsPast)
+                    {
+                        <input type="checkbox" class="form-check-input" name="isPast" value="true" id="isPastCheckbox" checked />
+                    }
+                    else
+                    {
+                        <input type="checkbox" class="form-check-input" name="isPast" value="true" id="isPastCheckbox" />
+                    }
+
+                    <label class="form-check-label" for="isPastCheckbox">Is Past</label>
+                </div>
+                <div class="input-group me-2">
+                    <input type="text" name="searchTerm" value="@ViewBag.SearchTerm" class="form-control" placeholder="Search group name...">
+                </div>
+                <button type="submit" class="btn btn-secondary">Search</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="container justify-content-center">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Group Name</th>
+                <th scope="col">Teacher Name</th>
+                <th scope="col">Past</th>
+                <th scope="col">Actions</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th scope="row">@count</th>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Group.Name</td>
+                    <td>@item.TeacherUser.Name</td>
+                    <td>@item.IsPast</td>
+
+                    <td>
+                        <a class="btn btn-warning" asp-action="AddExamScore" asp-route-id="@item.Id" asp-route-groupId="@item.GroupId">Add Exam Score</a>
+                        
+                    </td>
+                </tr>
+
+                count++;
+            }
+
+        </tbody>
+    </table>
+
+    <div asp-validation-summary=All class="text-danger"></div>
+</div>

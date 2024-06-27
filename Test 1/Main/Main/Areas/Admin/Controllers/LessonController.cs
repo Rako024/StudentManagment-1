@@ -25,20 +25,21 @@ namespace Main.Areas.Admin.Controllers
             _lessonTimeService = lessonTimeService;
         }
 
-        public async Task<IActionResult> Index(string? searchTerm)
+        public async Task<IActionResult> Index(string? searchTerm,bool isPast = false)
         {
             List<Lesson> lessons;
             if (string.IsNullOrEmpty(searchTerm))
             {
-                lessons = await _lessonService.GetAllLessons(x => x.IsDeleted == false, x => x.Name, false, x => x.Group, x => x.TeacherUser);
+                lessons = await _lessonService.GetAllLessons(x => x.IsDeleted == false && x.IsPast == isPast, x => x.Name, false, x => x.Group, x => x.TeacherUser);
             }
             else
             {
                 string upperSearchTerm = searchTerm.ToUpper();
                 lessons = await _lessonService.GetAllLessons(
-                    x => !x.IsDeleted && x.Name.ToUpper().Contains(upperSearchTerm),
+                    x => !x.IsDeleted && x.Name.ToUpper().Contains(upperSearchTerm) && x.IsPast == isPast,
                     x => x.Name, false, x => x.Group, x => x.TeacherUser);
             }
+            ViewBag.IsPast = isPast;
             ViewBag.SearchTerm = searchTerm;
             return View(lessons);
         }
@@ -60,6 +61,7 @@ namespace Main.Areas.Admin.Controllers
                 {
                     GroupId = groupId,
                 };
+                lesson.IsPast = false;
                 return View(lesson);
             }
         }

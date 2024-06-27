@@ -19,10 +19,12 @@ namespace Business.Services.Concretes
     {
         ILessonTimeRepository _lessonTimeRepository;
         ILessonService _lessonService;
-        public LessonTimeService(ILessonTimeRepository lessonTimeRepository, ILessonService lessonService)
+        ISemesterService _semesterService;
+        public LessonTimeService(ILessonTimeRepository lessonTimeRepository, ILessonService lessonService, ISemesterService semesterService)
         {
             _lessonTimeRepository = lessonTimeRepository;
             _lessonService = lessonService;
+            _semesterService = semesterService;
         }
 
         public async Task CreateLessonTime(LessonTime lessonTime)
@@ -140,8 +142,19 @@ namespace Business.Services.Concretes
 
         public async Task<bool> CheckDate(DateTime date, int lessonId)
         {
+            var activeSemester = _semesterService.GetSemester(x => x.IsActive);
             Lesson lesson = _lessonService.GetLessonsWithGroupAndTeacherUser(x => x.Id == lessonId);
-            IQueryable<LessonTime>lessons =  await _lessonTimeRepository.GetAll(x => !x.IsDeleted && x.Lesson.GroupId == lesson.GroupId);
+            IQueryable<LessonTime>lessons =  await _lessonTimeRepository.GetAll
+                (
+                x => x.IsDeleted == false &&
+                x.Lesson.GroupId == lesson.GroupId &&
+                 x.Lesson.IsDeleted == false &&
+                 x.Lesson.IsPast == false &&
+                (int)x.Lesson.Semester == activeSemester.SemesterNumber,
+                null,
+                false,
+                x=>x.Lesson
+                );
               return await  lessons.AnyAsync(lessonTime => (date >= lessonTime.Date && date <= lessonTime.EndDate) 
               || (date.AddMinutes(95)>=lessonTime.Date && date.AddMinutes(95) <= lessonTime.EndDate) );
         }
@@ -149,8 +162,18 @@ namespace Business.Services.Concretes
 
         public async Task<bool> CheckDate(LessonTime lessonTime, int lessonId)
         {
+            Semester activeSemester = _semesterService.GetSemester(x => x.IsActive);
             Lesson lesson =  _lessonService.GetLessonsWithGroupAndTeacherUser(x=>x.Id == lessonId);
-            IQueryable<LessonTime> lessons = await _lessonTimeRepository.GetAll(x => !x.IsDeleted && x.Lesson.GroupId == lesson.GroupId && x.Id!=lessonTime.Id);
+            IQueryable<LessonTime> lessons = await _lessonTimeRepository.GetAll
+                (x => x.IsDeleted == false &&
+                x.Lesson.GroupId == lesson.GroupId &&
+                x.Lesson.IsDeleted == false &&
+                x.Lesson.IsPast == false &&
+                x.Id!=lessonTime.Id &&
+                (int)x.Lesson.Semester == activeSemester.SemesterNumber,
+                null,
+                false,
+                x => x.Lesson);
             return await lessons.AnyAsync(lesson => (lessonTime.Date >= lesson.Date && lessonTime.Date <= lesson.EndDate)
             || (lessonTime.EndDate >= lesson.Date && lessonTime.EndDate <= lesson.EndDate));
         }

@@ -49,6 +49,9 @@ public class Program
         builder.Services.AddScoped<ISemesterRepository, SemesterRepository>();
         builder.Services.AddScoped<ISemesterService, SemesterService>();
 
+        builder.Services.AddScoped<IExamScoreRepository, ExamScoreRepository>();
+        builder.Services.AddScoped<IExamScoreService, ExamScoreService>();
+
         builder.Services.AddScoped<IMailService, MailService>();
 
         builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));

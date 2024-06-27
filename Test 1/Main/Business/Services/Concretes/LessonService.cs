@@ -107,5 +107,16 @@ namespace Business.Services.Concretes
             oldLesson.Credit = lesson.Credit;
             _lessonRepository.Commit();
         }
+
+        public async Task ChangeIsPast(int lessonId, bool isPast)
+        {
+            Lesson lesson = _lessonRepository.Get(x => x.Id == lessonId);
+            if (lesson == null)
+            {
+                throw new LessonNotFoundException("Lesson not found!");
+            }
+            lesson.IsPast = isPast;
+            _lessonRepository.Commit();
+        }
     }
 }

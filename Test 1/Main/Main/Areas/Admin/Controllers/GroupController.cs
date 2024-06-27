@@ -1,4 +1,5 @@
-﻿using Business.Exceptions;
+﻿using Business.DTOs.Admin;
+using Business.Exceptions;
 using Business.Services.Abstracts;
 using Core.CoreEnums;
 using Core.Models;
@@ -77,6 +78,7 @@ namespace Main.Areas.Admin.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public IActionResult Create(Group group) 
         {
@@ -84,7 +86,19 @@ namespace Main.Areas.Admin.Controllers
             {
                 return View();
             }
-            _groupService.CreateGroup(group);
+            try
+            {
+                _groupService.CreateGroup(group);
+            }
+            catch (GroupNameNotUniqueException ex)
+            {
+                ModelState.AddModelError(string.Empty, ex.Message);
+                return View(group);
+            }
+            catch (Exception)
+            {
+                return View("Error");
+            }
             return RedirectToAction(nameof(Index));
         }
 
@@ -112,6 +126,15 @@ namespace Main.Areas.Admin.Controllers
             {
                 return View("Error");
             }
+            catch (GroupNameNotUniqueException ex)
+            {
+                ModelState.AddModelError(string.Empty, ex.Message);
+                return View(group);
+            }
+            catch (Exception)
+            {
+                return View("Error");
+            }
             return RedirectToAction(nameof(Index));
         }
 
@@ -136,7 +159,7 @@ namespace Main.Areas.Admin.Controllers
             ViewBag.Group = group;
             Semester activeSemester = _semesterService.GetSemester(x=>x.IsActive);
             
-            List<Lesson> lessons = await _lessonService.GetAllLessons(x=>x.GroupId == id && x.IsDeleted == false && (int)x.Semester == activeSemester.SemesterNumber, x => x.Name,false,x=>x.Group, x => x.TeacherUser);
+            List<Lesson> lessons = await _lessonService.GetAllLessons(x=>x.GroupId == id && x.IsDeleted == false && x.IsPast == false && (int)x.Semester == activeSemester.SemesterNumber, x => x.Name,false,x=>x.Group, x => x.TeacherUser);
             return View(lessons);
         }
 
@@ -169,7 +192,7 @@ namespace Main.Areas.Admin.Controllers
             ViewBag.Group = group;
             List<LessonTime> lessonTimes = await _lessonTimeService.GetAllLessonTimes
                 (
-                x => x.Lesson.GroupId == id && x.IsDeleted == false && x.Lesson.IsDeleted == false,
+                x => x.Lesson.GroupId == id && x.IsDeleted == false && x.Lesson.IsDeleted == false && x.Lesson.IsPast == false,
                 x => x.Date, false,
                 x=>x.Lesson,
                 x=>x.Lesson.Group,

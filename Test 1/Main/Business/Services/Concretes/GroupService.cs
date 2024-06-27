@@ -1,4 +1,5 @@
-﻿using Business.Exceptions;
+﻿using Business.DTOs.Admin;
+using Business.Exceptions;
 using Business.Services.Abstracts;
 using Core.Models;
 using Core.RepositoryAbstracts;
@@ -23,6 +24,10 @@ namespace Business.Services.Concretes
 
         public void CreateGroup(Group group)
         {
+            if (GetGroup(x => x.Name == group.Name) != null)
+            {
+                throw new GroupNameNotUniqueException("Group name must be unique.");
+            }
             _groupRepository.Add(group);
             _groupRepository.Commit();
         }
@@ -71,6 +76,10 @@ namespace Business.Services.Concretes
             if (oldGroup == null)
             {
                 throw new GroupNotFoundException("", "Group Not Found!");
+            }
+            if (_groupRepository.Get(x => x.Name == group.Name && x.Id != id) != null)
+            {
+                throw new GroupNameNotUniqueException("Group name must be unique.");
             }
             oldGroup.Name = group.Name;
             oldGroup.FacultyName = group.FacultyName;

@@ -9,16 +9,30 @@
         </div>
     <div class="row mb-3">
         <div class="col-md-6 d-flex align-items-center">
-           
             <a class="btn btn-primary" asp-action="Create">Create</a>
         </div>
         <div class="col-md-6">
-            <form method="get" asp-action="Index" class="d-flex">
-                <input type="text" name="searchTerm" value="@ViewBag.SearchTerm" class="form-control me-2" placeholder="Search for lessons...">
-                <button type="submit" class="btn btn-secondary">Search</button>
+            <form method="get" asp-action="Index" class="d-flex align-items-center">
+                <div class="form-check me-3">
+                    @if (ViewBag.IsPast)
+                    {
+                        <input type="checkbox" class="form-check-input" name="isPast" value="true" id="isPastCheckbox" checked />
+                    }
+                    else
+                    {
+                        <input type="checkbox" class="form-check-input" name="isPast" value="true" id="isPastCheckbox" />
+                    }
+                    <label class="form-check-label" for="isPastCheckbox">Is Past</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" name="searchTerm" value="@ViewBag.SearchTerm" class="form-control" placeholder="Search for lessons...">
+                    <button type="submit" class="btn btn-secondary">Search</button>
+                </div>
             </form>
         </div>
     </div>
+
+</div>
 <div class="container justify-content-center">
     <table class="table">
         <thead>

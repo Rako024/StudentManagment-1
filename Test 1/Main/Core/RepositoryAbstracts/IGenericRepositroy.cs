@@ -13,7 +13,7 @@ namespace Core.RepositoryAbstracts
         void Remove(T item);
         void Commit();
         T Get(Func<T, bool>? func = null);
-        Task<T> GetAsync(Expression<Func<T, bool>> func);
+        Task<T> GetAsync(Expression<Func<T, bool>>? func = null);
         Task<IQueryable<T>> GetAll(Expression<Func<T, bool>>? func = null,
             Expression<Func<T,object>>? orderBy = null,
             bool isOrderByDesting = false,
