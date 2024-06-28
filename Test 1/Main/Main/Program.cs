@@ -28,6 +28,9 @@ public class Program
         builder.Services.AddScoped<ITeacherUserRepository, TeacherUserRepository>();
         builder.Services.AddScoped<ITeacherUserService, TeacherUserService>();
 
+        builder.Services.AddScoped<ICordinatorUserRepository,CordinatorUserRepository>();
+        builder.Services.AddScoped<ICordinatorUserService,CordinatorUserService>();
+
         builder.Services.AddScoped<ILessonRepository, LessonRepository>();
         builder.Services.AddScoped<ILessonService, LessonService>();
 
@@ -51,6 +54,12 @@ public class Program
 
         builder.Services.AddScoped<IExamScoreRepository, ExamScoreRepository>();
         builder.Services.AddScoped<IExamScoreService, ExamScoreService>();
+
+        builder.Services.AddScoped<IHomeworkRepository, HomeworkRepository>();
+        builder.Services.AddScoped<IHomeworkService, HomeworkService>();
+
+        builder.Services.AddScoped<IHomeworkSubmissionRepository, HomeworkSubmissionRepository>();
+        builder.Services.AddScoped<IHomeworkSubmissionService, HomeworkSubmissionService>();
 
         builder.Services.AddScoped<IMailService, MailService>();
 

@@ -1,0 +1,46 @@
+﻿@model Business.DTOs.Student.Homeworks.HomeworkDetailsViewModel
+
+@{
+    ViewData["Title"] = "Homework List";
+    string userId = ViewBag.UserId as string;
+}
+
+<div class="container mt-5">
+    <div class="d-flex justify-content-between mb-3">
+        <h2>Homework List</h2>
+    </div>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var homework in Model.Homeworks)
+            {
+                var submission = Model.Submissions.FirstOrDefault(s => s.HomeworkId == homework.Id && s.StudentUserId == userId);
+
+                <tr>
+                    <td>@homework.Name</td>
+                    <td>@homework.Description</td>
+                    <td>
+                        @if (submission != null)
+                        {
+                            <a asp-action="Edit" asp-route-id="@submission.Id" class="btn btn-sm btn-warning">Edit Submission</a>
+                            <a asp-action="SubmissionDetails" asp-route-submissionId="@submission.Id" class="btn btn-sm btn-info">Submission Details</a>
+                        }
+                        else
+                        {
+                            <a asp-action="Submit" asp-route-homeworkId="@homework.Id" class="btn btn-sm btn-primary">Submit Submission</a>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div asp-validation-summary="All"></div>
+</div>

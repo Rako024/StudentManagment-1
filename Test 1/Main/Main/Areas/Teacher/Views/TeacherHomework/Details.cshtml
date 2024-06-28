@@ -1,0 +1,64 @@
+﻿@using Business.DTOs.Teacher.Homeworks
+@model DetailsViewModel
+
+@{
+    ViewData["Title"] = "Homework Details";
+}
+<div class="page-wrapper">
+<div class="container mt-5">
+    <div class="row justify-content-between mb-3">
+        <div class="col-md-8">
+            <h2>Homework Details</h2>
+        </div>
+        <div class="col-md-4 text-end">
+            <a asp-action="Index" asp-route-lessonId="@Model.Homework.LessonId" class="btn btn-secondary">Back to Homework List</a>
+        </div>
+    </div>
+
+    <div class="card shadow-lg">
+        <div class="card-header bg-primary text-white">
+            <h3 class="mb-0">@Model.Homework.Name</h3>
+        </div>
+        <div class="card-body">
+            <p><strong>Description:</strong> @Model.Homework.Description</p>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <h3>Submissions</h3>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Link</th>
+                    <th>File</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var submission in Model.Submissions)
+                {
+                    var student = Model.Students.FirstOrDefault(s => s.Id == submission.StudentUserId);
+                    <tr>
+                        <td>@student?.Name @student?.Surname</td>
+                        <td>
+                            @if (!string.IsNullOrEmpty(submission.Link))
+                            {
+                                <a href="@submission.Link" target="_blank">View Link</a>
+                            }
+                        </td>
+                        <td>
+                            @if (!string.IsNullOrEmpty(submission.FileUrl))
+                            {
+                                    <a href="~/upload/homework/@submission.FileUrl" class="btn btn-info">View File</a>
+                                    <a href="~/upload/homework/@submission.FileUrl" class="btn btn-primary" download>Download File</a>
+                            }
+                        </td>
+                        <td>@submission.Description</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>

@@ -31,5 +31,9 @@ namespace Business.Services.Abstracts
         Expression<Func<LessonTime, object>>? orderBy = null,
         bool isOrderByDescending = false,
         params Expression<Func<LessonTime, object>>[] includes);
+
+
+        Task<List<LessonTime>> GetLessonsForWeekAsync(string studentId, DateTime weekStartDate);
+        Task<List<LessonTime>> GetLessonsForWeekTeacherAsync(string teacherId, DateTime weekStartDate);
     }
 }

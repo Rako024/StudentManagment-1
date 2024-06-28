@@ -237,6 +237,75 @@ namespace Data.Migrations
                     b.ToTable("Groups");
                 });
 
+            modelBuilder.Entity("Core.Models.Homework", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("LessonId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LessonId");
+
+                    b.ToTable("Homeworks");
+                });
+
+            modelBuilder.Entity("Core.Models.HomeworkSubmission", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("FileUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("HomeworkId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Link")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StudentUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("HomeworkId");
+
+                    b.HasIndex("StudentUserId");
+
+                    b.ToTable("HomeworkSubmissions");
+                });
+
             modelBuilder.Entity("Core.Models.Lesson", b =>
                 {
                     b.Property<int>("Id")
@@ -632,6 +701,36 @@ namespace Data.Migrations
                     b.Navigation("StudentUser");
                 });
 
+            modelBuilder.Entity("Core.Models.Homework", b =>
+                {
+                    b.HasOne("Core.Models.Lesson", "Lesson")
+                        .WithMany()
+                        .HasForeignKey("LessonId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Lesson");
+                });
+
+            modelBuilder.Entity("Core.Models.HomeworkSubmission", b =>
+                {
+                    b.HasOne("Core.Models.Homework", "Homework")
+                        .WithMany("Submissions")
+                        .HasForeignKey("HomeworkId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Core.Models.StudentUser", "StudentUser")
+                        .WithMany()
+                        .HasForeignKey("StudentUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Homework");
+
+                    b.Navigation("StudentUser");
+                });
+
             modelBuilder.Entity("Core.Models.Lesson", b =>
                 {
                     b.HasOne("Core.Models.Group", "Group")
@@ -761,6 +860,11 @@ namespace Data.Migrations
             modelBuilder.Entity("Core.Models.Group", b =>
                 {
                     b.Navigation("Students");
+                });
+
+            modelBuilder.Entity("Core.Models.Homework", b =>
+                {
+                    b.Navigation("Submissions");
                 });
 
             modelBuilder.Entity("Core.Models.Lesson", b =>

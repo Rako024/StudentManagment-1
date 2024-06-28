@@ -1,0 +1,405 @@
+﻿@model Business.DTOs.Student.AcademicResult.AcademicResultsEntryPointAndExamScoreDto
+
+@{
+    ViewData["Title"] = "Academic Results";
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">@ViewData["Title"]</h2>
+
+    @* Year 1 *@
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>Year 1</h3>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <h4>Semester Autumn</h4>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Lesson Name</th>
+                            <th>EntryPoint</th>
+                            <th>ExamPoint</th>
+                            <th>Final Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Year1Semester1)
+                        {
+                            <tr>
+                                <td>@item.Lesson.Name</td>
+                                <td>@item.EntryPoint.TotalPoint</td>
+                                <td>@item.ExamScore.Score</td>
+                                <td>@(item.EntryPoint.TotalPoint + item.ExamScore.Score)</td>
+                            </tr>
+                        }
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3"><strong>Semester GPA</strong></td>
+                            <td>@Model.SemesterGPA11</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="table-responsive">
+                <h4>Semester Spring</h4>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Lesson Name</th>
+                            <th>EntryPoint</th>
+                            <th>ExamPoint</th>
+                            <th>Final Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Year1Semester2)
+                        {
+                            <tr>
+                                <td>@item.Lesson.Name</td>
+                                <td>@item.EntryPoint.TotalPoint</td>
+                                <td>@item.ExamScore.Score</td>
+                                <td>@(item.EntryPoint.TotalPoint + item.ExamScore.Score)</td>
+                            </tr>
+                        }
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3"><strong>Semester GPA</strong></td>
+                            <td>@Model.SemesterGPA12</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="table-responsive">
+                <h4>Semester Summer</h4>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Lesson Name</th>
+                            <th>EntryPoint</th>
+                            <th>ExamPoint</th>
+                            <th>Final Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Year1Semester3)
+                        {
+                            <tr>
+                                <td>@item.Lesson.Name</td>
+                                <td>@item.EntryPoint.TotalPoint</td>
+                                <td>@item.ExamScore.Score</td>
+                                <td>@(item.EntryPoint.TotalPoint + item.ExamScore.Score)</td>
+                            </tr>
+                        }
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3"><strong>Semester GPA</strong></td>
+                            <td>@Model.SemesterGPA13</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    @* Year 2 *@
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>Year 2</h3>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <h4>Semester Autumn</h4>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Lesson Name</th>
+                            <th>EntryPoint</th>
+                            <th>ExamPoint</th>
+                            <th>Final Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Year2Semester1)
+                        {
+                            <tr>
+                                <td>@item.Lesson.Name</td>
+                                <td>@item.EntryPoint.TotalPoint</td>
+                                <td>@item.ExamScore.Score</td>
+                                <td>@(item.EntryPoint.TotalPoint + item.ExamScore.Score)</td>
+                            </tr>
+                        }
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3"><strong>Semester GPA</strong></td>
+                            <td>@Model.SemesterGPA21</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="table-responsive">
+                <h4>Semester Spring</h4>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Lesson Name</th>
+                            <th>EntryPoint</th>
+                            <th>ExamPoint</th>
+                            <th>Final Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Year2Semester2)
+                        {
+                            <tr>
+                                <td>@item.Lesson.Name</td>
+                                <td>@item.EntryPoint.TotalPoint</td>
+                                <td>@item.ExamScore.Score</td>
+                                <td>@(item.EntryPoint.TotalPoint + item.ExamScore.Score)</td>
+                            </tr>
+                        }
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3"><strong>Semester GPA</strong></td>
+                            <td>@Model.SemesterGPA22</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="table-responsive">
+                <h4>Semester Summer</h4>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Lesson Name</th>
+                            <th>EntryPoint</th>
+                            <th>ExamPoint</th>
+                            <th>Final Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Year2Semester3)
+                        {
+                            <tr>
+                                <td>@item.Lesson.Name</td>
+                                <td>@item.EntryPoint.TotalPoint</td>
+                                <td>@item.ExamScore.Score</td>
+                                <td>@(item.EntryPoint.TotalPoint + item.ExamScore.Score)</td>
+                            </tr>
+                        }
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3"><strong>Semester GPA</strong></td>
+                            <td>@Model.SemesterGPA23</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    @* Year 3 *@
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>Year 3</h3>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <h4>Semester Autumn</h4>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Lesson Name</th>
+                            <th>EntryPoint</th>
+                            <th>ExamPoint</th>
+                            <th>Final Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Year3Semester1)
+                        {
+                            <tr>
+                                <td>@item.Lesson.Name</td>
+                                <td>@item.EntryPoint.TotalPoint</td>
+                                <td>@item.ExamScore.Score</td>
+                                <td>@(item.EntryPoint.TotalPoint + item.ExamScore.Score)</td>
+                            </tr>
+                        }
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3"><strong>Semester GPA</strong></td>
+                            <td>@Model.SemesterGPA31</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="table-responsive">
+                <h4>Semester Spring</h4>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Lesson Name</th>
+                            <th>EntryPoint</th>
+                            <th>ExamPoint</th>
+                            <th>Final Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Year3Semester2)
+                        {
+                            <tr>
+                                <td>@item.Lesson.Name</td>
+                                <td>@item.EntryPoint.TotalPoint</td>
+                                <td>@item.ExamScore.Score</td>
+                                <td>@(item.EntryPoint.TotalPoint + item.ExamScore.Score)</td>
+                            </tr>
+                        }
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3"><strong>Semester GPA</strong></td>
+                            <td>@Model.SemesterGPA32</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="table-responsive">
+                <h4>Semester Summer</h4>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Lesson Name</th>
+                            <th>EntryPoint</th>
+                            <th>ExamPoint</th>
+                            <th>Final Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Year3Semester3)
+                        {
+                            <tr>
+                                <td>@item.Lesson.Name</td>
+                                <td>@item.EntryPoint.TotalPoint</td>
+                                <td>@item.ExamScore.Score</td>
+                                <td>@(item.EntryPoint.TotalPoint + item.ExamScore.Score)</td>
+                            </tr>
+                        }
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3"><strong>Semester GPA</strong></td>
+                            <td>@Model.SemesterGPA33</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    @* Year 4 *@
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>Year 4</h3>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <h4>Semester Autumn</h4>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Lesson Name</th>
+                            <th>EntryPoint</th>
+                            <th>ExamPoint</th>
+                            <th>Final Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Year4Semester1)
+                        {
+                            <tr>
+                                <td>@item.Lesson.Name</td>
+                                <td>@item.EntryPoint.TotalPoint</td>
+                                <td>@item.ExamScore.Score</td>
+                                <td>@(item.EntryPoint.TotalPoint + item.ExamScore.Score)</td>
+                            </tr>
+                        }
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3"><strong>Semester GPA</strong></td>
+                            <td>@Model.SemesterGPA41</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="table-responsive">
+                <h4>Semester Spring</h4>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Lesson Name</th>
+                            <th>EntryPoint</th>
+                            <th>ExamPoint</th>
+                            <th>Final Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Year4Semester2)
+                        {
+                            <tr>
+                                <td>@item.Lesson.Name</td>
+                                <td>@item.EntryPoint.TotalPoint</td>
+                                <td>@item.ExamScore.Score</td>
+                                <td>@(item.EntryPoint.TotalPoint + item.ExamScore.Score)</td>
+                            </tr>
+                        }
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3"><strong>Semester GPA</strong></td>
+                            <td>@Model.SemesterGPA42</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="table-responsive">
+                <h4>Semester Summer</h4>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Lesson Name</th>
+                            <th>EntryPoint</th>
+                            <th>ExamPoint</th>
+                            <th>Final Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Year4Semester3)
+                        {
+                            <tr>
+                                <td>@item.Lesson.Name</td>
+                                <td>@item.EntryPoint.TotalPoint</td>
+                                <td>@item.ExamScore.Score</td>
+                                <td>@(item.EntryPoint.TotalPoint + item.ExamScore.Score)</td>
+                            </tr>
+                        }
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3"><strong>Semester GPA</strong></td>
+                            <td>@Model.SemesterGPA43</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

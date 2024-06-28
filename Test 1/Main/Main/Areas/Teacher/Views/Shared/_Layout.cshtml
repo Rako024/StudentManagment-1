@@ -62,13 +62,15 @@
 			<!-- Logo -->
 			<div class="header-left">
 				<a href="admin-dashboard.html" class="logo">
-					<img src="~/teacher/assets/img/logo.svg" alt="Logo">
+					@* <img src="~/teacher/assets/img/logo.svg" alt="Logo"> *@
+					@* <h1>Teacher</h1> *@
 				</a>
 				<a href="admin-dashboard.html" class="logo collapse-logo">
-					<img src="~/teacher/assets/img/collapse-logo.svg" alt="Logo">
+					@* <img src="~/teacher/assets/img/collapse-logo.svg" alt="Logo"> *@
+					@* <h1>Teacher</h1> *@
 				</a>
 				<a href="admin-dashboard.html" class="logo2">
-					<img src="~/teacher/assets/img/logo2.png" width="40" height="40" alt="Logo">
+					@* <img src="~/teacher/assets/img/logo2.png" width="40" height="40" alt="Logo"> *@
 				</a>
 			</div>
 			<!-- /Logo -->
@@ -318,32 +320,14 @@
 							<li class="menu-title">
 								<span>Main</span>
 							</li>
-							<li class="submenu">
-								<a href="#"><i class="la la-dashcube"></i> <span> Dashboard</span> <span class="menu-arrow"></span></a>
-								<ul>
-									<li><a href="admin-dashboard.html">Admin Dashboard</a></li>
-									<li><a href="employee-dashboard.html">Employee Dashboard</a></li>
-									<li><a href="deals-dashboard.html">Deals Dashboard</a></li>
-									<li><a href="leads-dashboard.html">Leads Dashboard</a></li>
-								</ul>
-							</li>
+							
 							<li class="submenu">
 								<a href="#"><i class="la la-cube"></i> <span> Apps</span> <span class="menu-arrow"></span></a>
 								<ul>
 									<li><a href="chat.html">Chat</a></li>
-									<li class="submenu">
-										<a href="#"><span> Calls</span> <span class="menu-arrow"></span></a>
-										<ul>
-											<li><a href="voice-call.html">Voice Call</a></li>
-											<li><a href="video-call.html">Video Call</a></li>
-											<li><a href="outgoing-call.html">Outgoing Call</a></li>
-											<li><a href="incoming-call.html">Incoming Call</a></li>
-										</ul>
-									</li>
-									<li><a href="events.html">Calendar</a></li>
-									<li><a href="contacts.html">Contacts</a></li>
-									<li><a href="inbox.html">Email</a></li>
-									<li><a href="file-manager.html">File Manager</a></li>
+									
+									<li><a asp-action="Index" asp-controller="TeacherSchedule">Schedule</a></li>
+									
 								</ul>
 							</li>
 							<li class="menu-title">
@@ -712,32 +696,14 @@
 						<li class="menu-title">
 							<span>Main</span>
 						</li>
-						<li class="submenu">
-							<a href="#"><i class="la la-dashcube"></i> <span> Dashboard</span> <span class="menu-arrow"></span></a>
-							<ul>
-								<li><a href="admin-dashboard.html">Admin Dashboard</a></li>
-								<li><a href="employee-dashboard.html">Employee Dashboard</a></li>
-								<li><a href="deals-dashboard.html">Deals Dashboard</a></li>
-								<li><a href="leads-dashboard.html">Leads Dashboard</a></li>
-							</ul>
-						</li>
+						
 						<li class="submenu">
 							<a href="#"><i class="la la-cube"></i> <span> Apps</span> <span class="menu-arrow"></span></a>
 							<ul>
 								<li><a href="chat.html">Chat</a></li>
-								<li class="submenu">
-									<a href="#"><span> Calls</span> <span class="menu-arrow"></span></a>
-									<ul>
-										<li><a href="voice-call.html">Voice Call</a></li>
-										<li><a href="video-call.html">Video Call</a></li>
-										<li><a href="outgoing-call.html">Outgoing Call</a></li>
-										<li><a href="incoming-call.html">Incoming Call</a></li>
-									</ul>
-								</li>
-								<li><a href="events.html">Calendar</a></li>
-								<li><a href="contacts.html">Contacts</a></li>
-								<li><a href="inbox.html">Email</a></li>
-								<li><a href="file-manager.html">File Manager</a></li>
+								
+								<li><a asp-action="Index" asp-controller="TeacherSchedule">Schedule</a></li>
+								
 							</ul>
 						</li>
 					
@@ -1713,6 +1679,6 @@
 
 		<!-- Custom JS -->
 		<script src="~/teacher/assets/js/app.js"></script>
-
+		@RenderSection("Scripts", required: false)
 </body>
 </html>

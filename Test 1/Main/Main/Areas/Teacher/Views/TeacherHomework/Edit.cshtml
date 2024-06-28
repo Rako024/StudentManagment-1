@@ -1,0 +1,33 @@
+﻿@using Business.DTOs.Teacher.Homeworks
+@model HomeworkDto
+
+@{
+    ViewData["Title"] = "Edit Homework";
+}
+<div class="page-wrapper">
+    <div class="container mt-5 d-flex justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="mb-0">Create Homework</h2>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        <div class="form-group mb-3">
+                            <label asp-for="Name" class="form-label"></label>
+                            <input asp-for="Name" class="form-control" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label asp-for="Description" class="form-label"></label>
+                            <textarea asp-for="Description" class="form-control" rows="4"></textarea>
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+                        <input type="hidden" asp-for="LessonId" />
+                        <button type="submit" class="btn btn-primary w-100">Edit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,5 @@
-﻿using Core.Models;
+﻿using Business.DTOs.ExsamScores;
+using Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,5 +19,6 @@ namespace Business.DTOs.EntryPoints
         public int? ColloquiumSecound { get; set; }
         public int? ColloquiumThird { get; set; }
         public int? TermPaperGrade { get; set; }
+        
     }
 }

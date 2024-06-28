@@ -1,4 +1,5 @@
 ﻿using Business.DTOs.EntryPoints;
+using Business.DTOs.Student.AcademicResult;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
@@ -73,6 +74,31 @@ namespace Business.Helper
                 IsFailed = isFailed,
             };
             return result;
+        }
+
+        public static int SemesterGPA(List<StudentEntryPointAndExamScoreDto> dtoList)
+        {
+            if(dtoList.IsNullOrEmpty())
+            {
+                return 0;
+            }
+            int sumPoint = 0;
+            int creditSum = 0;
+            foreach(StudentEntryPointAndExamScoreDto dto in dtoList)
+            {
+                int credit = dto.Lesson.Credit;
+                creditSum += credit;
+                if (dto.ExamScore.Score != null)
+                {
+                     sumPoint += (dto.EntryPoint.TotalPoint + (int)dto.ExamScore.Score) * credit;
+                }
+                else
+                {
+                    sumPoint = dto.EntryPoint.TotalPoint * credit;
+                }
+            
+            }
+            return sumPoint/creditSum;
         }
     }
 }

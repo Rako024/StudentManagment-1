@@ -303,62 +303,15 @@
                                     <span class="sidebar-menu-text">Home</span>
                                 </a>
                             </li>
+                            
                             <li class="sidebar-menu-item">
                                 <a class="sidebar-menu-button"
-                                   href="courses.html">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">local_library</span>
-                                    <span class="sidebar-menu-text">Browse Courses</span>
-                                </a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button"
-                                   href="paths.html">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">style</span>
-                                    <span class="sidebar-menu-text">Browse Paths</span>
-                                </a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button"
-                                   href="student-dashboard.html">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">account_box</span>
-                                    <span class="sidebar-menu-text">Student Dashboard</span>
-                                </a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button"
-                                   href="student-my-courses.html">
+                               asp-action="Index" asp-controller="Schedule">
                                     <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">search</span>
-                                    <span class="sidebar-menu-text">My Courses</span>
+                                <span class="sidebar-menu-text">Schedule</span>
                                 </a>
                             </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button"
-                                   href="student-paths.html">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">timeline</span>
-                                    <span class="sidebar-menu-text">My Paths</span>
-                                </a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button"
-                                   href="student-path.html">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">change_history</span>
-                                    <span class="sidebar-menu-text">Path Details</span>
-                                </a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button"
-                                   href="student-course.html">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">face</span>
-                                    <span class="sidebar-menu-text">Course Preview</span>
-                                </a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button"
-                                   href="student-lesson.html">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">panorama_fish_eye</span>
-                                    <span class="sidebar-menu-text">Lesson Preview</span>
-                                </a>
-                            </li>
+                            
                             <li class="sidebar-menu-item">
                                 <a class="sidebar-menu-button" asp-action="Index" asp-controller="FreeLanceWork" asp-route-id="@user.Id"
                                    >
@@ -369,21 +322,15 @@
                             </li>
                             <li class="sidebar-menu-item">
                                 <a class="sidebar-menu-button"
-                                   href="student-take-lesson.html">
+                               asp-action="Index" asp-controller="StudentInformation" asp-route-id="@user.Id">
                                     <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">import_contacts</span>
-                                    <span class="sidebar-menu-text">Take Lesson</span>
+                                    <span class="sidebar-menu-text">Lesson Score Data</span>
                                 </a>
                             </li>
+                            
                             <li class="sidebar-menu-item">
                                 <a class="sidebar-menu-button"
-                                   href="student-take-quiz.html">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">dvr</span>
-                                    <span class="sidebar-menu-text">Take Quiz</span>
-                                </a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button"
-                                   href="student-quiz-results.html">
+                               asp-action="Index" asp-controller="StudentHomework" asp-route-id="@user.Id">
                                     <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">poll</span>
                                     <span class="sidebar-menu-text">My Quizzes</span>
                                 </a>
@@ -395,76 +342,17 @@
                                     <span class="sidebar-menu-text">Quiz Result</span>
                                 </a>
                             </li>
+                            
                             <li class="sidebar-menu-item">
                                 <a class="sidebar-menu-button"
-                                   href="student-path-assessment.html">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">layers</span>
-                                    <span class="sidebar-menu-text">Skill Assessment</span>
-                                </a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button"
-                                   href="student-path-assessment-result.html">
+                               asp-action="Index" asp-controller="AcademicResults" asp-route-id="@user.Id">
                                     <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">assignment_turned_in</span>
-                                    <span class="sidebar-menu-text">Skill Result</span>
+                                    <span class="sidebar-menu-text">Academic Results</span>
                                 </a>
                             </li>
 
                         </ul>
-                        <div class="sidebar-heading">Instructor</div>
-                        <ul class="sidebar-menu">
-
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button"
-                                   href="instructor-dashboard.html">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">school</span>
-                                    <span class="sidebar-menu-text">Instructor Dashboard</span>
-                                </a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button"
-                                   href="instructor-courses.html">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">import_contacts</span>
-                                    <span class="sidebar-menu-text">Manage Courses</span>
-                                </a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button"
-                                   href="instructor-quizzes.html">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">help</span>
-                                    <span class="sidebar-menu-text">Manage Quizzes</span>
-                                </a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button"
-                                   href="instructor-earnings.html">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">trending_up</span>
-                                    <span class="sidebar-menu-text">Earnings</span>
-                                </a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button"
-                                   href="instructor-statement.html">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">receipt</span>
-                                    <span class="sidebar-menu-text">Statement</span>
-                                </a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button"
-                                   href="instructor-edit-course.html">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">post_add</span>
-                                    <span class="sidebar-menu-text">Edit Course</span>
-                                </a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button"
-                                   href="instructor-edit-quiz.html">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">format_shapes</span>
-                                    <span class="sidebar-menu-text">Edit Quiz</span>
-                                </a>
-                            </li>
-
-                        </ul>
+                        
 
                         <div class="sidebar-heading">Applications</div>
                         <ul class="sidebar-menu">
@@ -623,7 +511,7 @@
 
         <!-- Preloader -->
         <script src="~/student/public/js/preloader.js"></script>
-
+    @RenderSection("Scripts", required: false)
     </body>
 
 </html>

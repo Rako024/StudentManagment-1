@@ -15,12 +15,14 @@ namespace Main.Areas.Student.Controllers
         IStudentUserService _studentUserService;
         ILessonService _lessonService;
         ITermPaperService _termPaperService;
+        ISemesterService _semesterService;
 
-        public FreeLanceWork(IStudentUserService studentUserService, ILessonService lessonService, ITermPaperService termPaperService)
+        public FreeLanceWork(IStudentUserService studentUserService, ILessonService lessonService, ITermPaperService termPaperService, ISemesterService semesterService)
         {
             _studentUserService = studentUserService;
             _lessonService = lessonService;
             _termPaperService = termPaperService;
+            _semesterService = semesterService;
         }
 
         public async Task<IActionResult> Index(string id)
@@ -30,9 +32,13 @@ namespace Main.Areas.Student.Controllers
             {
                 return View("Error");
             }
+            var activeSemester = _semesterService.GetSemester(x => x.IsActive);
             List<Lesson> lessons = await _lessonService.GetAllLessons
                 (
-                x => x.GroupId == user.GroupId,
+                x => x.GroupId == user.GroupId &&
+                (int)x.Semester == activeSemester.SemesterNumber &&
+                x.IsDeleted == false &&
+                x.IsPast == false,
                 null,
                 false,
                 x => x.Group,

@@ -1,0 +1,102 @@
+﻿@model Business.DTOs.EntryPoints.EntryPointCalculatorDto
+
+@{
+    ViewData["Title"] = "Entry Point Calculator";
+}
+
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="text-center">Entry Point Calculator</h3>
+        </div>
+        <div class="card-body">
+            <form asp-action="CalculateEntryPoint" method="post">
+                <div class="form-group">
+                    <label for="lessonCount">Number of Grades</label>
+                    <input type="number" class="form-control" id="lessonCount" name="LessonCount" min="1" max="10" required />
+                </div>
+
+                <div id="grades-container"></div>
+
+                <div class="form-group mt-3">
+                    <label for="colloquiumFirst">Colloquium First</label>
+                    <select class="form-control" id="colloquiumFirst" name="ColloquiumFirst">
+                        @for (int i = 0; i <= 10; i++)
+                        {
+                            <option value="@i">@i</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="colloquiumSecond">Colloquium Second</label>
+                    <select class="form-control" id="colloquiumSecond" name="ColloquiumSecound">
+                        @for (int i = 0; i <= 10; i++)
+                        {
+                            <option value="@i">@i</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="colloquiumThird">Colloquium Third</label>
+                    <select class="form-control" id="colloquiumThird" name="ColloquiumThird">
+                        @for (int i = 0; i <= 10; i++)
+                        {
+                            <option value="@i">@i</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="missedClassCount">Missed Class Count</label>
+                    <input type="number" class="form-control" id="missedClassCount" name="QbCount" min="0" />
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="termPaperGrade">Term Paper Score</label>
+                    <select class="form-control" id="termPaperGrade" name="TermPaperGrade">
+                        @for (int i = 0; i <= 10; i++)
+                        {
+                            <option value="@i">@i</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn btn-primary">Calculate</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="card mt-3">
+        <div class="card-body text-center">
+            <h4>Total Point: <span id="totalPoint">@ViewBag.TotalPoint</span></h4>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.getElementById('lessonCount').addEventListener('change', function () {
+            const count = this.value;
+            const gradesContainer = document.getElementById('grades-container');
+            gradesContainer.innerHTML = '';
+
+            for (let i = 0; i < count; i++) {
+                const gradeSelect = document.createElement('select');
+                gradeSelect.name = `Grades[${i}]`;
+                gradeSelect.classList.add('form-control', 'mt-2');
+
+                for (let j = 0; j <= 10; j++) {
+                    const option = document.createElement('option');
+                    option.value = j;
+                    option.text = j;
+                    gradeSelect.appendChild(option);
+                }
+
+                gradesContainer.appendChild(gradeSelect);
+            }
+        });
+    </script>
+}

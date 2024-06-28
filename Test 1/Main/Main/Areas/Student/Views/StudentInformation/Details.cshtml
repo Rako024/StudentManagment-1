@@ -1,0 +1,86 @@
+﻿@model Business.DTOs.Student.StudentInformations.StudentInfoLessonPointInfoDto
+
+@{
+    ViewData["Title"] = "Student Lesson Details";
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">@ViewData["Title"]</h2>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>Lesson Information</h3>
+        </div>
+        <div class="card-body">
+            <p class="display-6"><strong>Lesson Name:</strong> @Model.Lesson.Name</p>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>Grades</h3>
+        </div>
+        <div class="card-body">
+            @if (Model.Grades.Any())
+            {
+                <ul class="list-group">
+                    @foreach (var grade in Model.Grades)
+                    {
+                        <li class="list-group-item display-6">@grade</li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p class="display-6">No grades available.</p>
+            }
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>Attendance</h3>
+        </div>
+        <div class="card-body">
+            <p class="display-6"><strong>Missed Classes:</strong> @Model.QbCount</p>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>Colloquium Grades</h3>
+        </div>
+        <div class="card-body">
+            <p class="display-6"><strong>First:</strong> @(Model.ColloquiumFirst.HasValue ? Model.ColloquiumFirst.Value.ToString() : "N/A")</p>
+            <p class="display-6"><strong>Second:</strong> @(Model.ColloquiumSecound.HasValue ? Model.ColloquiumSecound.Value.ToString() : "N/A")</p>
+            <p class="display-6"><strong>Third:</strong> @(Model.ColloquiumThird.HasValue ? Model.ColloquiumThird.Value.ToString() : "N/A")</p>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>Term Paper Grade</h3>
+        </div>
+        <div class="card-body">
+            <p class="display-6">@(Model.TermPaperGrade.HasValue ? Model.TermPaperGrade.Value.ToString() : "N/A")</p>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>Entry Point</h3>
+        </div>
+        <div class="card-body">
+            <p class="display-6"><strong>Total Point:</strong> @Model.EntryPoint.TotalPoint</p>
+            <p class="display-6"><strong>Failed:</strong> @(Model.EntryPoint.IsFailed ? "Yes" : "No")</p>
+        </div>
+    </div>
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>Exam Score</h3>
+        </div>
+        <div class="card-body">
+            <p class="display-6">@Model.ExsamScore.Score</p>
+        </div>
+    </div>
+</div>

@@ -107,6 +107,15 @@
                     </a>
                 </li>
             }
+            @if (User.IsInRole("Admin"))
+            {
+                <li class="nav-item active">
+                    <a class="nav-link" asp-action="Index" asp-controller="Cordinator" asp-area="Admin">
+                        <i class="bi bi-incognito"></i>
+                        <span>Cordinators</span>
+                    </a>
+                </li>
+            }
            
 
             <!-- Heading -->

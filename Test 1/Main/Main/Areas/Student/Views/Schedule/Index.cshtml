@@ -1,0 +1,49 @@
+﻿@model Business.DTOs.Student.ScheduleViewModel
+
+@{
+    ViewData["Title"] = "Schedule";
+}
+
+<div class="container mt-5">
+    <div class="d-flex justify-content-between mb-3">
+        <a asp-action="PreviousWeek" asp-route-currentWeekStartDate="@Model.WeekStartDate.ToString("yyyy-MM-dd")" class="btn btn-primary">Previous Week</a>
+        <h3>Week of @Model.WeekStartDate.ToString("MMMM dd, yyyy")</h3>
+        <a asp-action="NextWeek" asp-route-currentWeekStartDate="@Model.WeekStartDate.ToString("yyyy-MM-dd")" class="btn btn-primary">Next Week</a>
+    </div>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Lesson</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var day in Model.WeeklySchedule.Keys.OrderBy(d => d))
+            {
+                var lessons = Model.WeeklySchedule[day];
+                if (lessons.Count == 0)
+                {
+                    <tr>
+                        <td>@day.ToString("dddd, MMMM dd")</td>
+                        <td colspan="3">No lessons</td>
+                    </tr>
+                }
+                else
+                {
+                    foreach (var lesson in lessons)
+                    {
+                        <tr>
+                            <td>@lesson.Date.ToString("dddd, MMMM dd")</td>
+                            <td>@lesson.Date.ToString("hh:mm tt")</td>
+                            <td>@lesson.EndDate.ToString("hh:mm tt")</td>
+                            <td>@(lesson.Lesson?.Name ?? "N/A")</td>
+                        </tr>
+                    }
+                }
+            }
+        </tbody>
+    </table>
+</div>

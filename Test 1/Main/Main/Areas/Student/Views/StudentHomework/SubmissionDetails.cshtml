@@ -1,0 +1,45 @@
+﻿@model Business.DTOs.Teacher.Homeworks.HomeworkSubmissionDto
+
+@{
+    ViewData["Title"] = "Submission Details";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="d-flex justify-content-between mb-3">
+                <a asp-action="Details" asp-controller="StudentHomework" asp-route-lessonId="@ViewBag.LessonId" class="btn btn-secondary">Back to Page</a>
+                <h2>Submission Details</h2>
+            </div>
+            <div class="card shadow-lg">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="mb-0">Submission Details</h2>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="Description" class="form-label"><strong>Description:</strong></label>
+                        <p>@Model.Description</p>
+                    </div>
+                    @if (!string.IsNullOrEmpty(Model.Link))
+                    {
+                        <div class="form-group">
+                            <label for="Link" class="form-label"><strong>Link:</strong></label>
+                            <p><a href="@Model.Link" target="_blank">@Model.Link</a></p>
+                        </div>
+                    }
+                    @if (!string.IsNullOrEmpty(Model.FileUrl))
+                    {
+                        <div class="form-group">
+                            <label for="File" class="form-label"><strong>File:</strong></label>
+                            <p>
+                                <a href="~/upload/homework/@Model.FileUrl" class="btn btn-warning">View File</a>
+
+                                <a href="~/upload/homework/@Model.FileUrl" class="btn btn-primary" download>Download File</a>
+                            </p>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

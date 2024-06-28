@@ -27,6 +27,8 @@ namespace Data.DAL
         public DbSet<TermPaperGrade> TermPaperGrades { get;set; }
         public DbSet<Semester> Semesters { get; set; }
         public DbSet<ExamScore> ExamScores { get; set; }
+        public DbSet<Homework> Homeworks { get; set; }
+        public DbSet<HomeworkSubmission> HomeworkSubmissions { get; set; }
 
     }
 }

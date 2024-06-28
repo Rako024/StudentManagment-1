@@ -20,11 +20,15 @@ namespace Business.Services.Concretes
         ILessonTimeRepository _lessonTimeRepository;
         ILessonService _lessonService;
         ISemesterService _semesterService;
-        public LessonTimeService(ILessonTimeRepository lessonTimeRepository, ILessonService lessonService, ISemesterService semesterService)
+        IStudentUserService _studentUserService;
+        ITeacherUserService _teacherUserService;
+        public LessonTimeService(ILessonTimeRepository lessonTimeRepository, ILessonService lessonService, ISemesterService semesterService, IStudentUserService studentUserService, ITeacherUserService teacherUserService)
         {
             _lessonTimeRepository = lessonTimeRepository;
             _lessonService = lessonService;
             _semesterService = semesterService;
+            _studentUserService = studentUserService;
+            _teacherUserService = teacherUserService;
         }
 
         public async Task CreateLessonTime(LessonTime lessonTime)
@@ -176,6 +180,54 @@ namespace Business.Services.Concretes
                 x => x.Lesson);
             return await lessons.AnyAsync(lesson => (lessonTime.Date >= lesson.Date && lessonTime.Date <= lesson.EndDate)
             || (lessonTime.EndDate >= lesson.Date && lessonTime.EndDate <= lesson.EndDate));
+        }
+
+        public async Task<List<LessonTime>> GetLessonsForWeekAsync(string studentId, DateTime weekStartDate)
+        {
+            var weekEndDate = weekStartDate.AddDays(7);
+            var activeSemester = _semesterService.GetSemester(x => x.IsActive);
+            StudentUser student = _studentUserService.Get(x => x.Id == studentId);
+            IQueryable<LessonTime> lessonTimes =  await _lessonTimeRepository.GetAll
+                (lt => lt.IsDeleted == false &&
+                lt.Date >= weekStartDate &&
+                lt.Date < weekEndDate &&
+                lt.Lesson.GroupId == student.GroupId &&
+                lt.Lesson.IsDeleted == false &&
+                lt.Lesson.IsPast == false &&
+                (int)lt.Lesson.Semester == activeSemester.SemesterNumber,
+                null,
+                false,
+                x=>x.Lesson
+                );
+                
+            return lessonTimes.ToList();
+                
+                
+                
+        }
+        public async Task<List<LessonTime>> GetLessonsForWeekTeacherAsync(string teacherId, DateTime weekStartDate)
+        {
+            var weekEndDate = weekStartDate.AddDays(7);
+            var activeSemester = _semesterService.GetSemester(x => x.IsActive);
+            TeacherUser teacher = _teacherUserService.GetTeacher(x => x.Id == teacherId);
+            IQueryable<LessonTime> lessonTimes = await _lessonTimeRepository.GetAll
+                (lt => lt.IsDeleted == false &&
+                lt.Date >= weekStartDate &&
+                lt.Date < weekEndDate &&
+                lt.Lesson.TeacherUserId == teacherId &&
+                lt.Lesson.IsDeleted == false &&
+                lt.Lesson.IsPast == false &&
+                (int)lt.Lesson.Semester == activeSemester.SemesterNumber,
+                null,
+                false,
+                x => x.Lesson,
+                x=>x.Lesson.Group
+                );
+
+            return lessonTimes.ToList();
+
+
+
         }
     }
 }

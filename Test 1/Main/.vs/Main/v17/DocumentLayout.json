@@ -3,34 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\main\\areas\\admin\\controllers\\groupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|solutionrelative:main\\areas\\admin\\controllers\\groupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\main\\areas\\admin\\views\\examscore\\addexamscore.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|solutionrelative:main\\areas\\admin\\views\\examscore\\addexamscore.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\main\\areas\\teacher\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|solutionrelative:main\\areas\\teacher\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\main\\areas\\admin\\views\\lesson\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|solutionrelative:main\\areas\\admin\\views\\lesson\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\main\\areas\\admin\\controllers\\lessoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|solutionrelative:main\\areas\\admin\\controllers\\lessoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\main\\areas\\admin\\controllers\\examscorecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|solutionrelative:main\\areas\\admin\\controllers\\examscorecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\main\\areas\\admin\\views\\examscore\\lessons.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|solutionrelative:main\\areas\\admin\\views\\examscore\\lessons.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\main\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|solutionrelative:main\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
@@ -47,105 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "GroupController.cs",
-              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Admin\\Controllers\\GroupController.cs",
-              "RelativeDocumentMoniker": "Main\\Areas\\Admin\\Controllers\\GroupController.cs",
-              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Admin\\Controllers\\GroupController.cs",
-              "RelativeToolTip": "Main\\Areas\\Admin\\Controllers\\GroupController.cs",
-              "ViewState": "AQIAAK0AAAAAAAAAAAAUwMIAAAB+AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T03:08:31.793Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AddExamScore.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Admin\\Views\\ExamScore\\AddExamScore.cshtml",
-              "RelativeDocumentMoniker": "Main\\Areas\\Admin\\Views\\ExamScore\\AddExamScore.cshtml",
-              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Admin\\Views\\ExamScore\\AddExamScore.cshtml",
-              "RelativeToolTip": "Main\\Areas\\Admin\\Views\\ExamScore\\AddExamScore.cshtml",
-              "ViewState": "AQIAADYAAAAAAAAAAAAowFYAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-29T03:04:19.111Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Teacher\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Main\\Areas\\Teacher\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Teacher\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Main\\Areas\\Teacher\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-29T03:02:25.937Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Lessons.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Admin\\Views\\ExamScore\\Lessons.cshtml",
-              "RelativeDocumentMoniker": "Main\\Areas\\Admin\\Views\\ExamScore\\Lessons.cshtml",
-              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Admin\\Views\\ExamScore\\Lessons.cshtml",
-              "RelativeToolTip": "Main\\Areas\\Admin\\Views\\ExamScore\\Lessons.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABkAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-29T02:54:13.724Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Admin\\Views\\Lesson\\Index.cshtml",
-              "RelativeDocumentMoniker": "Main\\Areas\\Admin\\Views\\Lesson\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Admin\\Views\\Lesson\\Index.cshtml",
-              "RelativeToolTip": "Main\\Areas\\Admin\\Views\\Lesson\\Index.cshtml",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAACEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-29T02:54:03.973Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ExamScoreController.cs",
-              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Admin\\Controllers\\ExamScoreController.cs",
-              "RelativeDocumentMoniker": "Main\\Areas\\Admin\\Controllers\\ExamScoreController.cs",
-              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Admin\\Controllers\\ExamScoreController.cs",
-              "RelativeToolTip": "Main\\Areas\\Admin\\Controllers\\ExamScoreController.cs",
-              "ViewState": "AQIAAE0AAAAAAAAAAAAgwF4AAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T02:52:58.828Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LessonController.cs",
-              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Admin\\Controllers\\LessonController.cs",
-              "RelativeDocumentMoniker": "Main\\Areas\\Admin\\Controllers\\LessonController.cs",
-              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Admin\\Controllers\\LessonController.cs",
-              "RelativeToolTip": "Main\\Areas\\Admin\\Controllers\\LessonController.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAQwCIAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T02:52:05.127Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Main\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Main\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAE8AAAAAAAAAAAAAAGwAAAANAAAA",
+              "ViewState": "AQIAAFcAAAAAAAAAAAAqwHEAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-29T02:45:24.526Z",
+              "WhenOpened": "2024-06-29T21:45:39.347Z",
               "EditorCaption": ""
             }
           ]
