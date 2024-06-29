@@ -41,7 +41,9 @@ namespace Business.Services.Concretes
                 !fileDto.TermPaperFile.ContentType.Contains("application/msword") &&
                 !fileDto.TermPaperFile.ContentType.Contains("application/vnd.openxmlformats-officedocument.wordprocessingml.document") &&
                 !fileDto.TermPaperFile.ContentType.Contains("application/vnd.ms-excel") &&
-                !fileDto.TermPaperFile.ContentType.Contains("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"))
+                !fileDto.TermPaperFile.ContentType.Contains("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet") &&
+                !fileDto.TermPaperFile.ContentType.Contains("application/vnd.ms-powerpoint") &&
+                !fileDto.TermPaperFile.ContentType.Contains("application/vnd.openxmlformats-officedocument.presentationml.presentation"))
             {
                 throw new ContentTypeException("TermPaperFile", "Termpaper File is not correct file type!");
             }

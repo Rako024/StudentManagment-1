@@ -1,0 +1,35 @@
+﻿@model List<Business.DTOs.Notifications.NotificatioPageDto>
+<div class="container">
+    <h2>Notifications</h2>
+    <a class="btn btn-primary" asp-action="Create">Create Notification</a>
+
+</div>
+<div class="container">
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Content</th>
+                <th>Sender</th>
+                <th>Receiver</th>
+                <th>Created Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var dto in Model)
+            {
+                <tr>
+                    <td>@dto.Notification.Content</td>
+                    <td>@(dto.Cordinator?.Name ?? "System")</td>
+                    <td>@(dto.Teacher?.Name ?? "All Teachers")</td>
+                    <td>@dto.Notification.CreatedDate.ToString("yyyy-MM-dd HH:mm")</td>
+                    <td>
+                        
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@dto.Notification.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

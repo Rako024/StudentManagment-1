@@ -29,6 +29,8 @@ namespace Data.DAL
         public DbSet<ExamScore> ExamScores { get; set; }
         public DbSet<Homework> Homeworks { get; set; }
         public DbSet<HomeworkSubmission> HomeworkSubmissions { get; set; }
+        public DbSet<LearningMaterial> LearningMaterials { get; set; }
+        public DbSet<Notification> Notifications { get; set; }
 
     }
 }

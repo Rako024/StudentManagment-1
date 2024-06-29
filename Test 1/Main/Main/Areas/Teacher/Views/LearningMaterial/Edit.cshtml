@@ -1,0 +1,41 @@
+﻿@using Business.DTOs.Teacher.LearningMaterials
+
+@model CreateLearningMaterialDto
+
+@{
+    ViewData["Title"] = "Add Learning Material";
+}
+<div class="page-wrapper">
+    <div class="container mt-5 d-flex justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="mb-0">Add Material</h2>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Edit" method="post" enctype="multipart/form-data">
+                        <div class="form-group mb-3">
+                            <label asp-for="Name" class="form-label"></label>
+                            <input asp-for="Name" class="form-control" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label asp-for="Link" class="form-label"></label>
+                            <input asp-for="Link" class="form-control" rows="4"></input>
+                            <span asp-validation-for="Link" class="text-danger"></span>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label asp-for="File" class="form-label"></label>
+                            <input asp-for="File" class="form-control" rows="4"></input>
+                            <span asp-validation-for="File" class="text-danger"></span>
+
+                            <a href="~/upload/learningmaterials/@Model.FileUrl" class="btn btn-info" target="_blank">View File</a>
+                        </div>
+                        <input type="hidden" asp-for="LessonId" />
+                        <button type="submit" class="btn btn-primary w-100">Edit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

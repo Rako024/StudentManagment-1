@@ -114,6 +114,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTGVzc29uXFVwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Notification/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTm90aWZpY2F0aW9uXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Notification/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTm90aWZpY2F0aW9uXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Semester/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2VtZXN0ZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -234,6 +242,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xTdHVkZW50SW5mb3JtYXRpb25cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/StudentLearningMaterial/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xTdHVkZW50TGVhcm5pbmdNYXRlcmlhbFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/StudentLearningMaterial/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xTdHVkZW50TGVhcm5pbmdNYXRlcmlhbFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -248,6 +264,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/EntryPoint/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xFbnRyeVBvaW50XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/LearningMaterial/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xMZWFybmluZ01hdGVyaWFsXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/LearningMaterial/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xMZWFybmluZ01hdGVyaWFsXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/LearningMaterial/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xMZWFybmluZ01hdGVyaWFsXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/LearningMaterial/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xMZWFybmluZ01hdGVyaWFsXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/Shared/Error.cshtml]

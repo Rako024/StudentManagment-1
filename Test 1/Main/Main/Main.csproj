@@ -21,6 +21,7 @@
   <ItemGroup>
     <Folder Include="wwwroot\student\" />
     <Folder Include="wwwroot\upload\homework\" />
+    <Folder Include="wwwroot\upload\learningmaterials\" />
     <Folder Include="wwwroot\upload\termpapers\" />
   </ItemGroup>
 

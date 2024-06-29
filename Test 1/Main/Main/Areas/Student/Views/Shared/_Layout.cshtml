@@ -118,7 +118,7 @@
                     <span class="d-none d-lg-block">Luma</span>
                 </a>
 
-                <ul class="nav navbar-nav d-none d-sm-flex flex justify-content-start ml-8pt">
+                @* <ul class="nav navbar-nav d-none d-sm-flex flex justify-content-start ml-8pt">
                     <li class="nav-item active">
                         <a asp-action="Index" asp-controller="Dashboard" asp-route-id="@user.Id"
                            class="nav-link">Home</a>
@@ -231,7 +231,7 @@
                                class="dropdown-item">Ask Question</a>
                         </div>
                     </li>
-                </ul>
+                </ul> *@
 
                 <ul class="nav navbar-nav ml-auto mr-0">
                     
@@ -337,9 +337,9 @@
                             </li>
                             <li class="sidebar-menu-item">
                                 <a class="sidebar-menu-button"
-                                   href="student-quiz-result-details.html">
+                               asp-action="Index" asp-controller="StudentLearningMaterial" asp-route-id="@user.Id">
                                     <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">live_help</span>
-                                    <span class="sidebar-menu-text">Quiz Result</span>
+                                    <span class="sidebar-menu-text">Learning Materials</span>
                                 </a>
                             </li>
                             
@@ -368,12 +368,7 @@
                                 </a>
                                 <ul class="sidebar-submenu collapse sm-indent"
                                     id="account_menu">
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button"
-                                           href="pricing.html">
-                                            <span class="sidebar-menu-text">Account</span>
-                                        </a>
-                                    </li>
+                                    
                                     <li class="sidebar-menu-item">
                                         <a class="sidebar-menu-button"
                                            asp-action="Login" asp-controller="Account" asp-area="">
@@ -396,84 +391,7 @@
                                 </ul>
                             </li>
 
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button"
-                                   data-toggle="collapse"
-                                   href="#community_menu">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">people_outline</span>
-                                    Community
-                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                                </a>
-                                <ul class="sidebar-submenu collapse sm-indent"
-                                    id="community_menu">
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button"
-                                           href="teachers.html">
-
-                                            <span class="sidebar-menu-text">Browse Teachers</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button"
-                                           href="student-profile.html">
-
-                                            <span class="sidebar-menu-text">Student Profile</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button"
-                                           href="teacher-profile.html">
-
-                                            <span class="sidebar-menu-text">Teacher Profile</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button"
-                                           href="blog.html">
-
-                                            <span class="sidebar-menu-text">Blog</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button"
-                                           href="blog-post.html">
-
-                                            <span class="sidebar-menu-text">Blog Post</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button"
-                                           href="faq.html">
-                                            <span class="sidebar-menu-text">FAQ</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button"
-                                           href="help-center.html">
-                                            <!--  -->
-                                            <span class="sidebar-menu-text">Help Center</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button"
-                                           href="discussions.html">
-                                            <span class="sidebar-menu-text">Discussions</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button"
-                                           href="discussion.html">
-                                            <span class="sidebar-menu-text">Discussion Details</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button"
-                                           href="discussions-ask.html">
-                                            <span class="sidebar-menu-text">Ask Question</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
+                            
                         </ul>   
 
                        

@@ -61,6 +61,12 @@ public class Program
         builder.Services.AddScoped<IHomeworkSubmissionRepository, HomeworkSubmissionRepository>();
         builder.Services.AddScoped<IHomeworkSubmissionService, HomeworkSubmissionService>();
 
+        builder.Services.AddScoped<ILearningMaterialRepository, LearningMaterialRepository>();
+        builder.Services.AddScoped<ILearningMaterialService, LearningMaterialService>();
+
+        builder.Services.AddScoped<INotificationRepository, NotificationRepository>();
+        builder.Services.AddScoped<INotificationService, NotificationService>();
+
         builder.Services.AddScoped<IMailService, MailService>();
 
         builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
@@ -94,7 +100,7 @@ public class Program
           );
         app.MapControllerRoute(
             name: "Default",
-            pattern: "{controller=Home}/{action=Index}/{id?}"
+            pattern: "{controller=Account}/{action=Login}/{id?}"
             );
 
         app.Run();

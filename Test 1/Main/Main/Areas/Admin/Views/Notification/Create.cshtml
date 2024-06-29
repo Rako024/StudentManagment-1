@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Create Notification";
+}
+
+<div class="container mt-4">
+    <h2>Create Notification</h2>
+    <form asp-action="Create">
+        <div class="mb-3">
+            <label class="form-label">Content</label>
+            <textarea class="form-control" name="content" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Receiver</label>
+            <select class="form-control" name="receiverId">
+                <option value="All">All Teachers</option>
+                @foreach (var teacher in ViewBag.Teachers as IEnumerable<Core.Models.AppUser>)
+                {
+                    <option value="@teacher.Id">@teacher.UserName (@teacher.Email)</option>
+                }
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Notification</button>
+    </form>
+</div>

@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Core.Models.LearningMaterial>
+
+<div class="container mt-5">
+    <h2>Learning Materials</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>File</th>
+                <th>Link</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var material in Model)
+            {
+                <tr>
+                    <td>@material.Name</td>
+                    <td>
+                        @if (!string.IsNullOrEmpty(material.FileUrl))
+                        {
+                            <a href="@Url.Content("~/upload/learningmaterials/" + material.FileUrl)" target="_blank">
+                                <button class="btn btn-primary">View</button>
+                            </a>
+                        }
+                        else
+                        {
+                            <span>N/A</span>
+                        }
+                    </td>
+                    <td>
+                        @if (!string.IsNullOrEmpty(material.Link))
+                        {
+                            <a href="@material.Link" target="_blank" rel="noopener noreferrer">Go to Link</a>
+                        }
+                        else
+                        {
+                            <span>N/A</span>
+                        }
+                    </td>
+                    <td>
+                        @if (!string.IsNullOrEmpty(material.FileUrl))
+                        {
+                            
+                            <a href="@Url.Content("~/upload/learningmaterials/" + material.FileUrl)" download="@material.Name">
+                                <button class="btn btn-primary">Download</button>
+                            </a>
+                        }
+                        else
+                        {
+                            <button class="btn btn-secondary" disabled>Download</button>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
