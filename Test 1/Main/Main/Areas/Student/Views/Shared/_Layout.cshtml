@@ -306,11 +306,18 @@
                             
                             <li class="sidebar-menu-item">
                                 <a class="sidebar-menu-button"
-                               asp-action="Index" asp-controller="Schedule">
+                               asp-action="Index" asp-controller="EntryPointCalculator">
                                     <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">search</span>
-                                <span class="sidebar-menu-text">Schedule</span>
+                                <span class="sidebar-menu-text">EntryPoint Calculator</span>
                                 </a>
                             </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button"
+                               asp-action="Index" asp-controller="Schedule">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">search</span>
+                                <span class="sidebar-menu-text">Schedule</span>
+                            </a>
+                        </li>
                             
                             <li class="sidebar-menu-item">
                                 <a class="sidebar-menu-button" asp-action="Index" asp-controller="FreeLanceWork" asp-route-id="@user.Id"
@@ -369,6 +376,7 @@
                                 <ul class="sidebar-submenu collapse sm-indent"
                                     id="account_menu">
                                     
+
                                     <li class="sidebar-menu-item">
                                         <a class="sidebar-menu-button"
                                            asp-action="Login" asp-controller="Account" asp-area="">
