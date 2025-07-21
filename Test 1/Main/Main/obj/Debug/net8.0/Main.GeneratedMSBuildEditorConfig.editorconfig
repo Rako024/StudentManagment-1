@@ -17,347 +17,347 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Main
 build_property.RootNamespace = Main
-build_property.ProjectDir = C:\Users\Rashid\Desktop\Student Managment\StudentManagment-1\Test 1\Main\Main\
+build_property.ProjectDir = C:\Users\Rashid\Desktop\Project student\Student Managment\StudentManagment-1\Test 1\Main\Main\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Rashid\Desktop\Student Managment\StudentManagment-1\Test 1\Main\Main
+build_property.MSBuildProjectDirectory = C:\Users\Rashid\Desktop\Project student\Student Managment\StudentManagment-1\Test 1\Main\Main
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Cordinator/Create.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Cordinator/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29yZGluYXRvclxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Cordinator/Index.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Cordinator/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29yZGluYXRvclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Cordinator/Update.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Cordinator/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29yZGluYXRvclxVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Cordinator/UpdatePassword.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Cordinator/UpdatePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29yZGluYXRvclxVcGRhdGVQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Dashboard/Index.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Dashboard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/ExamScore/AddExamScore.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/ExamScore/AddExamScore.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRXhhbVNjb3JlXEFkZEV4YW1TY29yZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/ExamScore/Index.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/ExamScore/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRXhhbVNjb3JlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/ExamScore/Lessons.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/ExamScore/Lessons.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRXhhbVNjb3JlXExlc3NvbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Group/Create.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Group/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR3JvdXBcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Group/Details.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Group/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR3JvdXBcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Group/DetailsLessons.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Group/DetailsLessons.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR3JvdXBcRGV0YWlsc0xlc3NvbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Group/DetailsLessonTimes.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Group/DetailsLessonTimes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR3JvdXBcRGV0YWlsc0xlc3NvblRpbWVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Group/DetailsTeachers.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Group/DetailsTeachers.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR3JvdXBcRGV0YWlsc1RlYWNoZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Group/Index.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Group/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR3JvdXBcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Group/Update.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Group/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR3JvdXBcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/LessonTime/Create.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/LessonTime/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTGVzc29uVGltZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/LessonTime/Index.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/LessonTime/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTGVzc29uVGltZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/LessonTime/Update.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/LessonTime/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTGVzc29uVGltZVxVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Lesson/Create.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Lesson/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTGVzc29uXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Lesson/Details.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Lesson/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTGVzc29uXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Lesson/Index.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Lesson/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTGVzc29uXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Lesson/Update.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Lesson/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTGVzc29uXFVwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Notification/Create.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Notification/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTm90aWZpY2F0aW9uXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Notification/Index.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Notification/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTm90aWZpY2F0aW9uXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Semester/Index.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Semester/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2VtZXN0ZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Shared/Error.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Shared/_Layout.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Student/Create.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Student/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3R1ZGVudFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Student/Index.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Student/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3R1ZGVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Student/Update.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Student/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3R1ZGVudFxVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Student/UpdatePassword.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Student/UpdatePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3R1ZGVudFxVcGRhdGVQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Teacher/Create.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Teacher/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVhY2hlclxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Teacher/Index.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Teacher/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVhY2hlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Teacher/Update.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Teacher/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVhY2hlclxVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Teacher/UpdatePassword.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/Teacher/UpdatePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVhY2hlclxVcGRhdGVQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/_ViewImports.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/_ViewStart.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/AcademicResults/Index.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/AcademicResults/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xBY2FkZW1pY1Jlc3VsdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/Dashboard/Index.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/Dashboard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xEYXNoYm9hcmRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/EntryPointCalculator/Index.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/EntryPointCalculator/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xFbnRyeVBvaW50Q2FsY3VsYXRvclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/FreeLanceWork/Create.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/FreeLanceWork/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xGcmVlTGFuY2VXb3JrXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/FreeLanceWork/Details.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/FreeLanceWork/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xGcmVlTGFuY2VXb3JrXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/FreeLanceWork/Index.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/FreeLanceWork/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xGcmVlTGFuY2VXb3JrXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/FreeLanceWork/Update.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/FreeLanceWork/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xGcmVlTGFuY2VXb3JrXFVwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/Schedule/Index.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/Schedule/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xTY2hlZHVsZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/Shared/Error.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xTaGFyZWRcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/Shared/_Layout.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xTaGFyZWRcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/StudentHomework/Details.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/StudentHomework/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xTdHVkZW50SG9tZXdvcmtcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/StudentHomework/Edit.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/StudentHomework/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xTdHVkZW50SG9tZXdvcmtcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/StudentHomework/Index.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/StudentHomework/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xTdHVkZW50SG9tZXdvcmtcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/StudentHomework/SubmissionDetails.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/StudentHomework/SubmissionDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xTdHVkZW50SG9tZXdvcmtcU3VibWlzc2lvbkRldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/StudentHomework/Submit.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/StudentHomework/Submit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xTdHVkZW50SG9tZXdvcmtcU3VibWl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/StudentInformation/Details.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/StudentInformation/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xTdHVkZW50SW5mb3JtYXRpb25cRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/StudentInformation/Index.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/StudentInformation/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xTdHVkZW50SW5mb3JtYXRpb25cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/StudentLearningMaterial/Details.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/StudentLearningMaterial/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xTdHVkZW50TGVhcm5pbmdNYXRlcmlhbFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/StudentLearningMaterial/Index.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/StudentLearningMaterial/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xTdHVkZW50TGVhcm5pbmdNYXRlcmlhbFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/_ViewImports.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/_ViewStart.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Student/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xfVmlld1N0YXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/Dashboard/Index.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/Dashboard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xEYXNoYm9hcmRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/EntryPoint/Index.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/EntryPoint/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xFbnRyeVBvaW50XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/LearningMaterial/Create.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/LearningMaterial/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xMZWFybmluZ01hdGVyaWFsXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/LearningMaterial/Details.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/LearningMaterial/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xMZWFybmluZ01hdGVyaWFsXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/LearningMaterial/Edit.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/LearningMaterial/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xMZWFybmluZ01hdGVyaWFsXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/LearningMaterial/Index.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/LearningMaterial/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xMZWFybmluZ01hdGVyaWFsXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/Shared/Error.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xTaGFyZWRcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/Shared/_Layout.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xTaGFyZWRcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/TeacherHomework/Create.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/TeacherHomework/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xUZWFjaGVySG9tZXdvcmtcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/TeacherHomework/Details.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/TeacherHomework/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xUZWFjaGVySG9tZXdvcmtcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/TeacherHomework/Edit.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/TeacherHomework/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xUZWFjaGVySG9tZXdvcmtcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/TeacherHomework/Index.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/TeacherHomework/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xUZWFjaGVySG9tZXdvcmtcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/TeacherLesson/Colloquium.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/TeacherLesson/Colloquium.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xUZWFjaGVyTGVzc29uXENvbGxvcXVpdW0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/TeacherLesson/Index.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/TeacherLesson/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xUZWFjaGVyTGVzc29uXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/TeacherLesson/TermPaper.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/TeacherLesson/TermPaper.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xUZWFjaGVyTGVzc29uXFRlcm1QYXBlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/TeacherLesson/TermPaperDetails.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/TeacherLesson/TermPaperDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xUZWFjaGVyTGVzc29uXFRlcm1QYXBlckRldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/TeacherSchedule/Index.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/TeacherSchedule/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xUZWFjaGVyU2NoZWR1bGVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/_ViewImports.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/_ViewStart.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Areas/Teacher/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xfVmlld1N0YXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Views/Account/ChangePassword.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Views/Account/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDaGFuZ2VQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Views/Account/ForgotPassword.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Views/Account/ForgotPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Views/Account/Login.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Views/Account/ResetPassword.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Views/Account/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Views/Home/Index.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Views/Shared/Error.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rashid/Desktop/Student Managment/StudentManagment-1/Test 1/Main/Main/Views/_ViewImports.cshtml]
+[C:/Users/Rashid/Desktop/Project student/Student Managment/StudentManagment-1/Test 1/Main/Main/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

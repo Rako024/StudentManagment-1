@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\",
+  "WorkspaceRootPath": "C:\\Users\\Rashid\\Desktop\\Project student\\Student Managment\\StudentManagment-1\\Test 1\\Main\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\main\\areas\\student\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|c:\\users\\rashid\\desktop\\project student\\student managment\\studentmanagment-1\\test 1\\main\\main\\areas\\student\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|solutionrelative:main\\areas\\student\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\main\\areas\\student\\controllers\\entrypointcalculatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|c:\\users\\rashid\\desktop\\project student\\student managment\\studentmanagment-1\\test 1\\main\\main\\areas\\student\\controllers\\entrypointcalculatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|solutionrelative:main\\areas\\student\\controllers\\entrypointcalculatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|c:\\users\\rashid\\desktop\\student managment\\studentmanagment-1\\test 1\\main\\main\\areas\\student\\controllers\\studentinformationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|c:\\users\\rashid\\desktop\\project student\\student managment\\studentmanagment-1\\test 1\\main\\main\\areas\\student\\controllers\\studentinformationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{77A8F039-4C2A-4655-8C9C-12B95D44629D}|Main\\Main.csproj|solutionrelative:main\\areas\\student\\controllers\\studentinformationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -22,43 +22,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "EntryPointCalculatorController.cs",
-              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Student\\Controllers\\EntryPointCalculatorController.cs",
+              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Project student\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Student\\Controllers\\EntryPointCalculatorController.cs",
               "RelativeDocumentMoniker": "Main\\Areas\\Student\\Controllers\\EntryPointCalculatorController.cs",
-              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Student\\Controllers\\EntryPointCalculatorController.cs",
+              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Project student\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Student\\Controllers\\EntryPointCalculatorController.cs",
               "RelativeToolTip": "Main\\Areas\\Student\\Controllers\\EntryPointCalculatorController.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAAwAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T08:42:41.25Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-09T08:42:41.25Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "StudentInformationController.cs",
-              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Student\\Controllers\\StudentInformationController.cs",
+              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Project student\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Student\\Controllers\\StudentInformationController.cs",
               "RelativeDocumentMoniker": "Main\\Areas\\Student\\Controllers\\StudentInformationController.cs",
-              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Student\\Controllers\\StudentInformationController.cs",
+              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Project student\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Student\\Controllers\\StudentInformationController.cs",
               "RelativeToolTip": "Main\\Areas\\Student\\Controllers\\StudentInformationController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T08:42:23.402Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-09T08:42:23.402Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Student\\Views\\Shared\\_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rashid\\Desktop\\Project student\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Student\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Main\\Areas\\Student\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Student\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Rashid\\Desktop\\Project student\\Student Managment\\StudentManagment-1\\Test 1\\Main\\Main\\Areas\\Student\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Main\\Areas\\Student\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAABsBAAAAAAAAAAAhwDQBAABWAAAA",
+              "ViewState": "AQIAABsBAAAAAAAAAAAhwCIBAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-07-09T08:39:22.764Z",
               "EditorCaption": ""

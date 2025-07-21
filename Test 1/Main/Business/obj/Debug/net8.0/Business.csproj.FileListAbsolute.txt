@@ -33,3 +33,21 @@ C:\Users\Rashid\Desktop\Student Managment\StudentManagment-1\Test 1\Main\Busines
 C:\Users\Rashid\Desktop\Student Managment\StudentManagment-1\Test 1\Main\Business\obj\Debug\net8.0\refint\Business.dll
 C:\Users\Rashid\Desktop\Student Managment\StudentManagment-1\Test 1\Main\Business\obj\Debug\net8.0\Business.pdb
 C:\Users\Rashid\Desktop\Student Managment\StudentManagment-1\Test 1\Main\Business\obj\Debug\net8.0\ref\Business.dll
+C:\Users\Rashid\Desktop\Project student\Student Managment\StudentManagment-1\Test 1\Main\Business\bin\Debug\net8.0\Business.deps.json
+C:\Users\Rashid\Desktop\Project student\Student Managment\StudentManagment-1\Test 1\Main\Business\bin\Debug\net8.0\Business.dll
+C:\Users\Rashid\Desktop\Project student\Student Managment\StudentManagment-1\Test 1\Main\Business\bin\Debug\net8.0\Business.pdb
+C:\Users\Rashid\Desktop\Project student\Student Managment\StudentManagment-1\Test 1\Main\Business\bin\Debug\net8.0\Core.dll
+C:\Users\Rashid\Desktop\Project student\Student Managment\StudentManagment-1\Test 1\Main\Business\bin\Debug\net8.0\Data.dll
+C:\Users\Rashid\Desktop\Project student\Student Managment\StudentManagment-1\Test 1\Main\Business\bin\Debug\net8.0\Data.pdb
+C:\Users\Rashid\Desktop\Project student\Student Managment\StudentManagment-1\Test 1\Main\Business\bin\Debug\net8.0\Core.pdb
+C:\Users\Rashid\Desktop\Project student\Student Managment\StudentManagment-1\Test 1\Main\Business\obj\Debug\net8.0\Business.csproj.AssemblyReference.cache
+C:\Users\Rashid\Desktop\Project student\Student Managment\StudentManagment-1\Test 1\Main\Business\obj\Debug\net8.0\Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rashid\Desktop\Project student\Student Managment\StudentManagment-1\Test 1\Main\Business\obj\Debug\net8.0\Business.AssemblyInfoInputs.cache
+C:\Users\Rashid\Desktop\Project student\Student Managment\StudentManagment-1\Test 1\Main\Business\obj\Debug\net8.0\Business.AssemblyInfo.cs
+C:\Users\Rashid\Desktop\Project student\Student Managment\StudentManagment-1\Test 1\Main\Business\obj\Debug\net8.0\Business.csproj.CoreCompileInputs.cache
+C:\Users\Rashid\Desktop\Project student\Student Managment\StudentManagment-1\Test 1\Main\Business\obj\Debug\net8.0\Business.sourcelink.json
+C:\Users\Rashid\Desktop\Project student\Student Managment\StudentManagment-1\Test 1\Main\Business\obj\Debug\net8.0\Business.csproj.Up2Date
+C:\Users\Rashid\Desktop\Project student\Student Managment\StudentManagment-1\Test 1\Main\Business\obj\Debug\net8.0\Business.dll
+C:\Users\Rashid\Desktop\Project student\Student Managment\StudentManagment-1\Test 1\Main\Business\obj\Debug\net8.0\refint\Business.dll
+C:\Users\Rashid\Desktop\Project student\Student Managment\StudentManagment-1\Test 1\Main\Business\obj\Debug\net8.0\Business.pdb
+C:\Users\Rashid\Desktop\Project student\Student Managment\StudentManagment-1\Test 1\Main\Business\obj\Debug\net8.0\ref\Business.dll
